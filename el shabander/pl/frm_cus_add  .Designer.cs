@@ -48,9 +48,9 @@ namespace el_shabander.pl
             this.lb_titelpage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_titelpage.Location = new System.Drawing.Point(515, 183);
             this.lb_titelpage.Name = "lb_titelpage";
-            this.lb_titelpage.Size = new System.Drawing.Size(192, 60);
+            this.lb_titelpage.Size = new System.Drawing.Size(191, 60);
             this.lb_titelpage.TabIndex = 7;
-            this.lb_titelpage.Text = "رقم الطاولة";
+            this.lb_titelpage.Text = "رقم المقعد";
             // 
             // btn_add
             // 
@@ -87,9 +87,9 @@ namespace el_shabander.pl
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(203, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 90);
+            this.label1.Size = new System.Drawing.Size(305, 90);
             this.label1.TabIndex = 11;
-            this.label1.Text = "اضافة طاولة";
+            this.label1.Text = "اضافة مقعد";
             // 
             // edt_table
             // 

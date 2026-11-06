@@ -12,7 +12,7 @@ namespace el_shabander
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_order_sell_takeway
+    public partial class tb_order_appointment
     {
         public int id { get; set; }
         public string name_sell { get; set; }

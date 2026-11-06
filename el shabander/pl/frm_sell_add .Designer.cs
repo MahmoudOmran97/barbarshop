@@ -50,78 +50,80 @@ namespace el_shabander.pl
             this.tileViewColumn2 = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.tileViewColumn3 = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.btn_save = new DevExpress.XtraEditors.SimpleButton();
+            this.التاريخ = new System.Windows.Forms.Label();
+            this.btn_print = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.edt_date = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_totaldata = new System.Windows.Forms.Label();
+            this.txt_add = new System.Windows.Forms.TextBox();
+            this.save = new System.Windows.Forms.ComboBox();
+            this.edt_pay = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_cut = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.edt_table = new System.Windows.Forms.ComboBox();
             this.btn_ChangeTable = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.tileView2 = new DevExpress.XtraGrid.Views.Tile.TileView();
-            this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
-            this.tileView1 = new DevExpress.XtraGrid.Views.Tile.TileView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_print_prc = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_print_ch = new DevExpress.XtraEditors.SimpleButton();
-            this.label19 = new System.Windows.Forms.Label();
-            this.save = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btn_save = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_add = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_cut = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btn_print = new DevExpress.XtraEditors.SimpleButton();
-            this.edt_pay = new System.Windows.Forms.TextBox();
-            this.txt_totaldata = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.edt_code = new System.Windows.Forms.TextBox();
+            this.id_invioce = new System.Windows.Forms.Label();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.btn_pick_from_queue = new DevExpress.XtraEditors.SimpleButton();
+            this.edt_cusname = new System.Windows.Forms.TextBox();
             this.edt_cus = new System.Windows.Forms.TextBox();
-            this.التاريخ = new System.Windows.Forms.Label();
-            this.edt_date = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_edit = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_add = new DevExpress.XtraEditors.SimpleButton();
-            this.edt_qt = new DevExpress.XtraEditors.SpinEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.edt_sell = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lb_titelpage = new System.Windows.Forms.Label();
-            this.edt_name = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.totall_buy = new System.Windows.Forms.Label();
             this.tot_buy = new System.Windows.Forms.Label();
             this.edt_buy = new System.Windows.Forms.Label();
-            this.id_invioce = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.Label();
             this.datesave = new System.Windows.Forms.Label();
             this.chack = new System.Windows.Forms.Label();
             this.qts_qt = new System.Windows.Forms.Label();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btn_add = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_edit = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lb_titelpage = new System.Windows.Forms.Label();
+            this.edt_code = new System.Windows.Forms.TextBox();
+            this.edt_name = new System.Windows.Forms.ComboBox();
+            this.edt_qt = new DevExpress.XtraEditors.SpinEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.edt_sell = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.tileView2 = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
+            this.tileView1 = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_qt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edt_qt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tileViewColumn1
@@ -154,119 +156,295 @@ namespace el_shabander.pl
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupControl3);
+            this.panel1.Controls.Add(this.groupControl5);
             this.panel1.Controls.Add(this.groupControl2);
-            this.panel1.Controls.Add(this.groupControl1);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupControl4);
             this.panel1.Controls.Add(this.totall_buy);
             this.panel1.Controls.Add(this.tot_buy);
             this.panel1.Controls.Add(this.edt_buy);
-            this.panel1.Controls.Add(this.id_invioce);
             this.panel1.Controls.Add(this.txt_id);
             this.panel1.Controls.Add(this.datesave);
             this.panel1.Controls.Add(this.chack);
             this.panel1.Controls.Add(this.qts_qt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 158);
+            this.panel1.Location = new System.Drawing.Point(0, 382);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 551);
+            this.panel1.Size = new System.Drawing.Size(1370, 316);
             this.panel1.TabIndex = 20;
             // 
-            // groupControl3
+            // groupControl5
             // 
-            this.groupControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupControl3.Appearance.BackColor = System.Drawing.Color.White;
-            this.groupControl3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.groupControl3.Appearance.BorderColor = System.Drawing.Color.Gold;
-            this.groupControl3.Appearance.Options.UseBackColor = true;
-            this.groupControl3.Appearance.Options.UseBorderColor = true;
-            this.groupControl3.AppearanceCaption.BackColor = System.Drawing.Color.White;
-            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl3.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupControl3.AppearanceCaption.Options.UseBackColor = true;
-            this.groupControl3.AppearanceCaption.Options.UseFont = true;
-            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl3.AppearanceCaption.Options.UseTextOptions = true;
-            this.groupControl3.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.groupControl3.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.groupControl3.Controls.Add(this.label5);
-            this.groupControl3.Controls.Add(this.label2);
-            this.groupControl3.Controls.Add(this.textBox3);
-            this.groupControl3.Controls.Add(this.textBox2);
-            this.groupControl3.Location = new System.Drawing.Point(28, 6);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupControl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupControl3.Size = new System.Drawing.Size(432, 76);
-            this.groupControl3.TabIndex = 45;
-            this.groupControl3.Text = "المبلغ المدفوع ";
+            this.groupControl5.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl5.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupControl5.Appearance.BorderColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
+            this.groupControl5.Appearance.Options.UseBackColor = true;
+            this.groupControl5.Appearance.Options.UseBorderColor = true;
+            this.groupControl5.AppearanceCaption.BackColor = System.Drawing.Color.White;
+            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl5.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.groupControl5.AppearanceCaption.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupControl5.AppearanceCaption.Options.UseBackColor = true;
+            this.groupControl5.AppearanceCaption.Options.UseFont = true;
+            this.groupControl5.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl5.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl5.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl5.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.groupControl5.Controls.Add(this.btn_save);
+            this.groupControl5.Controls.Add(this.التاريخ);
+            this.groupControl5.Controls.Add(this.btn_print);
+            this.groupControl5.Controls.Add(this.comboBox1);
+            this.groupControl5.Controls.Add(this.edt_date);
+            this.groupControl5.Controls.Add(this.label19);
+            this.groupControl5.Controls.Add(this.label17);
+            this.groupControl5.Controls.Add(this.label11);
+            this.groupControl5.Controls.Add(this.label6);
+            this.groupControl5.Controls.Add(this.txt_totaldata);
+            this.groupControl5.Controls.Add(this.txt_add);
+            this.groupControl5.Controls.Add(this.save);
+            this.groupControl5.Controls.Add(this.edt_pay);
+            this.groupControl5.Controls.Add(this.label9);
+            this.groupControl5.Controls.Add(this.txt_cut);
+            this.groupControl5.Controls.Add(this.label4);
+            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl5.Location = new System.Drawing.Point(260, 0);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupControl5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupControl5.Size = new System.Drawing.Size(859, 316);
+            this.groupControl5.TabIndex = 47;
+            this.groupControl5.Text = "معلومات الدفع";
             // 
-            // label5
+            // btn_save
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.IndianRed;
-            this.label5.Location = new System.Drawing.Point(63, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 21);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "المبلغ المتبقى";
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_save.Appearance.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Appearance.Options.UseFont = true;
+            this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
+            this.btn_save.Location = new System.Drawing.Point(188, 241);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(168, 56);
+            this.btn_save.TabIndex = 46;
+            this.btn_save.Text = "حفظ+F1";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // label2
+            // التاريخ
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(269, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 21);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "المبلغ المدفوع";
+            this.التاريخ.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.التاريخ.BackColor = System.Drawing.Color.LightGray;
+            this.التاريخ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.التاريخ.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.التاريخ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.التاريخ.Location = new System.Drawing.Point(15, 160);
+            this.التاريخ.Name = "التاريخ";
+            this.التاريخ.Size = new System.Drawing.Size(338, 33);
+            this.التاريخ.TabIndex = 52;
+            this.التاريخ.Text = "التاريخ";
+            this.التاريخ.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox3
+            // btn_print
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.LightCoral;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(7, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox3.Size = new System.Drawing.Size(196, 26);
-            this.textBox3.TabIndex = 42;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_print.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_print.Appearance.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Appearance.Options.UseFont = true;
+            this.btn_print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.ImageOptions.Image")));
+            this.btn_print.Location = new System.Drawing.Point(15, 241);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(168, 56);
+            this.btn_print.TabIndex = 41;
+            this.btn_print.Text = "طباعة +F2";
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
-            // textBox2
+            // comboBox1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox2.Size = new System.Drawing.Size(203, 26);
-            this.textBox2.TabIndex = 41;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.BackColor = System.Drawing.Color.Lime;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.Items.AddRange(new object[] {
+            "اجل",
+            "نقدى"});
+            this.comboBox1.Location = new System.Drawing.Point(410, 60);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox1.Size = new System.Drawing.Size(266, 28);
+            this.comboBox1.TabIndex = 48;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // edt_date
+            // 
+            this.edt_date.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_date.Location = new System.Drawing.Point(15, 200);
+            this.edt_date.Name = "edt_date";
+            this.edt_date.Size = new System.Drawing.Size(341, 29);
+            this.edt_date.TabIndex = 53;
+            this.edt_date.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label19.BackColor = System.Drawing.Color.Silver;
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label19.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label19.Location = new System.Drawing.Point(684, 110);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(166, 28);
+            this.label19.TabIndex = 48;
+            this.label19.Text = "الخزينة";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label17.BackColor = System.Drawing.Color.Silver;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(684, 60);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(166, 28);
+            this.label17.TabIndex = 47;
+            this.label17.Text = "طريقة الدفع";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.BackColor = System.Drawing.Color.Silver;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(684, 260);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(166, 28);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "تكلفة اضافية";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.BackColor = System.Drawing.Color.LightGray;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(15, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(338, 37);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "اجمالى الفاتورة";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_totaldata
+            // 
+            this.txt_totaldata.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_totaldata.BackColor = System.Drawing.Color.Black;
+            this.txt_totaldata.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_totaldata.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totaldata.ForeColor = System.Drawing.Color.White;
+            this.txt_totaldata.Location = new System.Drawing.Point(15, 107);
+            this.txt_totaldata.Name = "txt_totaldata";
+            this.txt_totaldata.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_totaldata.Size = new System.Drawing.Size(338, 47);
+            this.txt_totaldata.TabIndex = 38;
+            this.txt_totaldata.Text = "0";
+            this.txt_totaldata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txt_totaldata.UseMnemonic = false;
+            this.txt_totaldata.UseWaitCursor = true;
+            this.txt_totaldata.TextChanged += new System.EventHandler(this.txt_total_TextChanged);
+            // 
+            // txt_add
+            // 
+            this.txt_add.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add.Location = new System.Drawing.Point(410, 262);
+            this.txt_add.Name = "txt_add";
+            this.txt_add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_add.Size = new System.Drawing.Size(266, 29);
+            this.txt_add.TabIndex = 45;
+            this.txt_add.Text = "0";
+            this.txt_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_add.TextChanged += new System.EventHandler(this.txt_add_TextChanged);
+            // 
+            // save
+            // 
+            this.save.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.save.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.save.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.save.BackColor = System.Drawing.Color.LightCoral;
+            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save.FormattingEnabled = true;
+            this.save.Location = new System.Drawing.Point(410, 110);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(266, 28);
+            this.save.TabIndex = 49;
+            // 
+            // edt_pay
+            // 
+            this.edt_pay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_pay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_pay.Location = new System.Drawing.Point(410, 160);
+            this.edt_pay.Name = "edt_pay";
+            this.edt_pay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.edt_pay.Size = new System.Drawing.Size(266, 29);
+            this.edt_pay.TabIndex = 40;
+            this.edt_pay.Text = "0";
+            this.edt_pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.edt_pay.TextChanged += new System.EventHandler(this.edt_pay_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.BackColor = System.Drawing.Color.Silver;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(684, 210);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(166, 28);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "خصم ";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_cut
+            // 
+            this.txt_cut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_cut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cut.Location = new System.Drawing.Point(410, 211);
+            this.txt_cut.Name = "txt_cut";
+            this.txt_cut.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_cut.Size = new System.Drawing.Size(266, 29);
+            this.txt_cut.TabIndex = 43;
+            this.txt_cut.Text = "0";
+            this.txt_cut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_cut.TextChanged += new System.EventHandler(this.txt_cut_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(684, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 28);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "المدفوع";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.groupControl2.Appearance.BorderColor = System.Drawing.Color.Gold;
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.Appearance.Options.UseBorderColor = true;
             this.groupControl2.AppearanceCaption.BackColor = System.Drawing.Color.White;
-            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupControl2.AppearanceCaption.Options.UseBackColor = true;
@@ -277,48 +455,247 @@ namespace el_shabander.pl
             this.groupControl2.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.groupControl2.Controls.Add(this.edt_table);
             this.groupControl2.Controls.Add(this.btn_ChangeTable);
-            this.groupControl2.Location = new System.Drawing.Point(906, 6);
+            this.groupControl2.Controls.Add(this.id_invioce);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl2.Enabled = false;
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Padding = new System.Windows.Forms.Padding(4);
             this.groupControl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupControl2.Size = new System.Drawing.Size(452, 76);
+            this.groupControl2.Size = new System.Drawing.Size(260, 316);
             this.groupControl2.TabIndex = 44;
-            this.groupControl2.Text = "تحويل الطاولة";
-            this.groupControl2.Visible = false;
+            this.groupControl2.Text = "تحويل المقعد";
             // 
             // edt_table
             // 
+            this.edt_table.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.edt_table.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.edt_table.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.edt_table.BackColor = System.Drawing.Color.Lime;
             this.edt_table.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edt_table.FormattingEnabled = true;
-            this.edt_table.Location = new System.Drawing.Point(9, 39);
+            this.edt_table.Location = new System.Drawing.Point(6, 233);
             this.edt_table.Name = "edt_table";
             this.edt_table.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edt_table.Size = new System.Drawing.Size(264, 28);
+            this.edt_table.Size = new System.Drawing.Size(245, 28);
             this.edt_table.TabIndex = 42;
             this.edt_table.SelectedIndexChanged += new System.EventHandler(this.edt_table_SelectedIndexChanged);
             // 
             // btn_ChangeTable
             // 
-            this.btn_ChangeTable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_ChangeTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_ChangeTable.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ChangeTable.Appearance.Options.UseFont = true;
             this.btn_ChangeTable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ChangeTable.ImageOptions.Image")));
-            this.btn_ChangeTable.Location = new System.Drawing.Point(279, 31);
+            this.btn_ChangeTable.Location = new System.Drawing.Point(24, 184);
             this.btn_ChangeTable.Name = "btn_ChangeTable";
-            this.btn_ChangeTable.Size = new System.Drawing.Size(160, 40);
+            this.btn_ChangeTable.Size = new System.Drawing.Size(207, 40);
             this.btn_ChangeTable.TabIndex = 41;
             this.btn_ChangeTable.Text = "تحويل";
             this.btn_ChangeTable.Click += new System.EventHandler(this.btn_ChangeTable_Click);
             // 
+            // id_invioce
+            // 
+            this.id_invioce.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.id_invioce.BackColor = System.Drawing.Color.White;
+            this.id_invioce.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_invioce.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_invioce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.id_invioce.Location = new System.Drawing.Point(24, 54);
+            this.id_invioce.Name = "id_invioce";
+            this.id_invioce.Size = new System.Drawing.Size(207, 84);
+            this.id_invioce.TabIndex = 33;
+            this.id_invioce.Text = "0";
+            this.id_invioce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl4.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupControl4.Appearance.BorderColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.groupControl4.Appearance.Options.UseBackColor = true;
+            this.groupControl4.Appearance.Options.UseBorderColor = true;
+            this.groupControl4.AppearanceCaption.BackColor = System.Drawing.Color.White;
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl4.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupControl4.AppearanceCaption.Options.UseBackColor = true;
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl4.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl4.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl4.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.groupControl4.Controls.Add(this.btn_pick_from_queue);
+            this.groupControl4.Controls.Add(this.edt_cusname);
+            this.groupControl4.Controls.Add(this.edt_cus);
+            this.groupControl4.Controls.Add(this.label1);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupControl4.Location = new System.Drawing.Point(1119, 0);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupControl4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupControl4.Size = new System.Drawing.Size(251, 316);
+            this.groupControl4.TabIndex = 46;
+            this.groupControl4.Text = "بيانات الفاتورة";
+            // 
+            // btn_pick_from_queue
+            // 
+            this.btn_pick_from_queue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_pick_from_queue.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pick_from_queue.Appearance.Options.UseFont = true;
+            this.btn_pick_from_queue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_pick_from_queue.ImageOptions.Image")));
+            this.btn_pick_from_queue.Location = new System.Drawing.Point(9, 184);
+            this.btn_pick_from_queue.Name = "btn_pick_from_queue";
+            this.btn_pick_from_queue.Size = new System.Drawing.Size(233, 41);
+            this.btn_pick_from_queue.TabIndex = 57;
+            this.btn_pick_from_queue.Text = "اختر العميل";
+            this.btn_pick_from_queue.Click += new System.EventHandler(this.btn_pick_from_queue_Click);
+            // 
+            // edt_cusname
+            // 
+            this.edt_cusname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.edt_cusname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.edt_cusname.Enabled = false;
+            this.edt_cusname.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_cusname.Location = new System.Drawing.Point(9, 241);
+            this.edt_cusname.Name = "edt_cusname";
+            this.edt_cusname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.edt_cusname.Size = new System.Drawing.Size(233, 43);
+            this.edt_cusname.TabIndex = 56;
+            this.edt_cusname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // edt_cus
+            // 
+            this.edt_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.edt_cus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.edt_cus.Enabled = false;
+            this.edt_cus.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_cus.Location = new System.Drawing.Point(9, 125);
+            this.edt_cus.Name = "edt_cus";
+            this.edt_cus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.edt_cus.Size = new System.Drawing.Size(233, 43);
+            this.edt_cus.TabIndex = 54;
+            this.edt_cus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(9, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 41);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "المقعد";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // totall_buy
+            // 
+            this.totall_buy.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.totall_buy.AutoSize = true;
+            this.totall_buy.BackColor = System.Drawing.Color.Transparent;
+            this.totall_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totall_buy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.totall_buy.Location = new System.Drawing.Point(1320, 503);
+            this.totall_buy.Name = "totall_buy";
+            this.totall_buy.Size = new System.Drawing.Size(40, 42);
+            this.totall_buy.TabIndex = 36;
+            this.totall_buy.Text = "0";
+            this.totall_buy.Visible = false;
+            // 
+            // tot_buy
+            // 
+            this.tot_buy.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tot_buy.AutoSize = true;
+            this.tot_buy.BackColor = System.Drawing.Color.Transparent;
+            this.tot_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tot_buy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tot_buy.Location = new System.Drawing.Point(1418, 503);
+            this.tot_buy.Name = "tot_buy";
+            this.tot_buy.Size = new System.Drawing.Size(40, 42);
+            this.tot_buy.TabIndex = 35;
+            this.tot_buy.Text = "0";
+            this.tot_buy.Visible = false;
+            // 
+            // edt_buy
+            // 
+            this.edt_buy.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_buy.AutoSize = true;
+            this.edt_buy.BackColor = System.Drawing.Color.Transparent;
+            this.edt_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_buy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.edt_buy.Location = new System.Drawing.Point(1513, 499);
+            this.edt_buy.Name = "edt_buy";
+            this.edt_buy.Size = new System.Drawing.Size(40, 42);
+            this.edt_buy.TabIndex = 34;
+            this.edt_buy.Text = "0";
+            this.edt_buy.Visible = false;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_id.BackColor = System.Drawing.Color.Transparent;
+            this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txt_id.Location = new System.Drawing.Point(468, 37);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(265, 29);
+            this.txt_id.TabIndex = 32;
+            this.txt_id.Text = "1";
+            this.txt_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txt_id.Visible = false;
+            this.txt_id.Click += new System.EventHandler(this.txt_id_Click);
+            // 
+            // datesave
+            // 
+            this.datesave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.datesave.AutoSize = true;
+            this.datesave.BackColor = System.Drawing.Color.Transparent;
+            this.datesave.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datesave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.datesave.Location = new System.Drawing.Point(564, 503);
+            this.datesave.Name = "datesave";
+            this.datesave.Size = new System.Drawing.Size(40, 42);
+            this.datesave.TabIndex = 27;
+            this.datesave.Text = "0";
+            this.datesave.Visible = false;
+            // 
+            // chack
+            // 
+            this.chack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chack.AutoSize = true;
+            this.chack.BackColor = System.Drawing.Color.Transparent;
+            this.chack.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.chack.Location = new System.Drawing.Point(610, 490);
+            this.chack.Name = "chack";
+            this.chack.Size = new System.Drawing.Size(40, 42);
+            this.chack.TabIndex = 26;
+            this.chack.Text = "0";
+            this.chack.Visible = false;
+            // 
+            // qts_qt
+            // 
+            this.qts_qt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.qts_qt.AutoSize = true;
+            this.qts_qt.BackColor = System.Drawing.Color.Transparent;
+            this.qts_qt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qts_qt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.qts_qt.Location = new System.Drawing.Point(983, 499);
+            this.qts_qt.Name = "qts_qt";
+            this.qts_qt.Size = new System.Drawing.Size(40, 42);
+            this.qts_qt.TabIndex = 24;
+            this.qts_qt.Text = "0";
+            this.qts_qt.Visible = false;
+            // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.groupControl1.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupControl1.Appearance.BorderColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
             this.groupControl1.AppearanceCaption.BackColor = System.Drawing.Color.White;
@@ -331,27 +708,227 @@ namespace el_shabander.pl
             this.groupControl1.AppearanceCaption.Options.UseTextOptions = true;
             this.groupControl1.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl1.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.Location = new System.Drawing.Point(466, 88);
+            this.groupControl1.Controls.Add(this.btn_add);
+            this.groupControl1.Controls.Add(this.btn_edit);
+            this.groupControl1.Controls.Add(this.btn_delete);
+            this.groupControl1.Controls.Add(this.label18);
+            this.groupControl1.Controls.Add(this.lb_titelpage);
+            this.groupControl1.Controls.Add(this.edt_code);
+            this.groupControl1.Controls.Add(this.edt_name);
+            this.groupControl1.Controls.Add(this.edt_qt);
+            this.groupControl1.Controls.Add(this.label3);
+            this.groupControl1.Controls.Add(this.textBox1);
+            this.groupControl1.Controls.Add(this.label8);
+            this.groupControl1.Controls.Add(this.edt_sell);
+            this.groupControl1.Controls.Add(this.label10);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl1.Location = new System.Drawing.Point(0, 135);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Padding = new System.Windows.Forms.Padding(4);
             this.groupControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupControl1.Size = new System.Drawing.Size(434, 451);
+            this.groupControl1.Size = new System.Drawing.Size(687, 197);
             this.groupControl1.TabIndex = 43;
             this.groupControl1.Text = "معلومات المادة";
             // 
+            // btn_add
+            // 
+            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_add.Appearance.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Appearance.Options.UseFont = true;
+            this.btn_add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.ImageOptions.Image")));
+            this.btn_add.Location = new System.Drawing.Point(484, 158);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(194, 34);
+            this.btn_add.TabIndex = 40;
+            this.btn_add.Text = "اضافة ";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click_1);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_edit.Appearance.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Appearance.Options.UseFont = true;
+            this.btn_edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.ImageOptions.Image")));
+            this.btn_edit.Location = new System.Drawing.Point(245, 158);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(194, 34);
+            this.btn_edit.TabIndex = 42;
+            this.btn_edit.Text = "تعديل";
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_delete.Appearance.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Appearance.Options.UseFont = true;
+            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(6, 158);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(194, 34);
+            this.btn_delete.TabIndex = 43;
+            this.btn_delete.Text = "حذف";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label18.BackColor = System.Drawing.Color.Silver;
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label18.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(237, 40);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 31);
+            this.label18.TabIndex = 72;
+            this.label18.Text = "الكود";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lb_titelpage
+            // 
+            this.lb_titelpage.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_titelpage.BackColor = System.Drawing.Color.Silver;
+            this.lb_titelpage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_titelpage.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_titelpage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_titelpage.Location = new System.Drawing.Point(401, 80);
+            this.lb_titelpage.Name = "lb_titelpage";
+            this.lb_titelpage.Size = new System.Drawing.Size(277, 28);
+            this.lb_titelpage.TabIndex = 35;
+            this.lb_titelpage.Text = "اسم المادة";
+            this.lb_titelpage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lb_titelpage.UseMnemonic = false;
+            this.lb_titelpage.UseWaitCursor = true;
+            // 
+            // edt_code
+            // 
+            this.edt_code.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_code.BackColor = System.Drawing.Color.DimGray;
+            this.edt_code.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_code.ForeColor = System.Drawing.Color.Red;
+            this.edt_code.Location = new System.Drawing.Point(6, 43);
+            this.edt_code.Name = "edt_code";
+            this.edt_code.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.edt_code.Size = new System.Drawing.Size(225, 31);
+            this.edt_code.TabIndex = 71;
+            this.edt_code.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.edt_code.TextChanged += new System.EventHandler(this.edt_code_TextChanged);
+            // 
+            // edt_name
+            // 
+            this.edt_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.edt_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.edt_name.BackColor = System.Drawing.Color.Lime;
+            this.edt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_name.FormattingEnabled = true;
+            this.edt_name.Location = new System.Drawing.Point(306, 43);
+            this.edt_name.Name = "edt_name";
+            this.edt_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.edt_name.Size = new System.Drawing.Size(231, 28);
+            this.edt_name.TabIndex = 41;
+            this.edt_name.SelectedIndexChanged += new System.EventHandler(this.edt_name_SelectedIndexChanged_1);
+            // 
+            // edt_qt
+            // 
+            this.edt_qt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_qt.EditValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.edt_qt.Location = new System.Drawing.Point(9, 119);
+            this.edt_qt.Name = "edt_qt";
+            this.edt_qt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_qt.Properties.Appearance.Options.UseFont = true;
+            this.edt_qt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.edt_qt.Size = new System.Drawing.Size(168, 30);
+            this.edt_qt.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(543, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 28);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "اسم القائمة";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.UseMnemonic = false;
+            this.label3.UseWaitCursor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(9, 80);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox1.Size = new System.Drawing.Size(386, 29);
+            this.textBox1.TabIndex = 45;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.BackColor = System.Drawing.Color.Silver;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(526, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 28);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "سعر البيع";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.UseMnemonic = false;
+            this.label8.UseWaitCursor = true;
+            // 
+            // edt_sell
+            // 
+            this.edt_sell.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.edt_sell.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edt_sell.Location = new System.Drawing.Point(352, 119);
+            this.edt_sell.Name = "edt_sell";
+            this.edt_sell.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.edt_sell.Size = new System.Drawing.Size(168, 29);
+            this.edt_sell.TabIndex = 36;
+            this.edt_sell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.edt_sell.TextChanged += new System.EventHandler(this.edt_sell_TextChanged_1);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.BackColor = System.Drawing.Color.Silver;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(183, 119);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(163, 28);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "الكمية";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label10.UseMnemonic = false;
+            this.label10.UseWaitCursor = true;
+            // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(el_shabander.tb_product);
+            this.gridControl1.DataSource = typeof(el_shabander.tb_service);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(6, 44);
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.tileView2;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(422, 401);
+            this.gridControl1.Size = new System.Drawing.Size(687, 135);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView2,
@@ -452,632 +1029,73 @@ namespace el_shabander.pl
             this.tileView1.TileTemplate.Add(tileViewItemElement6);
             this.tileView1.TileTemplate.Add(tileViewItemElement7);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.BackColor = System.Drawing.Color.Moccasin;
-            this.groupBox2.Controls.Add(this.btn_print_prc);
-            this.groupBox2.Controls.Add(this.btn_print_ch);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.save);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.btn_save);
-            this.groupBox2.Controls.Add(this.txt_add);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.txt_cut);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.btn_print);
-            this.groupBox2.Controls.Add(this.edt_pay);
-            this.groupBox2.Controls.Add(this.txt_totaldata);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(28, 88);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(432, 451);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "معلومات الدفع";
-            // 
-            // btn_print_prc
-            // 
-            this.btn_print_prc.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_print_prc.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print_prc.Appearance.Options.UseFont = true;
-            this.btn_print_prc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print_prc.ImageOptions.Image")));
-            this.btn_print_prc.Location = new System.Drawing.Point(7, 403);
-            this.btn_print_prc.Name = "btn_print_prc";
-            this.btn_print_prc.Size = new System.Drawing.Size(203, 43);
-            this.btn_print_prc.TabIndex = 52;
-            this.btn_print_prc.Text = "طباعة باريستا+F4";
-            this.btn_print_prc.Click += new System.EventHandler(this.btn_print_prc_Click);
-            // 
-            // btn_print_ch
-            // 
-            this.btn_print_ch.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_print_ch.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print_ch.Appearance.Options.UseFont = true;
-            this.btn_print_ch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print_ch.ImageOptions.Image")));
-            this.btn_print_ch.Location = new System.Drawing.Point(216, 405);
-            this.btn_print_ch.Name = "btn_print_ch";
-            this.btn_print_ch.Size = new System.Drawing.Size(210, 43);
-            this.btn_print_ch.TabIndex = 51;
-            this.btn_print_ch.Text = "طباعة مطبخ+F3";
-            this.btn_print_ch.Click += new System.EventHandler(this.btn_print_ch_Click);
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(288, 87);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(95, 45);
-            this.label19.TabIndex = 48;
-            this.label19.Text = "الخزينة";
-            // 
-            // save
-            // 
-            this.save.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.save.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.save.BackColor = System.Drawing.Color.LightCoral;
-            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save.FormattingEnabled = true;
-            this.save.Location = new System.Drawing.Point(17, 97);
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(213, 28);
-            this.save.TabIndex = 49;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Lime;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Items.AddRange(new object[] {
-            "اجل",
-            "نقدى"});
-            this.comboBox1.Location = new System.Drawing.Point(17, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(213, 28);
-            this.comboBox1.TabIndex = 48;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(258, 34);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(155, 45);
-            this.label17.TabIndex = 47;
-            this.label17.Text = "طريقة الدفع";
-            // 
-            // btn_save
-            // 
-            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_save.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Appearance.Options.UseFont = true;
-            this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
-            this.btn_save.Location = new System.Drawing.Point(216, 356);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(210, 43);
-            this.btn_save.TabIndex = 46;
-            this.btn_save.Text = "حفظ+F1";
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // txt_add
-            // 
-            this.txt_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_add.Location = new System.Drawing.Point(17, 258);
-            this.txt_add.Name = "txt_add";
-            this.txt_add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_add.Size = new System.Drawing.Size(213, 29);
-            this.txt_add.TabIndex = 45;
-            this.txt_add.Text = "0";
-            this.txt_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_add.TextChanged += new System.EventHandler(this.txt_add_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(252, 246);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(166, 45);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "تكلفة اضافية";
-            // 
-            // txt_cut
-            // 
-            this.txt_cut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_cut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cut.Location = new System.Drawing.Point(17, 204);
-            this.txt_cut.Name = "txt_cut";
-            this.txt_cut.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_cut.Size = new System.Drawing.Size(213, 29);
-            this.txt_cut.TabIndex = 43;
-            this.txt_cut.Text = "0";
-            this.txt_cut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_cut.TextChanged += new System.EventHandler(this.txt_cut_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(297, 193);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 45);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "خصم ";
-            // 
-            // btn_print
-            // 
-            this.btn_print.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print.Appearance.Options.UseFont = true;
-            this.btn_print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.ImageOptions.Image")));
-            this.btn_print.Location = new System.Drawing.Point(7, 356);
-            this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(203, 43);
-            this.btn_print.TabIndex = 41;
-            this.btn_print.Text = "طباعة +F2";
-            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
-            // 
-            // edt_pay
-            // 
-            this.edt_pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.edt_pay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_pay.Location = new System.Drawing.Point(17, 150);
-            this.edt_pay.Name = "edt_pay";
-            this.edt_pay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edt_pay.Size = new System.Drawing.Size(213, 29);
-            this.edt_pay.TabIndex = 40;
-            this.edt_pay.Text = "0";
-            this.edt_pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.edt_pay.TextChanged += new System.EventHandler(this.edt_pay_TextChanged);
-            // 
-            // txt_totaldata
-            // 
-            this.txt_totaldata.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_totaldata.BackColor = System.Drawing.Color.Silver;
-            this.txt_totaldata.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_totaldata.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_totaldata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.txt_totaldata.Location = new System.Drawing.Point(17, 312);
-            this.txt_totaldata.Name = "txt_totaldata";
-            this.txt_totaldata.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_totaldata.Size = new System.Drawing.Size(213, 28);
-            this.txt_totaldata.TabIndex = 38;
-            this.txt_totaldata.Text = "0";
-            this.txt_totaldata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txt_totaldata.UseMnemonic = false;
-            this.txt_totaldata.UseWaitCursor = true;
-            this.txt_totaldata.TextChanged += new System.EventHandler(this.txt_total_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(242, 299);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 45);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "اجمالى الفاتورة";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(280, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 45);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "المدفوع";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.BackColor = System.Drawing.Color.Moccasin;
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.edt_code);
-            this.groupBox1.Controls.Add(this.edt_cus);
-            this.groupBox1.Controls.Add(this.التاريخ);
-            this.groupBox1.Controls.Add(this.edt_date);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btn_delete);
-            this.groupBox1.Controls.Add(this.btn_edit);
-            this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.edt_qt);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.edt_sell);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.lb_titelpage);
-            this.groupBox1.Controls.Add(this.edt_name);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(906, 88);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(452, 451);
-            this.groupBox1.TabIndex = 37;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "معلومات البيع";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Cairo", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(330, 124);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(76, 43);
-            this.label18.TabIndex = 72;
-            this.label18.Text = "الكود";
-            // 
-            // edt_code
-            // 
-            this.edt_code.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.edt_code.BackColor = System.Drawing.Color.DimGray;
-            this.edt_code.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_code.ForeColor = System.Drawing.Color.Red;
-            this.edt_code.Location = new System.Drawing.Point(34, 136);
-            this.edt_code.Name = "edt_code";
-            this.edt_code.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edt_code.Size = new System.Drawing.Size(242, 31);
-            this.edt_code.TabIndex = 71;
-            this.edt_code.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.edt_code.TextChanged += new System.EventHandler(this.edt_code_TextChanged);
-            // 
-            // edt_cus
-            // 
-            this.edt_cus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.edt_cus.BackColor = System.Drawing.Color.Gold;
-            this.edt_cus.Enabled = false;
-            this.edt_cus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_cus.Location = new System.Drawing.Point(34, 41);
-            this.edt_cus.Name = "edt_cus";
-            this.edt_cus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edt_cus.Size = new System.Drawing.Size(242, 29);
-            this.edt_cus.TabIndex = 54;
-            this.edt_cus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // التاريخ
-            // 
-            this.التاريخ.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.التاريخ.AutoSize = true;
-            this.التاريخ.BackColor = System.Drawing.Color.Transparent;
-            this.التاريخ.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.التاريخ.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.التاريخ.Location = new System.Drawing.Point(330, 320);
-            this.التاريخ.Name = "التاريخ";
-            this.التاريخ.Size = new System.Drawing.Size(83, 45);
-            this.التاريخ.TabIndex = 52;
-            this.التاريخ.Text = "التاريخ";
-            // 
-            // edt_date
-            // 
-            this.edt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_date.Location = new System.Drawing.Point(34, 331);
-            this.edt_date.Name = "edt_date";
-            this.edt_date.Size = new System.Drawing.Size(242, 29);
-            this.edt_date.TabIndex = 53;
-            this.edt_date.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(34, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(242, 29);
-            this.textBox1.TabIndex = 45;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(296, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 45);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "اسم القائمة";
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Appearance.Options.UseFont = true;
-            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(6, 377);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(137, 56);
-            this.btn_delete.TabIndex = 43;
-            this.btn_delete.Text = "حذف";
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Appearance.Options.UseFont = true;
-            this.btn_edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.ImageOptions.Image")));
-            this.btn_edit.Location = new System.Drawing.Point(167, 377);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(137, 56);
-            this.btn_edit.TabIndex = 42;
-            this.btn_edit.Text = "تعديل";
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_add.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Appearance.Options.UseFont = true;
-            this.btn_add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.ImageOptions.Image")));
-            this.btn_add.Location = new System.Drawing.Point(322, 377);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(127, 56);
-            this.btn_add.TabIndex = 40;
-            this.btn_add.Text = "اضافة ";
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click_1);
-            // 
-            // edt_qt
-            // 
-            this.edt_qt.EditValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.edt_qt.Location = new System.Drawing.Point(34, 282);
-            this.edt_qt.Name = "edt_qt";
-            this.edt_qt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_qt.Properties.Appearance.Options.UseFont = true;
-            this.edt_qt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.edt_qt.Size = new System.Drawing.Size(242, 30);
-            this.edt_qt.TabIndex = 38;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(314, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 45);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "الطاولة";
-            // 
-            // edt_sell
-            // 
-            this.edt_sell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.edt_sell.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_sell.Location = new System.Drawing.Point(34, 234);
-            this.edt_sell.Name = "edt_sell";
-            this.edt_sell.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edt_sell.Size = new System.Drawing.Size(242, 29);
-            this.edt_sell.TabIndex = 36;
-            this.edt_sell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.edt_sell.TextChanged += new System.EventHandler(this.edt_sell_TextChanged_1);
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(323, 272);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 45);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "الكمية";
-            // 
-            // lb_titelpage
-            // 
-            this.lb_titelpage.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_titelpage.AutoSize = true;
-            this.lb_titelpage.BackColor = System.Drawing.Color.Transparent;
-            this.lb_titelpage.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_titelpage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lb_titelpage.Location = new System.Drawing.Point(302, 176);
-            this.lb_titelpage.Name = "lb_titelpage";
-            this.lb_titelpage.Size = new System.Drawing.Size(138, 45);
-            this.lb_titelpage.TabIndex = 35;
-            this.lb_titelpage.Text = "اسم المادة";
-            // 
-            // edt_name
-            // 
-            this.edt_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.edt_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.edt_name.BackColor = System.Drawing.Color.Lime;
-            this.edt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_name.FormattingEnabled = true;
-            this.edt_name.Location = new System.Drawing.Point(34, 89);
-            this.edt_name.Name = "edt_name";
-            this.edt_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edt_name.Size = new System.Drawing.Size(242, 28);
-            this.edt_name.TabIndex = 41;
-            this.edt_name.SelectedIndexChanged += new System.EventHandler(this.edt_name_SelectedIndexChanged_1);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(310, 224);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 45);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "سعر البيع";
-            // 
-            // totall_buy
-            // 
-            this.totall_buy.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.totall_buy.AutoSize = true;
-            this.totall_buy.BackColor = System.Drawing.Color.Transparent;
-            this.totall_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totall_buy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.totall_buy.Location = new System.Drawing.Point(1103, 503);
-            this.totall_buy.Name = "totall_buy";
-            this.totall_buy.Size = new System.Drawing.Size(40, 42);
-            this.totall_buy.TabIndex = 36;
-            this.totall_buy.Text = "0";
-            this.totall_buy.Visible = false;
-            // 
-            // tot_buy
-            // 
-            this.tot_buy.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tot_buy.AutoSize = true;
-            this.tot_buy.BackColor = System.Drawing.Color.Transparent;
-            this.tot_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tot_buy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tot_buy.Location = new System.Drawing.Point(1201, 503);
-            this.tot_buy.Name = "tot_buy";
-            this.tot_buy.Size = new System.Drawing.Size(40, 42);
-            this.tot_buy.TabIndex = 35;
-            this.tot_buy.Text = "0";
-            this.tot_buy.Visible = false;
-            // 
-            // edt_buy
-            // 
-            this.edt_buy.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.edt_buy.AutoSize = true;
-            this.edt_buy.BackColor = System.Drawing.Color.Transparent;
-            this.edt_buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_buy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.edt_buy.Location = new System.Drawing.Point(1296, 499);
-            this.edt_buy.Name = "edt_buy";
-            this.edt_buy.Size = new System.Drawing.Size(40, 42);
-            this.edt_buy.TabIndex = 34;
-            this.edt_buy.Text = "0";
-            this.edt_buy.Visible = false;
-            // 
-            // id_invioce
-            // 
-            this.id_invioce.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.id_invioce.BackColor = System.Drawing.Color.Transparent;
-            this.id_invioce.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_invioce.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_invioce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.id_invioce.Location = new System.Drawing.Point(556, 27);
-            this.id_invioce.Name = "id_invioce";
-            this.id_invioce.Size = new System.Drawing.Size(265, 29);
-            this.id_invioce.TabIndex = 33;
-            this.id_invioce.Text = "0";
-            this.id_invioce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_id
-            // 
-            this.txt_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_id.BackColor = System.Drawing.Color.Transparent;
-            this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txt_id.Location = new System.Drawing.Point(251, 37);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(265, 29);
-            this.txt_id.TabIndex = 32;
-            this.txt_id.Text = "1";
-            this.txt_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txt_id.Visible = false;
-            this.txt_id.Click += new System.EventHandler(this.txt_id_Click);
-            // 
-            // datesave
-            // 
-            this.datesave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.datesave.AutoSize = true;
-            this.datesave.BackColor = System.Drawing.Color.Transparent;
-            this.datesave.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datesave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.datesave.Location = new System.Drawing.Point(347, 503);
-            this.datesave.Name = "datesave";
-            this.datesave.Size = new System.Drawing.Size(40, 42);
-            this.datesave.TabIndex = 27;
-            this.datesave.Text = "0";
-            this.datesave.Visible = false;
-            // 
-            // chack
-            // 
-            this.chack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.chack.AutoSize = true;
-            this.chack.BackColor = System.Drawing.Color.Transparent;
-            this.chack.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.chack.Location = new System.Drawing.Point(393, 490);
-            this.chack.Name = "chack";
-            this.chack.Size = new System.Drawing.Size(40, 42);
-            this.chack.TabIndex = 26;
-            this.chack.Text = "0";
-            this.chack.Visible = false;
-            // 
-            // qts_qt
-            // 
-            this.qts_qt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.qts_qt.AutoSize = true;
-            this.qts_qt.BackColor = System.Drawing.Color.Transparent;
-            this.qts_qt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qts_qt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.qts_qt.Location = new System.Drawing.Point(766, 499);
-            this.qts_qt.Name = "qts_qt";
-            this.qts_qt.Size = new System.Drawing.Size(40, 42);
-            this.qts_qt.TabIndex = 24;
-            this.qts_qt.Text = "0";
-            this.qts_qt.Visible = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dataGridView1.Location = new System.Drawing.Point(699, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1370, 158);
+            this.dataGridView1.Size = new System.Drawing.Size(671, 382);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cell);
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupControl3.Appearance.BorderColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Warning;
+            this.groupControl3.Appearance.Options.UseBackColor = true;
+            this.groupControl3.Appearance.Options.UseBorderColor = true;
+            this.groupControl3.AppearanceCaption.BackColor = System.Drawing.Color.White;
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl3.AppearanceCaption.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupControl3.AppearanceCaption.Options.UseBackColor = true;
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl3.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl3.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.groupControl3.Controls.Add(this.panel3);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl3.Location = new System.Drawing.Point(0, 0);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupControl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupControl3.Size = new System.Drawing.Size(699, 382);
+            this.groupControl3.TabIndex = 47;
+            this.groupControl3.Text = "معلومات البيع";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.groupControl1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(6, 44);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(687, 332);
+            this.panel3.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.gridControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(687, 135);
+            this.panel2.TabIndex = 73;
             // 
             // frm_sell_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 709);
+            this.ClientSize = new System.Drawing.Size(1370, 698);
+            this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Red;
@@ -1095,23 +1113,27 @@ namespace el_shabander.pl
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_sell_add_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_qt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edt_qt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1129,7 +1151,6 @@ namespace el_shabander.pl
         public System.Windows.Forms.Label tot_buy;
         public System.Windows.Forms.Label edt_buy;
         public System.Windows.Forms.Label totall_buy;
-        private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox save;
         private System.Windows.Forms.Label label19;
         public DevExpress.XtraEditors.SimpleButton btn_delete;
@@ -1142,7 +1163,6 @@ namespace el_shabander.pl
         private System.Windows.Forms.Label lb_titelpage;
         public System.Windows.Forms.ComboBox edt_name;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label17;
         public DevExpress.XtraEditors.SimpleButton btn_save;
@@ -1171,14 +1191,14 @@ namespace el_shabander.pl
         private DevExpress.XtraEditors.GroupControl groupControl2;
         public System.Windows.Forms.ComboBox edt_table;
         public DevExpress.XtraEditors.SimpleButton btn_ChangeTable;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
-        public DevExpress.XtraEditors.SimpleButton btn_print_ch;
-        public DevExpress.XtraEditors.SimpleButton btn_print_prc;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.TextBox edt_code;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        public System.Windows.Forms.TextBox edt_cusname;
+        public DevExpress.XtraEditors.SimpleButton btn_pick_from_queue;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

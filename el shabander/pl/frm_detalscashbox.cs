@@ -15,13 +15,13 @@ namespace el_shabander.pl
 {
     public partial class frm_detalscashbox : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
       
         bl.methods methods = new bl.methods();
         bl.send send = new bl.send();
         toast toast = new toast();
         tb_cus tb_Cus = new tb_cus();
-        tb_sell_table tb_Sell_Table = new tb_sell_table();
+        tb_appointment tb_appointment = new tb_appointment();
         tb_safe tb_Safe = new tb_safe();
         tb_user tb_User = new tb_user();
             
@@ -39,7 +39,7 @@ namespace el_shabander.pl
 
             
 
-            /*el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            /*el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.tb_OperationLog.LoadAsync().ContinueWith(loadTask =>
             {
@@ -58,7 +58,7 @@ namespace el_shabander.pl
         public void updata_data()
         {
 
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             List<tb_OperationLog> data = db.tb_OperationLog.Where(x => x.SessionID == id).ToList(); // جلب البيانات
             data.Reverse();
             gridControl1.DataSource = data;

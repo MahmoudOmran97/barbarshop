@@ -14,7 +14,7 @@ namespace el_shabander.pl
 {
     public partial class frm_supp : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_supp tB_supp = new tb_supp();
         bl.methods methods = new bl.methods();
         bl.send send = new bl.send();
@@ -26,7 +26,7 @@ namespace el_shabander.pl
         {
             InitializeComponent();
             
-            el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.tb_supp.LoadAsync().ContinueWith(loadTask =>
             {
@@ -116,7 +116,7 @@ namespace el_shabander.pl
 
         public void updata_data()
         {
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             gridControl1.DataSource = db.tb_supp.ToList();
         }
 

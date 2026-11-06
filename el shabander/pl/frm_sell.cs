@@ -13,12 +13,12 @@ namespace el_shabander.pl
 {
     public partial class frm_sell : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
-        tb_sell_table tb_sell_table = new tb_sell_table();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
+        tb_appointment tb_appointment = new tb_appointment();
         bl.methods methods = new bl.methods();
         toast toast = new toast();
         tb_cus tb_Cus = new tb_cus();
-        tb_order_sell_table tb_order_sell_table = new tb_order_sell_table();
+        tb_order_appointment tb_order_appointment = new tb_order_appointment();
        // tb_stuk tb_Stuk = new tb_stuk();
         tb_safe tb_Safe = new tb_safe();
         int id;
@@ -28,15 +28,15 @@ namespace el_shabander.pl
 
 
            
-            el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-            dbContext.tb_sell_table.LoadAsync().ContinueWith(loadTask =>
+            dbContext.tb_appointment.LoadAsync().ContinueWith(loadTask =>
             {
-               /* List<tb_sell_table> data = db.tb_sell_table.ToList(); // جلب البيانات
+               /* List<tb_appointment> data = db.tb_appointment.ToList(); // جلب البيانات
                 data.Reverse();
                 gridControl1.DataSource = data;*/
                 // Bind data to control when loading complete
-                gridControl1.DataSource = dbContext.tb_sell_table.Local.ToBindingList().Reverse();
+                gridControl1.DataSource = dbContext.tb_appointment.Local.ToBindingList().Reverse();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -53,7 +53,7 @@ namespace el_shabander.pl
         {
             updata_data();
         }
-        public List<tb_order_sell_table> listorder;
+        public List<tb_order_appointment> listorder;
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
@@ -67,12 +67,12 @@ namespace el_shabander.pl
                 var rs = MessageBox.Show("عملية حذف", "هل انت متاكد من هذة العملية", MessageBoxButtons.YesNo);
                 if (rs == DialogResult.Yes)
                 {
-                    tb_sell_table = db.tb_sell_table.Where(x => x.id == id).FirstOrDefault();
-                    db.Entry(tb_sell_table).State = EntityState.Deleted;
+                    tb_appointment = db.tb_appointment.Where(x => x.id == id).FirstOrDefault();
+                    db.Entry(tb_appointment).State = EntityState.Deleted;
 
                     db.SaveChanges();
 
-                    listorder = db.tb_order_sell_table.Where(x => x.sell_id ==tb_sell_table.id).ToList();
+                    listorder = db.tb_order_appointment.Where(x => x.sell_id ==tb_appointment.id).ToList();
                     for (int i = 0; i < listorder.Count; i++)
                     {
                     
@@ -101,14 +101,14 @@ namespace el_shabander.pl
 
 
                      }
-                    tb_Cus = db.tb_cus.Where(x => x.cus_name == tb_sell_table.sell_cus).FirstOrDefault();
-                  // tb_Cus.total_price += tb_sell_table.cus_price;
-                  //  tb_Cus.total_price -= tb_sell_table.total_sell-tb_sell_table.pay;
+                    tb_Cus = db.tb_cus.Where(x => x.cus_name == tb_appointment.sell_cus).FirstOrDefault();
+                  // tb_Cus.total_price += tb_appointment.cus_price;
+                  //  tb_Cus.total_price -= tb_appointment.total_sell-tb_appointment.pay;
                    
                     db.Entry(tb_Cus).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                    tb_Safe = db.tb_safe.Where(x => x.safe_name ==tb_sell_table.safe).FirstOrDefault();
-                    tb_Safe.safe_count -= tb_sell_table.pay;
+                    tb_Safe = db.tb_safe.Where(x => x.safe_name ==tb_appointment.safe).FirstOrDefault();
+                    tb_Safe.safe_count -= tb_appointment.pay;
                     db.Entry(tb_Safe).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     toast.txt_caption.Text = "تم الحذف بنجاح";
@@ -127,8 +127,8 @@ namespace el_shabander.pl
 
         private void updata_data()
         {
-            db = new DB_restoraintEntities();
-            List<tb_sell_table> data = db.tb_sell_table.ToList(); // جلب البيانات
+            db = new DB_BarbershopEntities();
+            List<tb_appointment> data = db.tb_appointment.ToList(); // جلب البيانات
             data.Reverse();
             gridControl1.DataSource = data;
         }
@@ -143,7 +143,7 @@ namespace el_shabander.pl
             {
                 id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id"));
 
-              //  frm_supp_Add.Invoices = db.tb_sell_table.ToList();
+              //  frm_supp_Add.Invoices = db.tb_appointment.ToList();
                 frm_supp_Add.CurrentInvoiceIndex = frm_supp_Add.Invoices.FindIndex(x => x.id == id);
 
                 if (frm_supp_Add.CurrentInvoiceIndex >= 0)
@@ -166,7 +166,7 @@ namespace el_shabander.pl
         private void btn_search_Click(object sender, EventArgs e)
         {
             var _search = edit_txt.Text;
-            List<tb_sell_table> data = db.tb_sell_table.Where(x =>  x.sell_cus.Contains(_search) || x.invocie_id.ToString().Contains(_search) ).ToList(); // جلب البيانات
+            List<tb_appointment> data = db.tb_appointment.Where(x =>  x.sell_cus.Contains(_search) || x.invocie_id.ToString().Contains(_search) ).ToList(); // جلب البيانات
             data.Reverse();
 
             gridControl1.DataSource = data;

@@ -16,7 +16,7 @@ namespace el_shabander.pl
 {
     public partial class frm_calc_earning : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_safe tb_Safe = new tb_safe();
         bl.methods methods = new bl.methods();
         tb_employees tb_Employees = new tb_employees();
@@ -112,7 +112,7 @@ namespace el_shabander.pl
             // جلب البيانات من الجداول الثلاثة بناءً على اسم العميل
 
 
-            var spends = db.tb_sell_table.ToList()
+            var spends = db.tb_appointment.ToList()
                .Where(x => x.sell_date.HasValue &&
                 x.sell_date.Value.Date >= fromDate &&
                 x.sell_date.Value.Date <= toDate)
@@ -124,7 +124,7 @@ namespace el_shabander.pl
                   PreviousBalance = x.pay,
                   PaidAmount = x.pay - x.pay
               }).ToList();
-            var spendsout = db.tb_sell_takeway.ToList()
+           /* var spendsout = db.tb_sell_takeway.ToList()
              .Where(x => x.sell_date.HasValue &&
                 x.sell_date.Value.Date >= fromDate &&
                 x.sell_date.Value.Date <= toDate)
@@ -135,7 +135,7 @@ namespace el_shabander.pl
                  name = x.sell_cus,
                  PreviousBalance = x.pay,
                  PaidAmount = x.pay - x.pay
-             }).ToList();
+             }).ToList();*/
             var spendsbuy = db.tb_buy.ToList()
              .Where(x => x.pur_dat.HasValue && x.pur_dat.Value.Date >= fromDate && x.pur_dat.Value.Date <= toDate)
              .Select(x => new
@@ -161,7 +161,7 @@ namespace el_shabander.pl
                }).ToList();
             // دمج البيانات في قائمة واحدة وترتيبها حسب التاريخ
             var combinedData = spends
-                 .Concat(spendsout)
+                
                  .Concat(spendsbuy)
                 .Concat(expense)
                  .OrderBy(x => x.Date)

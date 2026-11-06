@@ -13,7 +13,7 @@ namespace el_shabander.pl
 {
     public partial class frm_chack_hand : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_Shift tb_Shift = new tb_Shift();
        
         bl.methods methods = new bl.methods();

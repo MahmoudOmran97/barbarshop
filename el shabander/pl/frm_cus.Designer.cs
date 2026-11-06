@@ -59,7 +59,7 @@ namespace el_shabander.pl
             // tileViewColumn1
             // 
             this.tileViewColumn1.Caption = "tileViewColumn1";
-            this.tileViewColumn1.FieldName = "name_table";
+            this.tileViewColumn1.FieldName = "name_chair";
             this.tileViewColumn1.Name = "tileViewColumn1";
             this.tileViewColumn1.Visible = true;
             this.tileViewColumn1.VisibleIndex = 0;
@@ -86,7 +86,7 @@ namespace el_shabander.pl
             // gridControl1
             // 
             this.gridControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gridControl1.DataSource = typeof(el_shabander.tb_table);
+            this.gridControl1.DataSource = typeof(el_shabander.tb_chair);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.tileView1;
@@ -253,7 +253,7 @@ namespace el_shabander.pl
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(160, 55);
             this.btn_add.TabIndex = 1;
-            this.btn_add.Text = "اضافة طاولة";
+            this.btn_add.Text = "اضافة مقعد";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // frm_cus

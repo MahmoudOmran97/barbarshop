@@ -42,11 +42,11 @@ namespace el_shabander.pl
             this.pn_cat = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colstor_empname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colstor_spen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colstor_type = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colstor_dete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colstor_det = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
             this.tileView1 = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,7 +61,6 @@ namespace el_shabander.pl
             this.colsupp_phone = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colsupp_email = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colsupp_image = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pn_cat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -99,18 +98,17 @@ namespace el_shabander.pl
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.Appearance.Row.Options.UseTextOptions = true;
             this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colstor_empname,
             this.colstor_spen,
             this.colstor_type,
             this.colstor_dete,
@@ -119,55 +117,58 @@ namespace el_shabander.pl
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colstor_empname
-            // 
-            this.colstor_empname.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colstor_empname.AppearanceHeader.Options.UseFont = true;
-            this.colstor_empname.Caption = "اسم الموظف";
-            this.colstor_empname.FieldName = "stor_empname";
-            this.colstor_empname.Name = "colstor_empname";
-            this.colstor_empname.Visible = true;
-            this.colstor_empname.VisibleIndex = 0;
-            // 
             // colstor_spen
             // 
-            this.colstor_spen.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colstor_spen.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
             this.colstor_spen.AppearanceHeader.Options.UseFont = true;
             this.colstor_spen.Caption = "المبلغ المستلم";
             this.colstor_spen.FieldName = "stor_spen";
             this.colstor_spen.Name = "colstor_spen";
             this.colstor_spen.Visible = true;
             this.colstor_spen.VisibleIndex = 1;
+            this.colstor_spen.Width = 157;
             // 
             // colstor_type
             // 
-            this.colstor_type.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colstor_type.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
             this.colstor_type.AppearanceHeader.Options.UseFont = true;
             this.colstor_type.Caption = "نوع المصروفات";
             this.colstor_type.FieldName = "stor_type";
             this.colstor_type.Name = "colstor_type";
             this.colstor_type.Visible = true;
-            this.colstor_type.VisibleIndex = 2;
+            this.colstor_type.VisibleIndex = 0;
+            this.colstor_type.Width = 268;
             // 
             // colstor_dete
             // 
-            this.colstor_dete.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colstor_dete.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
             this.colstor_dete.AppearanceHeader.Options.UseFont = true;
             this.colstor_dete.Caption = "التاريخ";
             this.colstor_dete.FieldName = "stor_dete";
             this.colstor_dete.Name = "colstor_dete";
             this.colstor_dete.Visible = true;
-            this.colstor_dete.VisibleIndex = 3;
+            this.colstor_dete.VisibleIndex = 2;
+            this.colstor_dete.Width = 184;
             // 
             // colstor_det
             // 
-            this.colstor_det.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colstor_det.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
             this.colstor_det.AppearanceHeader.Options.UseFont = true;
             this.colstor_det.Caption = "ملاحظات";
             this.colstor_det.FieldName = "stor_det";
             this.colstor_det.Name = "colstor_det";
             this.colstor_det.Visible = true;
-            this.colstor_det.VisibleIndex = 4;
+            this.colstor_det.VisibleIndex = 3;
+            this.colstor_det.Width = 271;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "الكاشير";
+            this.gridColumn1.FieldName = "namecasher";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.Width = 221;
             // 
             // cardView1
             // 
@@ -345,14 +346,6 @@ namespace el_shabander.pl
             this.colsupp_image.Visible = true;
             this.colsupp_image.VisibleIndex = 2;
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "الكاشير";
-            this.gridColumn1.FieldName = "namecasher";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 5;
-            // 
             // frm_stor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,7 +388,6 @@ namespace el_shabander.pl
         private DevExpress.XtraGrid.Columns.TileViewColumn colsupp_email;
         private DevExpress.XtraGrid.Columns.TileViewColumn colsupp_image;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colstor_empname;
         private DevExpress.XtraGrid.Columns.GridColumn colstor_spen;
         private DevExpress.XtraGrid.Columns.GridColumn colstor_type;
         private DevExpress.XtraGrid.Columns.GridColumn colstor_dete;

@@ -13,10 +13,10 @@ namespace el_shabander
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_restoraintEntities : DbContext
+    public partial class DB_BarbershopEntities : DbContext
     {
-        public DB_restoraintEntities()
-            : base("name=DB_restoraintEntities")
+        public DB_BarbershopEntities()
+            : base("name=DB_BarbershopEntities")
         {
         }
     
@@ -25,32 +25,35 @@ namespace el_shabander
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AppSetting> AppSettings { get; set; }
+        public virtual DbSet<Notfication> Notfications { get; set; }
+        public virtual DbSet<sendmailcode> sendmailcodes { get; set; }
+        public virtual DbSet<Session> Sessions { get; set; }
+        public virtual DbSet<tb_appointment> tb_appointment { get; set; }
         public virtual DbSet<tb_buy> tb_buy { get; set; }
         public virtual DbSet<tb_cat> tb_cat { get; set; }
+        public virtual DbSet<tb_chair> tb_chair { get; set; }
         public virtual DbSet<tb_cus> tb_cus { get; set; }
         public virtual DbSet<tb_employees> tb_employees { get; set; }
+        public virtual DbSet<tb_location> tb_location { get; set; }
         public virtual DbSet<tb_main> tb_main { get; set; }
+        public virtual DbSet<tb_movement> tb_movement { get; set; }
+        public virtual DbSet<tb_OperationLog> tb_OperationLog { get; set; }
+        public virtual DbSet<tb_order_appointment> tb_order_appointment { get; set; }
         public virtual DbSet<tb_order_buy> tb_order_buy { get; set; }
-        public virtual DbSet<tb_order_sell_table> tb_order_sell_table { get; set; }
-        public virtual DbSet<tb_order_sell_takeway> tb_order_sell_takeway { get; set; }
-        public virtual DbSet<tb_product> tb_product { get; set; }
+        public virtual DbSet<tb_order_cat> tb_order_cat { get; set; }
         public virtual DbSet<tb_safe> tb_safe { get; set; }
-        public virtual DbSet<tb_sell_table> tb_sell_table { get; set; }
-        public virtual DbSet<tb_sell_takeway> tb_sell_takeway { get; set; }
+        public virtual DbSet<tb_service> tb_service { get; set; }
+        public virtual DbSet<tb_Shift> tb_Shift { get; set; }
         public virtual DbSet<tb_spend_cus> tb_spend_cus { get; set; }
         public virtual DbSet<tb_stor> tb_stor { get; set; }
         public virtual DbSet<tb_supp> tb_supp { get; set; }
-        public virtual DbSet<tb_table> tb_table { get; set; }
         public virtual DbSet<tb_user> tb_user { get; set; }
         public virtual DbSet<tb_spend_supp> tb_spend_supp { get; set; }
-        public virtual DbSet<tb_movement> tb_movement { get; set; }
-        public virtual DbSet<Notfication> Notfications { get; set; }
-        public virtual DbSet<tb_order_cat> tb_order_cat { get; set; }
-        public virtual DbSet<AppSetting> AppSettings { get; set; }
-        public virtual DbSet<Session> Sessions { get; set; }
-        public virtual DbSet<tb_OperationLog> tb_OperationLog { get; set; }
-        public virtual DbSet<tb_Shift> tb_Shift { get; set; }
-        public virtual DbSet<tb_location> tb_location { get; set; }
-        public virtual DbSet<sendmailcode> sendmailcodes { get; set; }
+        public virtual DbSet<tb_booking> tb_booking { get; set; }
+        public virtual DbSet<Advance> Advances { get; set; }
+        public virtual DbSet<Attendance> Attendances { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Salary> Salaries { get; set; }
     }
 }

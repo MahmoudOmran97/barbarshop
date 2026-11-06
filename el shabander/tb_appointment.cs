@@ -12,7 +12,7 @@ namespace el_shabander
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_sell_table
+    public partial class tb_appointment
     {
         public int id { get; set; }
         public string sell_cus { get; set; }
@@ -22,11 +22,18 @@ namespace el_shabander
         public Nullable<double> stay { get; set; }
         public Nullable<double> total_price { get; set; }
         public Nullable<int> cus_id { get; set; }
-        public string safe { get; set; }
         public Nullable<double> sell_add { get; set; }
         public Nullable<double> cut { get; set; }
         public Nullable<int> invocie_id { get; set; }
         public Nullable<double> total_earnings { get; set; }
+        public Nullable<double> cus_price { get; set; }
+        public string safe { get; set; }
         public string namecasher { get; set; }
+        public Nullable<int> barber_id { get; set; }
+        public string barber_name { get; set; }
+        public string app_status { get; set; }
+        public string app_time { get; set; }
+        public string cus_name { get; set; }
+        public Nullable<System.DateTime> LastModified { get; set; }
     }
 }

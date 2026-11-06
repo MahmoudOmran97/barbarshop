@@ -13,7 +13,7 @@ namespace el_shabander.pl
 {
     public partial class frm_addmain : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_main tb_main = new tb_main();
         bl.methods methods = new bl.methods();
         tb_employees tb_Employees = new tb_employees();

@@ -30,24 +30,10 @@ namespace el_shabander.epl
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(toast));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_caption = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -64,9 +50,9 @@ namespace el_shabander.epl
             this.txt_caption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_caption.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_caption.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_caption.Location = new System.Drawing.Point(100, 0);
+            this.txt_caption.Location = new System.Drawing.Point(0, 0);
             this.txt_caption.Name = "txt_caption";
-            this.txt_caption.Size = new System.Drawing.Size(390, 78);
+            this.txt_caption.Size = new System.Drawing.Size(490, 78);
             this.txt_caption.TabIndex = 8;
             this.txt_caption.Text = "الرسالة";
             this.txt_caption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,13 +70,11 @@ namespace el_shabander.epl
             this.ClientSize = new System.Drawing.Size(515, 78);
             this.Controls.Add(this.txt_caption);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "toast";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,8 +83,6 @@ namespace el_shabander.epl
        // private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label txt_capthion;
         public System.Windows.Forms.PictureBox pic_toast;
-      //  private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
        // private System.Windows.Forms.Label lb_titelpage;
         private System.Windows.Forms.Timer timer2;

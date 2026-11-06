@@ -13,14 +13,14 @@ namespace el_shabander.pl
 {
     public partial class frm_stor : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_stor tb_Stor = new tb_stor();
         tb_safe tb_Safe = new tb_safe();
         bl.send send = new bl.send();
         Notfication notfication = new Notfication();
         bl.methods methods = new bl.methods();
         toast toast = new toast();
-        tb_employees tb_Employees = new tb_employees();
+      //  tb_employees tb_Employees = new tb_employees();
         tb_OperationLog tb_OperationLog = new tb_OperationLog();
         int id;
         public frm_stor()
@@ -31,7 +31,7 @@ namespace el_shabander.pl
 
 
           
-            el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.tb_stor.LoadAsync().ContinueWith(loadTask =>
             {
@@ -45,12 +45,20 @@ namespace el_shabander.pl
         {
             main user = (main)Application.OpenForms["main"];
             string casherName = user?.la_username.Text;
-            var openSession = db.Sessions.FirstOrDefault(x => x.namecasher == casherName && x.IsClosed == true);
+
+            var openSession = db.Sessions
+                .FirstOrDefault(x => x.namecasher == casherName && x.IsClosed == true);
+
             if (openSession == null)
             {
                 MessageBox.Show("يرجى فتح الكاش بوكس أولاً");
                 return;
             }
+
+            // ✅ التحقق من وجود موظفين
+           
+
+            // ✅ فتح الفورم
             pl.frm_stor_add frm_supp_Add = new frm_stor_add();
             frm_supp_Add.id = 0;
             frm_supp_Add.btn_add.Text = "اضافة";
@@ -90,24 +98,7 @@ namespace el_shabander.pl
                     tb_Safe.safe_count += tb_Stor.stor_spen;
                     db.Entry(tb_Safe).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                    if (tb_Stor.stor_type == "مرتبات")
-                    {
-                        tb_Employees = db.tb_employees.Where(x => x.emp_name == tb_Stor.stor_empname).FirstOrDefault();
-                        if (tb_Employees.emp_paysalers == 0)
-                        {
-                            tb_Employees.emp_paysalers = tb_Employees.emp_salers- tb_Stor.stor_spen;
-                            tb_Employees.emp_staysalers = tb_Employees.emp_salers- tb_Employees.emp_paysalers;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-                        else
-                        {
-                            tb_Employees.emp_staysalers += tb_Stor.stor_spen;
-                            tb_Employees.emp_paysalers -= tb_Stor.stor_spen;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-                    }
+                   
                     main user1 = (main)Application.OpenForms["main"];
                     string casherName1 = user1?.la_username.Text;
                     var openSession1 = db.Sessions.FirstOrDefault(x => x.namecasher == casherName1 && x.IsClosed == true);
@@ -154,7 +145,7 @@ namespace el_shabander.pl
 
         public void updata_data()
         {
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             List<tb_stor> data = db.tb_stor.ToList();// جلب البيانات
             data.Reverse();
             gridControl1.DataSource = data;
@@ -175,9 +166,9 @@ namespace el_shabander.pl
             tb_Stor = db.tb_stor.Where(x => x.id == id).FirstOrDefault();
             frm_supp_Add.edt_safe.DataSource = db.tb_safe.Select(x => x.safe_name).ToList();
 
-            frm_supp_Add.edt_name.DataSource = db.tb_employees.Select(x => x.emp_name).ToList();
+          //  frm_supp_Add.edt_name.DataSource = db.tb_employees.Select(x => x.emp_name).ToList();
 
-            frm_supp_Add.edt_name.Text = tb_Stor.stor_empname;
+          //  frm_supp_Add.edt_name.Text = tb_Stor.stor_empname;
             frm_supp_Add.edt_type.Text = tb_Stor.stor_type;
             frm_supp_Add.edt_spen.Text = tb_Stor.stor_spen.ToString();
 

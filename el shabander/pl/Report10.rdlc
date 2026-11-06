@@ -88,7 +88,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>اسم المنتج</Value>
+                                  <Value>اسم الخدمة</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>

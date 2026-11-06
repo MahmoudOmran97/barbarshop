@@ -14,6 +14,7 @@ using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 using Timer = System.Windows.Forms.Timer;
 using System.Media;
 using DevExpress.LookAndFeel;
+using System.Data.Entity;
 
 namespace el_shabander
 {
@@ -33,13 +34,20 @@ namespace el_shabander
         pl.frm_safe_as frm_safe_as= new pl.frm_safe_as();
         pl.frm_shift_motion frm_Shift_Motion = new pl.frm_shift_motion();
         pl.frm_cashbox cashbox = new pl.frm_cashbox();
+        pl.frm_booking frm_booking = new pl.frm_booking();
+        pl.Attendanceemp Attendanceemp = new pl.Attendanceemp();
+        pl.frm_Salaries frm_Salaries = new pl.frm_Salaries();
         private  DateTime trialStartDate;
         private Timer notificationTimer;
         pl.frm_employees frm_Employees = new pl.frm_employees();
         tb_user tB_user = new tb_user();
-       // pl.frm_login login = new pl.frm_login();
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        int lastNotificationId = 0;
+        // pl.frm_login login = new pl.frm_login();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         private System.Timers.Timer emailTimer;
+        private readonly ApiSyncService _syncService = new ApiSyncService();
+        private DateTime _lastSyncTime = DateTime.Now.AddMinutes(-11);
+        private System.Threading.Timer _syncTimer;
         public main()
         {
             InitializeComponent();
@@ -61,7 +69,48 @@ namespace el_shabander
             notificationTimer.Start();
 
         }
+        // ========== Helper: حسابات tb_booking ==========
+        private void LoadBookingStats()
+        {
+            DateTime today = DateTime.Today;
 
+            // عدد العملاء الفريدين (بدون تكرار برقم التليفون)
+            int uniqueCustomers = db.tb_booking
+                .Select(x => x.cus_phone)
+                .Distinct()
+                .Count();
+
+            // حجوزات اليوم - انتظار
+            int todayWaiting = db.tb_booking
+                .Count(x => DbFunctions.TruncateTime(x.booking_date) == today
+                         && x.status == "انتظار");
+
+            // حجوزات اليوم - تم
+            int todayDone = db.tb_booking
+                .Count(x => DbFunctions.TruncateTime(x.booking_date) == today
+                         && x.status == "تم");
+
+            // ========== tileItem1 ==========
+            frm_home.tileItem1.Frames[2].Elements[1].Text = uniqueCustomers.ToString();
+
+            // ========== tileItem2 - الانتظار/تم اليوم ==========
+            frm_home.tileItem2.Frames[2].Elements[2].Text = $"{todayWaiting}";
+            frm_home.tileItem2.Frames[2].Elements[5].Text = $"{todayDone}";
+
+            // ========== tileItem6 ==========
+            frm_home.tileItem6.Frames[3].Elements[2].Text = $"{todayWaiting}";
+            frm_home.tileItem6.Frames[3].Elements[4].Text = $"{todayDone}";
+
+            // ========== tileItem10 ==========
+            frm_home.tileItem10.Frames[0].Elements[2].Text = uniqueCustomers.ToString();
+
+            // ========== tileItem4 ==========
+            frm_home.tileItem4.Frames[3].Elements[2].Text = $"{todayWaiting}";
+            frm_home.tileItem4.Frames[3].Elements[5].Text = $"{todayDone}";
+
+            // ========== tileItem7 ==========
+            frm_home.tileItem7.Frames[2].Elements[2].Text = uniqueCustomers.ToString();
+        }
         private void main_Load(object sender, EventArgs e)
         {
             pn_cont.Controls.Clear();
@@ -69,41 +118,38 @@ namespace el_shabander
 
             frm_home.tileItem1.Frames[0].Elements[1].Text = db.tb_supp.Count().ToString();
             frm_home.tileItem1.Frames[1].Elements[1].Text = db.tb_employees.Count().ToString();
-            frm_home.tileItem1.Frames[2].Elements[1].Text = db.tb_cus.Count().ToString();
-            //pur
-            frm_home.tileItem2.Frames[0].Elements[2].Text = db.tb_table.Where(x => x.totall_price>0). Count().ToString();
-            frm_home.tileItem2.Frames[0].Elements[5].Text = db.tb_table.Where(x => x.totall_price == 0).Count().ToString();
+
+            frm_home.tileItem2.Frames[0].Elements[2].Text = db.tb_chair.Where(x => x.totall_price > 0).Count().ToString();
+            frm_home.tileItem2.Frames[0].Elements[5].Text = db.tb_chair.Where(x => x.totall_price == 0).Count().ToString();
             frm_home.tileItem2.Frames[1].Elements[2].Text = db.tb_buy.Count().ToString();
-            frm_home.tileItem2.Frames[2].Elements[2].Text = db.tb_cus.Where(x => x.cus_max > 0).Count().ToString();
-            frm_home.tileItem2.Frames[2].Elements[5].Text = db.tb_cus.Where(x => x.cus_max== 0).Count().ToString();
             frm_home.tileItem2.Frames[3].Elements[2].Text = db.tb_cat.Count().ToString();
 
-            //sell
             frm_home.tileItem6.Frames[2].Elements[2].Text = db.tb_buy.Count().ToString();
-            frm_home.tileItem6.Frames[0].Elements[2].Text = db.tb_table.Where(x => x.totall_price > 0).Count().ToString();
-            frm_home.tileItem6.Frames[0].Elements[4].Text = db.tb_table.Where(x => x.totall_price == 0).Count().ToString();
-            frm_home.tileItem6.Frames[3].Elements[2].Text = db.tb_cus.Where(x => x.cus_max > 0).Count().ToString();
-            frm_home.tileItem6.Frames[3].Elements[4].Text = db.tb_cus.Where(x => x.cus_max == 0).Count().ToString();
+            frm_home.tileItem6.Frames[0].Elements[2].Text = db.tb_chair.Where(x => x.totall_price > 0).Count().ToString();
+            frm_home.tileItem6.Frames[0].Elements[4].Text = db.tb_chair.Where(x => x.totall_price == 0).Count().ToString();
             frm_home.tileItem6.Frames[1].Elements[2].Text = db.tb_cat.Count().ToString();
-            //cus
+
             frm_home.tileItem10.Frames[1].Elements[2].Text = db.tb_supp.Count().ToString();
             frm_home.tileItem10.Frames[2].Elements[2].Text = db.tb_employees.Count().ToString();
-            frm_home.tileItem10.Frames[0].Elements[2].Text = db.tb_cus.Count().ToString();
-            //car
+
             frm_home.tileItem4.Frames[2].Elements[2].Text = db.tb_buy.Count().ToString();
-            frm_home.tileItem4.Frames[1].Elements[2].Text = db.tb_table.Where(x => x.totall_price > 0).Count().ToString();
-            frm_home.tileItem4.Frames[1].Elements[5].Text = db.tb_table.Where(x => x.totall_price == 0).Count().ToString();
-            frm_home.tileItem4.Frames[3].Elements[2].Text = db.tb_cus.Where(x => x.cus_max > 0).Count().ToString();
-            frm_home.tileItem4.Frames[3].Elements[5].Text = db.tb_cus.Where(x => x.cus_max == 0).Count().ToString();
+            frm_home.tileItem4.Frames[1].Elements[2].Text = db.tb_chair.Where(x => x.totall_price > 0).Count().ToString();
+            frm_home.tileItem4.Frames[1].Elements[5].Text = db.tb_chair.Where(x => x.totall_price == 0).Count().ToString();
             frm_home.tileItem4.Frames[0].Elements[2].Text = db.tb_cat.Count().ToString();
-            //driver
+
             frm_home.tileItem7.Frames[1].Elements[2].Text = db.tb_supp.Count().ToString();
             frm_home.tileItem7.Frames[0].Elements[2].Text = db.tb_employees.Count().ToString();
-            frm_home.tileItem7.Frames[2].Elements[2].Text = db.tb_cus.Count().ToString();
 
+            // ← استدعاء الدالة الجديدة
+            LoadBookingStats();
 
-
-
+            // ابدأ التايمر - كل 10 دقايق يبعت للسيرفر
+            _syncTimer = new System.Threading.Timer(
+                async _ => await SyncAllDataAsync(),
+                null,
+                TimeSpan.FromMinutes(1),   // استنى دقيقة الأول عشان البرنامج يقوم
+                TimeSpan.FromMinutes(1)   // كرر كل 10 دقايق
+            );
 
             lb_titelpage.Text = " EngineeCode ";
             StoreSerialNumber();
@@ -123,6 +169,10 @@ namespace el_shabander
                 simpleButton2.Visible = false;
                 btn_employees.Visible = false;
                 frm_report.tileItem8.Visible = false;
+                Attendanceemp.btn_close.Enabled = false;
+                Attendanceemp.btn_open.Enabled = false;
+                frm_Salaries.gridControl_Salaries.Enabled = false;
+                frm_Salaries.groupControl2.Enabled = false;
 
             }
 
@@ -136,37 +186,105 @@ namespace el_shabander
             CheckTrialExpiration(trialStartDate, la_trile);
 
         }
+
+        private async Task SyncAllDataAsync()
+        {
+            var syncFrom = Properties.Settings.Default.LastSyncTime;
+            if (syncFrom == DateTime.MinValue)
+                syncFrom = DateTime.Now.AddMinutes(-11);
+            try
+            {
+                using (var dbSync = new DB_BarbershopEntities())
+                {
+                    var today = DateTime.Today;
+
+
+
+                    var appointments = dbSync.tb_appointment
+                 .Where(x => x.invocie_id.HasValue && x.LastModified >= syncFrom)
+                 .ToList();
+
+                    if (appointments.Any())
+                        await _syncService.SyncAppointmentsAsync(appointments);
+
+
+                    var allAttendance = dbSync.Attendances
+    .Where(x => x.AttendDate.HasValue && x.EmployeeId.HasValue)
+    .ToList();
+
+                    if (allAttendance.Any())
+                        await _syncService.SyncAttendanceAsync(allAttendance);
+
+
+                  
+
+                    // ✅ بعت كل الـ IDs الموجودة محلياً — مش بس اليوم
+                    var allLocalInvoiceIds = dbSync.tb_appointment
+                        .Where(x => x.invocie_id.HasValue)
+                        .Select(x => x.invocie_id.Value)
+                        .ToList();
+
+                    var allLocalAttendanceIds = dbSync.Attendances
+                        .Where(x => x.EmployeeId.HasValue)
+                        .Select(x => x.EmployeeId.Value)
+                        .Distinct()
+                        .ToList();
+
+                    await _syncService.SyncDeletedAppointmentsAsync(allLocalInvoiceIds);
+                    await _syncService.SyncDeletedAttendanceAsync(allLocalAttendanceIds);
+                }
+
+                if (DateTime.Now.Hour == 0 && DateTime.Now.Minute < 3)
+                    await _syncService.CleanupOldDataAsync();
+                _lastSyncTime = DateTime.Now;
+                Properties.Settings.Default.LastSyncTime = _lastSyncTime;
+                Properties.Settings.Default.Save();
+                this.Invoke((Action)(() =>
+                {
+                    lb_titelpage.Text = $"آخر مزامنة: {DateTime.Now:hh:mm tt}";
+                  
+                }));
+            }
+            catch (Exception ex)
+            {
+                this.Invoke((Action)(() =>
+                {
+                    lb_titelpage.Text = $"❌ خطأ: {ex.Message}";
+                }));
+            }
+        }
         private void NotificationTimer_Tick(object sender, EventArgs e)
         {
             CheckForNewNotifications();
         }
         private void CheckForNewNotifications()
         {
-            DateTime oneSecondAgo = DateTime.Now.AddSeconds(-1); // إشعارات آخر ثانية
-            bool hasNotifications = db.Notfications.Any(n => n.CreatedAt >= oneSecondAgo); // تحقق إذا كان هناك إشعارات جديدة في آخر ثانية
-
-            if (hasNotifications)
+            using (var dbNew = new DB_BarbershopEntities()) // يفضل context جديد عشان البيانات تكون فريش
             {
-                var notifications = db.Notfications
-                              .Where(n => n.CreatedAt >= oneSecondAgo) // استرجاع الإشعارات الجديدة في آخر ثانية
-                              .ToList();
+                // هات الإشعارات اللي الـ ID بتاعها أكبر من آخر واحد شفناه
+                var newNotifications = dbNew.Notfications
+                                            .Where(n => n.id > lastNotificationId)
+                                            .ToList();
 
-                if (notifications.Count > 0)
+                if (newNotifications.Count > 0)
                 {
-                    // التأكد من إضافة العدد مرة واحدة فقط
-                    int currentCount = int.Parse(lblNotificationCount.Text); // احصل على القيمة الحالية للعداد
-                    lblNotificationCount.Text = (currentCount + 1).ToString(); // أضف 1 فقط إذا وُجد إشعار جديد
-                    if (!lblNotificationCount.Visible)
+                    // 1. تحديث آخر ID عشان المرة الجاية ما يكررش نفس الإشعارات
+                    lastNotificationId = newNotifications.Max(n => n.id);
+                    foreach (var notif in newNotifications)
                     {
-                        lblNotificationCount.Visible = true;
+                        _ = _syncService.SendNotificationAsync(notif.notfication1);
                     }
+                    // 2. تحديث العداد (نزود عدد الإشعارات الجديدة اللي جت فعلاً)
+                    int currentCount = 0;
+                    int.TryParse(lblNotificationCount.Text, out currentCount);
 
+                    lblNotificationCount.Text = (currentCount + newNotifications.Count).ToString();
+                    lblNotificationCount.Visible = true;
+
+                    // 3. تشغيل الصوت
                     PlayNotificationSound();
                 }
             }
-
-
-
         }
         private void PlayNotificationSound()
         {
@@ -185,16 +303,6 @@ namespace el_shabander
             }
         }
         private void pn_cont_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void simpleButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton3_Click(object sender, EventArgs e)
         {
 
         }
@@ -238,41 +346,36 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_home.tileControl1);
+            db = new DB_BarbershopEntities();
+
             frm_home.tileItem1.Frames[0].Elements[1].Text = db.tb_supp.Count().ToString();
             frm_home.tileItem1.Frames[1].Elements[1].Text = db.tb_employees.Count().ToString();
-            frm_home.tileItem1.Frames[2].Elements[1].Text = db.tb_cus.Count().ToString();
-            //pur
-            frm_home.tileItem2.Frames[0].Elements[2].Text = db.tb_table.Where(x => x.totall_price > 0).Count().ToString();
-            frm_home.tileItem2.Frames[0].Elements[5].Text = db.tb_table.Where(x => x.totall_price == 0).Count().ToString();
+
+            frm_home.tileItem2.Frames[0].Elements[2].Text = db.tb_chair.Where(x => x.totall_price > 0).Count().ToString();
+            frm_home.tileItem2.Frames[0].Elements[5].Text = db.tb_chair.Where(x => x.totall_price == 0).Count().ToString();
             frm_home.tileItem2.Frames[1].Elements[2].Text = db.tb_buy.Count().ToString();
-            frm_home.tileItem2.Frames[2].Elements[2].Text = db.tb_cus.Where(x => x.cus_max > 0).Count().ToString();
-            frm_home.tileItem2.Frames[2].Elements[5].Text = db.tb_cus.Where(x => x.cus_max == 0).Count().ToString();
             frm_home.tileItem2.Frames[3].Elements[2].Text = db.tb_cat.Count().ToString();
 
-            //sell
             frm_home.tileItem6.Frames[2].Elements[2].Text = db.tb_buy.Count().ToString();
-            frm_home.tileItem6.Frames[0].Elements[2].Text = db.tb_table.Where(x => x.totall_price > 0).Count().ToString();
-            frm_home.tileItem6.Frames[0].Elements[4].Text = db.tb_table.Where(x => x.totall_price == 0).Count().ToString();
-            frm_home.tileItem6.Frames[3].Elements[2].Text = db.tb_cus.Where(x => x.cus_max > 0).Count().ToString();
-            frm_home.tileItem6.Frames[3].Elements[4].Text = db.tb_cus.Where(x => x.cus_max == 0).Count().ToString();
+            frm_home.tileItem6.Frames[0].Elements[2].Text = db.tb_chair.Where(x => x.totall_price > 0).Count().ToString();
+            frm_home.tileItem6.Frames[0].Elements[4].Text = db.tb_chair.Where(x => x.totall_price == 0).Count().ToString();
             frm_home.tileItem6.Frames[1].Elements[2].Text = db.tb_cat.Count().ToString();
-            //cus
+
             frm_home.tileItem10.Frames[1].Elements[2].Text = db.tb_supp.Count().ToString();
             frm_home.tileItem10.Frames[2].Elements[2].Text = db.tb_employees.Count().ToString();
-            frm_home.tileItem10.Frames[0].Elements[2].Text = db.tb_cus.Count().ToString();
-            //car
+
             frm_home.tileItem4.Frames[2].Elements[2].Text = db.tb_buy.Count().ToString();
-            frm_home.tileItem4.Frames[1].Elements[2].Text = db.tb_table.Where(x => x.totall_price > 0).Count().ToString();
-            frm_home.tileItem4.Frames[1].Elements[5].Text = db.tb_table.Where(x => x.totall_price == 0).Count().ToString();
-            frm_home.tileItem4.Frames[3].Elements[2].Text = db.tb_cus.Where(x => x.cus_max > 0).Count().ToString();
-            frm_home.tileItem4.Frames[3].Elements[5].Text = db.tb_cus.Where(x => x.cus_max == 0).Count().ToString();
+            frm_home.tileItem4.Frames[1].Elements[2].Text = db.tb_chair.Where(x => x.totall_price > 0).Count().ToString();
+            frm_home.tileItem4.Frames[1].Elements[5].Text = db.tb_chair.Where(x => x.totall_price == 0).Count().ToString();
             frm_home.tileItem4.Frames[0].Elements[2].Text = db.tb_cat.Count().ToString();
-            //driver
+
             frm_home.tileItem7.Frames[1].Elements[2].Text = db.tb_supp.Count().ToString();
             frm_home.tileItem7.Frames[0].Elements[2].Text = db.tb_employees.Count().ToString();
-            frm_home.tileItem7.Frames[2].Elements[2].Text = db.tb_cus.Count().ToString();
 
-            db = new DB_restoraintEntities();
+            // ← استدعاء الدالة الجديدة
+            LoadBookingStats();
+
+           
             lb_titelpage.Text = " EngineeCode ";
         }
 
@@ -280,7 +383,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_Cat.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_Cat.updata_data();
             lb_titelpage.Text = "الاصناف";
            frm_Cat.gridControl1.DataSource = db.tb_cat.ToList();
@@ -322,7 +425,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_supp.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_supp.updata_data();
             lb_titelpage.Text = "الموردين";
         }
@@ -331,7 +434,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_Pur.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_Pur.updata_data();
             lb_titelpage.Text = "المشتريات";
         }
@@ -340,7 +443,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_cus.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_cus.updata_data();
             lb_titelpage.Text = "الصاله";
         }
@@ -348,17 +451,17 @@ namespace el_shabander
         private void simpleButton11_Click(object sender, EventArgs e)
         {
             pn_cont.Controls.Clear();
-            pn_cont.Controls.Add(frm_cus_out.pn_cat);
-            db = new DB_restoraintEntities();
-            frm_cus_out.updata_data();
-            lb_titelpage.Text = "تيك اوى";
+            pn_cont.Controls.Add(frm_booking.pn_cat);
+            db = new DB_BarbershopEntities();
+            frm_booking.updata_data();
+            lb_titelpage.Text = "الحجز";
         }
 
         private void simpleButton12_Click(object sender, EventArgs e)
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_report.tileControl1);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             lb_titelpage.Text = "التقارير";
          
         }
@@ -367,7 +470,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_user.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_user.updata_data();
             lb_titelpage.Text = "المستخدمين";
         }
@@ -394,12 +497,12 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_stuk.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_stuk.updata_data();
-            lb_titelpage.Text = "المنتجات";
+            lb_titelpage.Text = "الخدمات";
         }
-        public  List<tb_sell_takeway> list_sellpop;
-        public List<tb_sell_table> list_sell;
+      //  public  List<tb_sell_takeway> list_sellpop;
+        public List<tb_appointment> list_sell;
         public List<tb_buy> list_pur;
         public List<tb_supp> list_supp;
         public List<tb_cus> list_cus;
@@ -416,7 +519,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_Employees.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_Employees.updata_data();
             lb_titelpage.Text = "الموظفين";
         }
@@ -425,7 +528,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_Stor.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_Stor.updata_data();
             lb_titelpage.Text = "المصاريف";
         }
@@ -433,21 +536,31 @@ namespace el_shabander
         public tb_user CurrentUser { get; set; }
         private void UpdateUserState(string state)
         {
-
+            try
+            {
                 if (CurrentUser != null)
                 {
-                    CurrentUser.user_state = state;
-                    db.Entry(CurrentUser).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
+                    // نستخدم dbContext جديد لضمان وصول الحالة حتى لو الـ context الرئيسي فيه مشكلة
+                    using (var dbContext = new DB_BarbershopEntities())
+                    {
+                        var user = dbContext.tb_user.Find(CurrentUser.id);
+                        if (user != null)
+                        {
+                            user.user_state = state;
+                            dbContext.SaveChanges();
+                        }
+                    }
                 }
-
-           
-            
+            }
+            catch { /* تجاهل الخطأ لضمان إغلاق البرنامج بسلاسة */ }
         }
         private void CheckUserStatesAtStartup()
         {
             try
             {
+                lastNotificationId = db.Notfications.Max(n => (int?)n.id) ?? 0;
+                // ----------------------------
+
                 bool hasUsers = db.tb_user.Any();
                 if (!hasUsers)
                 {
@@ -473,6 +586,7 @@ namespace el_shabander
                     UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful");
 
                 }
+               
             }
             catch (Exception ex)
             {
@@ -530,7 +644,7 @@ namespace el_shabander
                     MessageBox.Show("انتهت فترة التجربة.");
 
                     simpleButton13.Enabled = false;
-                    simpleButton14.Enabled = true;
+                    simpleButton6.Enabled = true;
                     btn_employees.Enabled = false;
                     btn_stor.Enabled = false;
                     simpleButton1.Enabled = false;
@@ -596,6 +710,7 @@ namespace el_shabander
 
             lblNotificationCount.Visible = false;
             lblNotificationCount.Text = "0";
+
             // التحقق مما إذا كان نموذج الإشعارات مفتوحًا بالفعل
             foreach (Form form in Application.OpenForms)
             {
@@ -631,11 +746,13 @@ namespace el_shabander
 
             // عرض النموذج
             notificationForm.Show();
+            lastNotificationId = db.Notfications.Max(n => (int?)n.id) ?? 0;
         }
         private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
             UpdateUserState("مغلق");
-            
+            _syncTimer?.Dispose();
+
         }
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
@@ -649,7 +766,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_safe_as.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_safe_as.updata_data();
             lb_titelpage.Text = "الخزينة";
         }
@@ -658,7 +775,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(frm_Shift_Motion.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             frm_Shift_Motion.updata_data();
             lb_titelpage.Text = "تسليم وردية";
         }
@@ -673,7 +790,7 @@ namespace el_shabander
         {
             pn_cont.Controls.Clear();
             pn_cont.Controls.Add(cashbox.pn_cat);
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             cashbox.updata_data();
             lb_titelpage.Text = "الكاش بوكس";
 
@@ -700,6 +817,24 @@ namespace el_shabander
         private void pn_topbar_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+        private void simpleButton6_Click_1(object sender, EventArgs e)
+        {
+            pn_cont.Controls.Clear();
+            pn_cont.Controls.Add(Attendanceemp.pn_cat);
+            db = new DB_BarbershopEntities();
+            Attendanceemp.updata_data();
+            lb_titelpage.Text = "الحضور والانصراف";
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            pn_cont.Controls.Clear();
+            pn_cont.Controls.Add(frm_Salaries.pn_cat);
+            db = new DB_BarbershopEntities();
+            frm_Salaries.updata_data();
+            lb_titelpage.Text = "المرتبات";
         }
     }
    

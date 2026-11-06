@@ -12,11 +12,17 @@ namespace el_shabander
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_table
+    public partial class tb_service
     {
         public int id { get; set; }
-        public string name_table { get; set; }
-        public Nullable<double> totall_price { get; set; }
-        public string name_location { get; set; }
+        public string name_main { get; set; }
+        public string name_product { get; set; }
+        public Nullable<double> price { get; set; }
+        public string name_cat { get; set; }
+        public Nullable<double> cost { get; set; }
+        public byte[] pro_image { get; set; }
+        public string type_product { get; set; }
+        public byte[] barcode_img { get; set; }
+        public string code { get; set; }
     }
 }

@@ -43,9 +43,10 @@ namespace el_shabander.pl
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colname_cus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmony_rev = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colmony_spend = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmony_stay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
@@ -65,6 +66,7 @@ namespace el_shabander.pl
             this.colsupp_phone = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colsupp_email = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colsupp_image = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colmony_spend = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pn_cat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -90,7 +92,7 @@ namespace el_shabander.pl
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(el_shabander.tb_sell_table);
+            this.gridControl1.DataSource = typeof(el_shabander.tb_appointment);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -122,9 +124,10 @@ namespace el_shabander.pl
             this.gridView1.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colname_cus,
+            this.gridColumn3,
+            this.gridColumn2,
             this.coldate,
             this.colmony_rev,
-            this.colmony_spend,
             this.colmony_stay,
             this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
@@ -139,7 +142,25 @@ namespace el_shabander.pl
             this.colname_cus.Name = "colname_cus";
             this.colname_cus.Visible = true;
             this.colname_cus.VisibleIndex = 0;
-            this.colname_cus.Width = 124;
+            this.colname_cus.Width = 121;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "المدفوع";
+            this.gridColumn3.FieldName = "pay";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 5;
+            this.gridColumn3.Width = 141;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "العميل";
+            this.gridColumn2.FieldName = "cus_name";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 205;
             // 
             // coldate
             // 
@@ -149,8 +170,8 @@ namespace el_shabander.pl
             this.coldate.FieldName = "sell_date";
             this.coldate.Name = "coldate";
             this.coldate.Visible = true;
-            this.coldate.VisibleIndex = 2;
-            this.coldate.Width = 211;
+            this.coldate.VisibleIndex = 3;
+            this.coldate.Width = 182;
             // 
             // colmony_rev
             // 
@@ -160,30 +181,19 @@ namespace el_shabander.pl
             this.colmony_rev.FieldName = "sell_tprice";
             this.colmony_rev.Name = "colmony_rev";
             this.colmony_rev.Visible = true;
-            this.colmony_rev.VisibleIndex = 3;
-            this.colmony_rev.Width = 154;
-            // 
-            // colmony_spend
-            // 
-            this.colmony_spend.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
-            this.colmony_spend.AppearanceHeader.Options.UseFont = true;
-            this.colmony_spend.Caption = "المدفوع";
-            this.colmony_spend.FieldName = "pay";
-            this.colmony_spend.Name = "colmony_spend";
-            this.colmony_spend.Visible = true;
-            this.colmony_spend.VisibleIndex = 4;
-            this.colmony_spend.Width = 143;
+            this.colmony_rev.VisibleIndex = 4;
+            this.colmony_rev.Width = 165;
             // 
             // colmony_stay
             // 
             this.colmony_stay.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
             this.colmony_stay.AppearanceHeader.Options.UseFont = true;
-            this.colmony_stay.Caption = "الطاولة";
+            this.colmony_stay.Caption = "المقعد";
             this.colmony_stay.FieldName = "sell_cus";
             this.colmony_stay.Name = "colmony_stay";
             this.colmony_stay.Visible = true;
             this.colmony_stay.VisibleIndex = 1;
-            this.colmony_stay.Width = 191;
+            this.colmony_stay.Width = 114;
             // 
             // gridColumn1
             // 
@@ -191,8 +201,8 @@ namespace el_shabander.pl
             this.gridColumn1.FieldName = "namecasher";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 5;
-            this.gridColumn1.Width = 117;
+            this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.Width = 163;
             // 
             // cardView1
             // 
@@ -265,7 +275,7 @@ namespace el_shabander.pl
             this.groupControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.groupControl1.Appearance.BorderColor = System.Drawing.Color.Chartreuse;
+            this.groupControl1.Appearance.BorderColor = System.Drawing.Color.Crimson;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
             this.groupControl1.AppearanceCaption.BackColor = System.Drawing.Color.White;
@@ -307,7 +317,7 @@ namespace el_shabander.pl
             this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.groupControl2.Appearance.BorderColor = System.Drawing.Color.Chartreuse;
+            this.groupControl2.Appearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.Appearance.Options.UseBorderColor = true;
             this.groupControl2.AppearanceCaption.BackColor = System.Drawing.Color.White;
@@ -332,7 +342,7 @@ namespace el_shabander.pl
             // txtTotalSales
             // 
             this.txtTotalSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTotalSales.BackColor = System.Drawing.Color.PaleTurquoise;
             this.txtTotalSales.Enabled = false;
             this.txtTotalSales.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalSales.ForeColor = System.Drawing.Color.Black;
@@ -442,6 +452,15 @@ namespace el_shabander.pl
             this.colsupp_image.Visible = true;
             this.colsupp_image.VisibleIndex = 2;
             // 
+            // colmony_spend
+            // 
+            this.colmony_spend.AppearanceHeader.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold);
+            this.colmony_spend.AppearanceHeader.Options.UseFont = true;
+            this.colmony_spend.Caption = "المدفوع";
+            this.colmony_spend.FieldName = "pay";
+            this.colmony_spend.Name = "colmony_spend";
+            this.colmony_spend.Width = 143;
+            // 
             // frm_spend_cus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,7 +515,6 @@ namespace el_shabander.pl
         private DevExpress.XtraGrid.Columns.GridColumn colname_cus;
         private DevExpress.XtraGrid.Columns.GridColumn coldate;
         private DevExpress.XtraGrid.Columns.GridColumn colmony_rev;
-        private DevExpress.XtraGrid.Columns.GridColumn colmony_spend;
         private DevExpress.XtraGrid.Columns.GridColumn colmony_stay;
         private DevExpress.XtraEditors.SimpleButton btn_edit;
         private DevExpress.XtraEditors.GroupControl groupControl2;
@@ -504,5 +522,8 @@ namespace el_shabander.pl
         private DevExpress.XtraEditors.GroupControl groupControl1;
         public System.Windows.Forms.TextBox txtTotalSalesstop;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colmony_spend;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

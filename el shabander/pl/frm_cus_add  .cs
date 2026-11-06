@@ -13,9 +13,9 @@ namespace el_shabander.pl
 {
     public partial class frm_cus_add  : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         //  tb_cus tB_cus = new tb_cus();
-        tb_table tb_Table = new tb_table();
+        tb_chair tb_chair = new tb_chair();
         bl.methods methods = new bl.methods();
        
         //pl.frm_supp frm_Cat = new frm_supp();
@@ -34,7 +34,7 @@ namespace el_shabander.pl
             if (string.IsNullOrEmpty(num_tab.Text))
             {
                 dialog.Width = this.Width;
-                dialog.txt_capthion.Text = "رقم الطاولة مطلوب";
+                dialog.txt_capthion.Text = "رقم المقعد مطلوب";
                 dialog.Show();
                 return;
             }
@@ -56,28 +56,28 @@ namespace el_shabander.pl
 
 
             string fullTableName = $"{edt_table.Text} : {num_tab.Text}";
-            // التحقق مما إذا كان اسم الطاولة موجودًا بالفعل في قاعدة البيانات
-            bool isTableExists = db.tb_table.Any(x => x.name_table == fullTableName);
+            // التحقق مما إذا كان اسم المقعد موجودًا بالفعل في قاعدة البيانات
+            bool isTableExists = db.tb_chair.Any(x => x.name_chair == fullTableName);
 
             if (isTableExists)
             {
                 dialog.Width = this.Width;
-                dialog.txt_capthion.Text = "اسم الطاولة موجود من قبل";
+                dialog.txt_capthion.Text = "اسم المقعد موجود من قبل";
                 dialog.Show();
                 return;
             }
            
                     if (id == 0)
                     {
-                        tb_Table.name_table = fullTableName;
-                        tb_Table.totall_price = 0;
-                        tb_Table.name_location = edt_table.Text;
+                        tb_chair.name_chair = fullTableName;
+                        tb_chair.totall_price = 0;
+                        tb_chair.name_location = edt_table.Text;
 
-                        db.tb_table.Add(tb_Table);
+                        db.tb_chair.Add(tb_chair);
                         db.SaveChanges();
 
                         toast.Width = this.Width;
-                        toast.txt_caption.Text = "تم إضافة طاولة جديدة";
+                        toast.txt_caption.Text = "تم إضافة مقعد جديدة";
                         toast.Show();
                         this.Close();
                     }

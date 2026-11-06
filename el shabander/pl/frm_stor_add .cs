@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using el_shabander.epl;
@@ -13,11 +15,11 @@ namespace el_shabander.pl
 {
     public partial class frm_stor_add: Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_stor tb_Stor = new tb_stor();
         bl.methods methods = new bl.methods();
         tb_safe tb_Safe = new tb_safe();
-        tb_employees tb_Employees = new tb_employees();
+       // tb_employees tb_Employees = new tb_employees();
         Notfication notfication = new Notfication();
         bl.send send = new bl.send();
         tb_OperationLog tb_OperationLog = new tb_OperationLog();
@@ -31,18 +33,43 @@ namespace el_shabander.pl
         {
             InitializeComponent();
         }
+        private void ApplyArabicCulture()
+        {
+            CultureInfo arabicCulture = new CultureInfo("ar-EG");
+            Thread.CurrentThread.CurrentCulture = arabicCulture;
+            Thread.CurrentThread.CurrentUICulture = arabicCulture;
+        }
+        private void SetArabicDateFormat(DateTimePicker picker)
+        {
+            picker.Format = DateTimePickerFormat.Custom;
+            picker.CustomFormat = GetArabicFormattedDate(picker.Value);
 
+            // إجبار النصوص على أن تكون باللغة العربية وعدم الانعكاس
+            picker.RightToLeft = RightToLeft.No;
+            picker.RightToLeftLayout = false;
+
+            // تحديث عند تغيير التاريخ
+            picker.ValueChanged += (s, e) =>
+            {
+                picker.CustomFormat = GetArabicFormattedDate(picker.Value);
+            };
+        }
+        private string GetArabicFormattedDate(DateTime date)
+        {
+            string[] arabicDays = { "الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت" };
+            string[] arabicMonths = { "", "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر" };
+
+            string dayName = arabicDays[(int)date.DayOfWeek];
+            string monthName = arabicMonths[date.Month];
+
+            return $"{dayName}, {date.Day} {monthName} {date.Year}";
+        }
         private void btn_add_Click(object sender, EventArgs e)
         {
             toast toast = new toast();
             dialog dialog = new dialog();
-            tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
-            if (tb_Employees == null)
-            {
-                MessageBox.Show("الرجاء التاكد من اسم الموظف قبل اضافة المصاريف.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // الخروج من العملية إذا لم يتم العثور على العميل
-            }
-            else if (Convert.ToDouble(edt_spen.Text) <= 0)
+          
+             if (Convert.ToDouble(edt_spen.Text) <= 0)
             {
                 MessageBox.Show("الرجاء ادخال مبلغ اكبر من الصفر.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // الخروج من العملية إذا لم يتم العثور على العميل
@@ -52,7 +79,7 @@ namespace el_shabander.pl
                 if (id == 0)
                 {
                     // pic_cover.Image.Save(methods.ma, System.Drawing.Imaging.ImageFormat.Png);
-                    tb_Stor.stor_empname = edt_name.Text;
+                //  tb_Stor.stor_empname = edt_name.Text;
                     tb_Stor.stor_type = edt_type.Text;
                     tb_Stor.stor_spen = Convert.ToDouble(edt_spen.Text);
 
@@ -71,24 +98,7 @@ namespace el_shabander.pl
                     }
                     db.tb_stor.Add(tb_Stor);
                     db.SaveChanges();
-                    if (edt_type.Text == "مرتبات")
-                    {
-
-                        tb_Employees.emp_staysalers -= Convert.ToDouble(edt_spen.Text);
-                        tb_Employees.emp_paysalers += Convert.ToDouble(edt_spen.Text);
-                        db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                        db.SaveChanges();
-                        if (tb_Employees.emp_staysalers == 0)
-                        {
-                            tb_Employees.emp_paysalers = 0;
-                            tb_Employees.emp_staysalers = tb_Employees.emp_salers;
-                            tb_Employees.emp_absent = 0;
-                            tb_Employees.emp_dat = null;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-                        // db.tb_employees.Add(tb_Employees);
-                    }
+                    
 
                     // tb_Safe.id = id;
                     if (edt_safe.Text == tb_Safe.safe_name)
@@ -128,7 +138,7 @@ namespace el_shabander.pl
                     tb_Stor = db.tb_stor.Where(x => x.id == id).FirstOrDefault();
                     tb_Stor.id = id;
 
-                    tb_Stor.stor_empname = edt_name.Text;
+                   // tb_Stor.stor_empname = edt_name.Text;
                     tb_Stor.stor_type = edt_type.Text;
                     tb_Stor.stor_spen = Convert.ToDouble(edt_spen.Text);
 
@@ -145,77 +155,7 @@ namespace el_shabander.pl
                             tb_Stor.namecasher = frm_supp_Add.la_username.Text;
                         }
                     }
-                    if (edt_type_old != tb_Stor.stor_type && edt_type_old == "مرتبات")
-                    {
-                        tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name_old).FirstOrDefault();
-                        if (tb_Employees.emp_paysalers == 0)
-                        {
-                            tb_Employees.emp_paysalers = tb_Employees.emp_salers - safeou;
-                            tb_Employees.emp_staysalers = tb_Employees.emp_salers - tb_Employees.emp_paysalers;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-                        else
-                        {
-                            tb_Employees.emp_staysalers += safeou;
-                            tb_Employees.emp_paysalers -= safeou;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-
-                    }
-                    else if (tb_Stor.stor_type == "مرتبات" && edt_type_old == tb_Stor.stor_type)
-                    {
-
-                        tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name_old).FirstOrDefault();
-                        if (tb_Employees.emp_paysalers == 0)
-                        {
-                            tb_Employees.emp_paysalers = tb_Employees.emp_salers - safeou;
-                            tb_Employees.emp_staysalers = tb_Employees.emp_salers - tb_Employees.emp_paysalers;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-                        else
-                        {
-                            tb_Employees.emp_staysalers += safeou;
-                            tb_Employees.emp_paysalers -= safeou;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-                        tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
-                        tb_Employees.emp_staysalers -= Convert.ToDouble(edt_spen.Text);
-                        tb_Employees.emp_paysalers += Convert.ToDouble(edt_spen.Text);
-                        db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                        db.SaveChanges();
-                        if (tb_Employees.emp_staysalers == 0)
-                        {
-                            tb_Employees.emp_paysalers = 0;
-                            tb_Employees.emp_staysalers = tb_Employees.emp_salers;
-                            tb_Employees.emp_absent = 0;
-                            tb_Employees.emp_dat = null;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-
-                    }
-                    else if (tb_Stor.stor_type == "مرتبات")
-                    {
-                        tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
-                        tb_Employees.emp_staysalers -= Convert.ToDouble(edt_spen.Text);
-                        tb_Employees.emp_paysalers += Convert.ToDouble(edt_spen.Text);
-                        db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                        db.SaveChanges();
-                        if (tb_Employees.emp_staysalers == 0)
-                        {
-                            tb_Employees.emp_paysalers = 0;
-                            tb_Employees.emp_staysalers = tb_Employees.emp_salers;
-                            tb_Employees.emp_absent = 0;
-                            tb_Employees.emp_dat = null;
-                            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                        }
-
-                    }
+                  
                     tb_Safe = db.tb_safe.Where(x => x.safe_name == edt_safe.Text).FirstOrDefault();
                     tb_Safe.safe_count += safeou;
                     tb_Safe.safe_count -= Convert.ToDouble(edt_spen.Text);
@@ -304,15 +244,16 @@ namespace el_shabander.pl
             {
                 var r1 = db.tb_employees.Select(x => x.emp_name).ToList();
                 var r2 = db.tb_safe.Select(x => x.safe_name).ToList();
-                edt_name.DataSource = r1;
+              //  edt_name.DataSource = r1;
                 edt_safe.DataSource = r2;
                 AutoCompleteStringCollection acsc1 = new AutoCompleteStringCollection();
                 AutoCompleteStringCollection acsc2 = new AutoCompleteStringCollection();
                 acsc1.AddRange(r1.ToArray());
                 acsc2.AddRange(r2.ToArray());
-                edt_name.AutoCompleteCustomSource = acsc1;
+              //  edt_name.AutoCompleteCustomSource = acsc1;
                 edt_safe.AutoCompleteCustomSource = acsc2;
                 edt_date.Text = (DateTime.Now).ToString();
+               
                 edt_type.Text = "اخرى";
             }
             else
@@ -329,7 +270,7 @@ namespace el_shabander.pl
 
         private void edt_name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
+           // tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
 
         }
 

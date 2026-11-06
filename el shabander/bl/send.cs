@@ -12,7 +12,7 @@ namespace el_shabander.bl
 {
     class send
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         public string GetHtmlFromTextBoxContent(string messageContent)
         {
             // جلب محتوى TextBox

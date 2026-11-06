@@ -320,5 +320,52 @@ namespace el_shabander.Properties {
                 this["checkinprint"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.198")]
+        public string ip_hik {
+            get {
+                return ((string)(this["ip_hik"]));
+            }
+            set {
+                this["ip_hik"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string user_hik {
+            get {
+                return ((string)(this["user_hik"]));
+            }
+            set {
+                this["user_hik"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Aosh14789")]
+        public string pass_hik {
+            get {
+                return ((string)(this["pass_hik"]));
+            }
+            set {
+                this["pass_hik"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime LastSyncTime {
+            get {
+                return ((global::System.DateTime)(this["LastSyncTime"]));
+            }
+            set {
+                this["LastSyncTime"] = value;
+            }
+        }
     }
 }

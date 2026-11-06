@@ -16,7 +16,7 @@ namespace el_shabander.pl
 {
     public partial class frm_calc_day : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_safe tb_Safe = new tb_safe();
         bl.methods methods = new bl.methods();
         tb_employees tb_Employees = new tb_employees();
@@ -108,8 +108,8 @@ namespace el_shabander.pl
         {
             DateTime fromDate = edt_from.Value.Date;
 
-            // جمع قيمة total_price من جدول tb_sell_table حيث التاريخ بعد آخر تاريخ
-            var totalSum = db.tb_sell_table
+            // جمع قيمة total_price من جدول tb_appointment حيث التاريخ بعد آخر تاريخ
+            var totalSum = db.tb_appointment
                             .Where(x => DbFunctions.TruncateTime(x.sell_date) ==fromDate)
                             .Select(x => new
                             {
@@ -121,7 +121,7 @@ namespace el_shabander.pl
                                 invoice = x.invocie_id
                                 // فرضًا لا يوجد مرتجع في عملية البيع
                             }).ToList();
-            var totalSumtake = db.tb_sell_takeway
+           /* var totalSumtake = db.tb_sell_takeway
                            .Where(x => DbFunctions.TruncateTime(x.sell_date) == fromDate)
                            .Select(x => new
                            {
@@ -132,11 +132,11 @@ namespace el_shabander.pl
                                PaidAmount = x.pay,
                                invoice = x.invocie_id
                                // فرضًا لا يوجد مرتجع في عملية البيع
-                           }).ToList();
+                           }).ToList();*/
 
             // عرض النتيجة في TextBox
             var combinedData = totalSum
-             .Concat(totalSumtake).OrderBy(x => x.Date).ToList();
+            .OrderBy(x => x.Date).ToList();
             DataSet1 dataSet = new DataSet1();
             dataSet.Tables["tb_import_export"].Clear();
             frm_report_view1 reportForm = new frm_report_view1();

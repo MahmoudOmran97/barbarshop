@@ -16,7 +16,7 @@ namespace el_shabander.pl
 {
     public partial class frm_cashbox : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
        
         Session session = new Session();
         bl.methods methods = new bl.methods();
@@ -34,7 +34,7 @@ namespace el_shabander.pl
 
 
             
-            el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.Sessions.LoadAsync().ContinueWith(loadTask =>
             {
@@ -78,7 +78,7 @@ namespace el_shabander.pl
 
         public void updata_data()
         {
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             main frm_supp_Add = (main)Application.OpenForms["main"];
             string casherName = frm_supp_Add?.la_username.Text;
             List<Session> data = db.Sessions.Where(x=>x.namecasher== frm_supp_Add.la_username.Text).ToList();

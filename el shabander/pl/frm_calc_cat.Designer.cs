@@ -116,7 +116,7 @@ namespace el_shabander.pl
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 50);
             this.label2.TabIndex = 21;
-            this.label2.Text = "اسم المنتج";
+            this.label2.Text = "اسم الخدمة";
             // 
             // frm_calc_cat
             // 

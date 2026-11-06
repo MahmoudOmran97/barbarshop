@@ -25,5 +25,7 @@ namespace el_shabander
         public Nullable<double> emp_staysalers { get; set; }
         public byte[] emp_image { get; set; }
         public Nullable<double> emp_absent { get; set; }
+        public string emp_specialty { get; set; }
+        public Nullable<double> emp_commission_rate { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace el_shabander.pl
 {
     public partial class frm_cat_add : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_cat tb_cat = new tb_cat();
         bl.methods methods = new bl.methods();
        
@@ -61,7 +61,7 @@ namespace el_shabander.pl
                         db.SaveChanges();
 
                         // تحديث البيانات بعد الإضافة
-                        db = new DB_restoraintEntities();
+                        db = new DB_BarbershopEntities();
                         frm_Cat.gridControl1.DataSource = db.tb_cat.ToList();
 
                         toast.txt_caption.Text = "تم إضافة صنف جديد";
@@ -81,7 +81,7 @@ namespace el_shabander.pl
                         db.SaveChanges();
 
                         // تحديث البيانات بعد التعديل
-                        db = new DB_restoraintEntities();
+                        db = new DB_BarbershopEntities();
                         frm_Cat.gridControl1.DataSource = db.tb_cat.ToList();
 
                         toast.txt_caption.Text = "تم تعديل الصنف";

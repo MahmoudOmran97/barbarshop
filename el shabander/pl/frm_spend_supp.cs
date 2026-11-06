@@ -13,7 +13,7 @@ namespace el_shabander.pl
 {
     public partial class frm_spend_supp : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
       
         bl.methods methods = new bl.methods();
         toast toast = new toast();
@@ -32,7 +32,7 @@ namespace el_shabander.pl
 
 
           
-            el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.tb_spend_supp.LoadAsync().ContinueWith(loadTask =>
             {
@@ -204,7 +204,7 @@ namespace el_shabander.pl
 
         private void updata_data()
         {
-            db = new DB_restoraintEntities(); 
+            db = new DB_BarbershopEntities(); 
             List<tb_spend_supp> data = db.tb_spend_supp.ToList();
             data.Reverse();
             gridControl1.DataSource = data;

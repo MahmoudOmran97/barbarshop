@@ -4,34 +4,37 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ac4d077331ab4ecd90ec968895a67787" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_buy" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_cat" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_cus" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_employees" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_main" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_order_buy" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_order_sell_table" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_order_sell_takeway" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_product" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_safe" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_sell_table" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_sell_takeway" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_spend_cus" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_stor" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_supp" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_table" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_user" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_spend_supp" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_movement" Width="1.5" PointX="11.375" PointY="11.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.Notfication" Width="1.5" PointX="0.75" PointY="13.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_order_cat" Width="1.5" PointX="13.375" PointY="3.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.AppSetting" Width="1.5" PointX="13.375" PointY="6.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.Session" Width="1.5" PointX="13.375" PointY="0.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_OperationLog" Width="1.5" PointX="7.375" PointY="13.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_Shift" Width="1.5" PointX="3.375" PointY="13.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.tb_location" Width="1.5" PointX="13.375" PointY="10.75" />
-        <EntityTypeShape EntityType="DB_restoraintModel.sendmailcode" Width="1.5" PointX="13.375" PointY="13.75" />
+      <Diagram DiagramId="34200da19ceb4b9bb2a97ae76095b604" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_BarbershopModel.AppSetting" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.Notfication" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.sendmailcode" Width="1.5" PointX="2.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.Session" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_appointment" Width="1.5" PointX="2.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_buy" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_cat" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_chair" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_cus" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_employees" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_location" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_main" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_movement" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_OperationLog" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_order_appointment" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_order_buy" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_order_cat" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_safe" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_service" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_Shift" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_spend_cus" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_stor" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_supp" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_user" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_spend_supp" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.tb_booking" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.Advance" Width="1.5" PointX="9.375" PointY="14.75" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.Attendance" Width="1.5" PointX="15.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.Employee" Width="1.5" PointX="15.375" PointY="8.75" />
+        <EntityTypeShape EntityType="DB_BarbershopModel.Salary" Width="1.5" PointX="15.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

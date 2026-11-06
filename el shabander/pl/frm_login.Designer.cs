@@ -39,11 +39,13 @@ namespace el_shabander.pl
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.che_us = new DevExpress.XtraEditors.CheckEdit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.che_us.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,7 +91,7 @@ namespace el_shabander.pl
             this.btn_add.Appearance.Options.UseForeColor = true;
             this.btn_add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.ImageOptions.Image")));
             this.btn_add.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.btn_add.Location = new System.Drawing.Point(145, 441);
+            this.btn_add.Location = new System.Drawing.Point(144, 441);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(170, 41);
             this.btn_add.TabIndex = 25;
@@ -160,6 +162,18 @@ namespace el_shabander.pl
             this.che_us.TabIndex = 28;
             this.che_us.CheckedChanged += new System.EventHandler(this.che_us_CheckedChanged);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ErrorImage = null;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(336, 192);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(89, 89);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +181,8 @@ namespace el_shabander.pl
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(475, 510);
+            this.ClientSize = new System.Drawing.Size(473, 510);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.panel2);
@@ -195,6 +210,7 @@ namespace el_shabander.pl
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.che_us.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +227,6 @@ namespace el_shabander.pl
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private DevExpress.XtraEditors.CheckEdit che_us;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

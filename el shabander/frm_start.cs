@@ -11,7 +11,7 @@ namespace el_shabander
 {
     public partial class frm_start : SplashScreen
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_user tb_User = new tb_user();
         main main = new main();
         pl.frm_login login = new pl.frm_login();

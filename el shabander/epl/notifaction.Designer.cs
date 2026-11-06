@@ -83,6 +83,7 @@ namespace el_shabander.epl
             this.gridView2,
             this.advBandedGridView1,
             this.gridView3});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // tileView1
             // 

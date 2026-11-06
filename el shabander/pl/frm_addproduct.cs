@@ -15,8 +15,8 @@ namespace el_shabander.pl
 {
     public partial class frm_addproduct : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
-        tb_product tb_Product = new tb_product();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
+        tb_service tb_service = new tb_service();
         bl.methods methods = new bl.methods();
         DataTable datasells = new DataTable();
         //pl.frm_supp frm_Cat = new frm_supp();
@@ -45,7 +45,7 @@ namespace el_shabander.pl
             do
             {
                 code = random.Next(10000000, 99999999).ToString();
-                isUnique = !db.tb_product.Any(x => x.code == code); // التحقق من أن الكود غير مكرر
+                isUnique = !db.tb_service.Any(x => x.code == code); // التحقق من أن الكود غير مكرر
             }
             while (!isUnique);
 
@@ -58,7 +58,7 @@ namespace el_shabander.pl
             if (string.IsNullOrEmpty(edt_name.Text))
             {
 
-                ShowDialogMessage("اسم المنتج مطلوب");
+                ShowDialogMessage("اسم الخدمة مطلوب");
               
                 return;
             }
@@ -83,45 +83,45 @@ namespace el_shabander.pl
                 return;
             }
 
-            // إضافة أو تعديل المنتج
+            // إضافة أو تعديل الخدمة
             if (id == 0)
             {
                
-                tb_Product.name_product = edt_name.Text;
-                tb_Product.name_main = edt_supp.Text;
-                tb_Product.name_cat = edt_cat.Text;
-                tb_Product.pro_image = bl.methods.convert_byte(pic_cover.Image);
-                tb_Product.price = Convert.ToDouble(edt_sales.Text);
-                tb_Product.cost = Convert.ToDouble(edt_max.Text);
-                tb_Product.type_product = edt_type.Text;
-                tb_Product.barcode_img= bl.methods.convert_byte(pictureEdit1.Image);
-                tb_Product.code = string.IsNullOrWhiteSpace(edt_code.Text) ? GenerateUniqueCode() : edt_code.Text;
-                db.tb_product.Add(tb_Product);
+                tb_service.name_product = edt_name.Text;
+                tb_service.name_main = edt_supp.Text;
+                tb_service.name_cat = edt_cat.Text;
+                tb_service.pro_image = bl.methods.convert_byte(pic_cover.Image);
+                tb_service.price = Convert.ToDouble(edt_sales.Text);
+                tb_service.cost = Convert.ToDouble(edt_max.Text);
+               // tb_service.type_product = edt_type.Text;
+                tb_service.barcode_img= bl.methods.convert_byte(pictureEdit1.Image);
+                tb_service.code = string.IsNullOrWhiteSpace(edt_code.Text) ? GenerateUniqueCode() : edt_code.Text;
+                db.tb_service.Add(tb_service);
                 db.SaveChanges();
                 ss();
                 toast.Width = this.Width;
-                toast.txt_caption.Text = "تم إضافة منتج جديد";
+                toast.txt_caption.Text = "تم إضافة خدمة جديد";
                 toast.Show();
                 this.Close();
             }
             else
             {
-                tb_Product = db.tb_product.Where(x => x.id == id).FirstOrDefault();
+                tb_service = db.tb_service.Where(x => x.id == id).FirstOrDefault();
                
-                tb_Product.name_product = edt_name.Text;
-                tb_Product.name_main = edt_supp.Text;
-                tb_Product.name_cat = edt_cat.Text;
-                tb_Product.pro_image = bl.methods.convert_byte(pic_cover.Image);
-                tb_Product.price = Convert.ToDouble(edt_sales.Text);
-                tb_Product.cost = Convert.ToDouble(edt_max.Text);
-                tb_Product.type_product = edt_type.Text;
-                tb_Product.barcode_img = bl.methods.convert_byte(pictureEdit1.Image);
-                tb_Product.code = string.IsNullOrWhiteSpace(edt_code.Text) ? GenerateUniqueCode() : edt_code.Text;
-                db.Entry(tb_Product).State = System.Data.Entity.EntityState.Modified;
+                tb_service.name_product = edt_name.Text;
+                tb_service.name_main = edt_supp.Text;
+                tb_service.name_cat = edt_cat.Text;
+                tb_service.pro_image = bl.methods.convert_byte(pic_cover.Image);
+                tb_service.price = Convert.ToDouble(edt_sales.Text);
+                tb_service.cost = Convert.ToDouble(edt_max.Text);
+               // tb_service.type_product = edt_type.Text;
+                tb_service.barcode_img = bl.methods.convert_byte(pictureEdit1.Image);
+                tb_service.code = string.IsNullOrWhiteSpace(edt_code.Text) ? GenerateUniqueCode() : edt_code.Text;
+                db.Entry(tb_service).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 ss();
                 toast.Width = this.Width;
-                toast.txt_caption.Text = "تم تعديل المنتج بنجاح";
+                toast.txt_caption.Text = "تم تعديل الخدمة بنجاح";
                 toast.Show();
                 this.Close();
             }
@@ -215,7 +215,7 @@ namespace el_shabander.pl
 
                 // edt_name.AutoCompleteCustomSource = acsc1;
                 edt_cat.AutoCompleteCustomSource = acsc3;
-                edt_type.Text = "مطبخ";
+               
                 printcode.Visible = false;
 
 
@@ -344,10 +344,10 @@ namespace el_shabander.pl
             {
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-                    // إنشاء كائن جديد من tb_order_sell_table لكل صف
+                    // إنشاء كائن جديد من tb_order_appointment لكل صف
                     var tb_order_cat = new tb_order_cat
                     {
-                        product_id = tb_Product.id,
+                        product_id = tb_service.id,
                         name_cat= dataGridView1.Rows[i].Cells[0].Value.ToString(),
                         qt_cat= Convert.ToDouble(dataGridView1.Rows[i].Cells[1].Value),
 
@@ -372,7 +372,7 @@ namespace el_shabander.pl
                 // حذف الفواتير القديمة المرتبطة بهذا المعرف
 
 
-                // جلب السجلات المطابقة من tb_order_sell_table
+                // جلب السجلات المطابقة من tb_order_appointment
                 var ordersToRemove = db.tb_order_cat.Where(x => x.product_id == id).ToList();
 
                 // تحقق من وجود السجلات قبل الحذف
@@ -387,10 +387,10 @@ namespace el_shabander.pl
 
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-                    // إنشاء كائن جديد من tb_order_sell_table لكل صف
+                    // إنشاء كائن جديد من tb_order_appointment لكل صف
                     var tb_order_cat = new tb_order_cat
                     {
-                        product_id = tb_Product.id,
+                        product_id = tb_service.id,
                         name_cat = dataGridView1.Rows[i].Cells[0].Value.ToString(),
                         qt_cat = Convert.ToDouble(dataGridView1.Rows[i].Cells[1].Value),
 
@@ -421,7 +421,7 @@ namespace el_shabander.pl
             do
             {
                 code = random.Next(10000000, 99999999).ToString();
-                isUnique = !db.tb_product.Any(x => x.code == code); // التحقق من أن الكود غير مكرر
+                isUnique = !db.tb_service.Any(x => x.code == code); // التحقق من أن الكود غير مكرر
             }
             while (!isUnique);
 

@@ -12,16 +12,17 @@ namespace el_shabander
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_order_sell_table
+    public partial class tb_booking
     {
         public int id { get; set; }
-        public string name_sell { get; set; }
-        public Nullable<double> price_sell { get; set; }
-        public Nullable<double> qt_sell { get; set; }
-        public Nullable<double> tprice_sell { get; set; }
-        public Nullable<int> sell_id { get; set; }
-        public string weight { get; set; }
-        public Nullable<double> total_earnings { get; set; }
-        public Nullable<double> newqt { get; set; }
+        public string cus_name { get; set; }
+        public string cus_phone { get; set; }
+        public Nullable<int> chair_id { get; set; }
+        public string chair_name { get; set; }
+        public Nullable<System.DateTime> booking_date { get; set; }
+        public Nullable<int> queue_number { get; set; }
+        public string status { get; set; }
+        public string notes { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
     }
 }

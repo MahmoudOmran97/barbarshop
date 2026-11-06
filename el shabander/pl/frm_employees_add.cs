@@ -11,137 +11,347 @@ using el_shabander.epl;
 
 namespace el_shabander.pl
 {
-    public partial class frm_employees_add: Form
+    public partial class frm_employees_add : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
-        tb_employees tb_Employees = new tb_employees();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
+        Employee tb_Employees = new Employee();
         bl.methods methods = new bl.methods();
-        double saltot, salpay, salstay;
-        //pl.frm_supp frm_Cat = new frm_supp();
-        public int id;
-        public frm_employees_add ()
 
+        // ✅ إضافة المتغيرات الناقصة
+        private HikvisionService _hikvision;
+        private bool _deviceConnected = false;
+
+        private string DEVICE_IP = Properties.Settings.Default.ip_hik;
+        private string DEVICE_USER = Properties.Settings.Default.user_hik;
+        private string DEVICE_PASS = Properties.Settings.Default.pass_hik;
+
+        public int id;
+
+        public frm_employees_add()
         {
             InitializeComponent();
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
+        // ✅ تحويل الميثود إلى async
+        private async void btn_add_Click(object sender, EventArgs e)
         {
-            
-            toast toast = new toast();
-            dialog dialog = new dialog();
-            if (edt_name.Text == "")
+            // ← مش بنعمل dialog و toast هنا - بنعملهم جوه كل حالة
+            if (string.IsNullOrWhiteSpace(edt_name.Text))
             {
+                dialog dialog = new dialog();
                 dialog.Width = this.Width;
-                dialog.txt_capthion.Text = "  اسم المستخدم مطلوب";
+                dialog.txt_capthion.Text = "  اسم الموظف مطلوب";
                 dialog.Show();
+                return;
             }
-            else
+
+            if (string.IsNullOrWhiteSpace(edt_typeemp.Text))
+            {
+                dialog dialog = new dialog();
+                dialog.Width = this.Width;
+                dialog.txt_capthion.Text = "  المسمى الوظيفي مطلوب";
+                dialog.Show();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(edt_freeday.Text))
+            {
+                dialog dialog = new dialog();
+                dialog.Width = this.Width;
+                dialog.txt_capthion.Text = "  نوع الوظيفة مطلوب";
+                dialog.Show();
+                return;
+            }
+
+            try
             {
                 if (id == 0)
                 {
-                    // pic_cover.Image.Save(methods.ma, System.Drawing.Imaging.ImageFormat.Png);
-                    tb_Employees.emp_name = edt_name.Text;
-                    tb_Employees.emp_type_emp = edt_typeemp.Text;
-                    tb_Employees.emp_freeday = edt_freeday.Text;
-                    tb_Employees.emp_salers = Convert.ToDouble(edt_salery.Text);
-                    tb_Employees.emp_paysalers = Convert.ToDouble(edt_salerypay.Text);
-                    tb_Employees.emp_staysalers = Convert.ToDouble(edt_salerystay.Text);
-                    tb_Employees.emp_datemont = edt_saleryday.Text;
-
-                   
-                    tb_Employees.emp_image = bl.methods.convert_byte(pic_cover.Image);
-                    tb_Employees.emp_absent = 0;
-                    db.tb_employees.Add(tb_Employees);
+                    tb_Employees.EmployeeName = edt_name.Text.Trim();
+                    tb_Employees.JobTitle = edt_typeemp.Text.Trim();
+                    tb_Employees.SalaryType = edt_freeday.Text.Trim();
+                    tb_Employees.SalaryValue = string.IsNullOrWhiteSpace(edt_salery.Text) ? 0 : Convert.ToDecimal(edt_salery.Text);
+                    tb_Employees.RequiredMonthlyHours = string.IsNullOrWhiteSpace(edt_work_hours.Text) ? 0 : Convert.ToInt32(edt_work_hours.Text);
+                    tb_Employees.OvertimeRate = string.IsNullOrWhiteSpace(edt_overtime_rate.Text) ? 0 : Convert.ToDecimal(edt_overtime_rate.Text);
+                    tb_Employees.workingdays = Convert.ToInt32(workingdays.Value);
+                    tb_Employees.FaceImage = _selectedImageBytes;
+                    tb_Employees.EmployeePassword = edt_password.Text.Trim();
+                    db.Employees.Add(tb_Employees);
                     db.SaveChanges();
+
+                    await SyncEmployeeToDevice(tb_Employees);
+
+                    // ← toast جديد هنا
+                    toast toast = new toast();
                     toast.Width = this.Width;
-                    toast.txt_caption.Text = "تم اضافة موظف جديد";
+                    toast.txt_caption.Text = "تم اضافة موظف جديد بنجاح";
                     toast.Show();
                     this.Close();
-
                 }
                 else
                 {
-                    tb_Employees = db.tb_employees.Where(x => x.id == id).FirstOrDefault();
-                    tb_Employees.emp_name = edt_name.Text;
-                    tb_Employees.emp_type_emp = edt_typeemp.Text;
-                    tb_Employees.emp_freeday = edt_freeday.Text;
-                    tb_Employees.emp_salers = Convert.ToDouble(edt_salery.Text);
-                    tb_Employees.emp_paysalers = Convert.ToDouble(edt_salerypay.Text);
-                    tb_Employees.emp_staysalers = Convert.ToDouble(edt_salerystay.Text);
-                    tb_Employees.emp_datemont = edt_saleryday.Text;
+                    tb_Employees = db.Employees.Where(x => x.EmployeeId == id).FirstOrDefault();
 
-                   
-                    //tb_Employees.emp_absent = 0;
-                    tb_Employees.emp_image = bl.methods.convert_byte(pic_cover.Image);
-                    db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
+                    if (tb_Employees != null)
+                    {
+                        tb_Employees.EmployeeName = edt_name.Text.Trim();
+                        tb_Employees.JobTitle = edt_typeemp.Text.Trim();
+                        tb_Employees.SalaryType = edt_freeday.Text.Trim();
+                        tb_Employees.SalaryValue = string.IsNullOrWhiteSpace(edt_salery.Text) ? 0 : Convert.ToDecimal(edt_salery.Text);
+                        tb_Employees.RequiredMonthlyHours = string.IsNullOrWhiteSpace(edt_work_hours.Text) ? 0 : Convert.ToInt32(edt_work_hours.Text);
+                        tb_Employees.OvertimeRate = string.IsNullOrWhiteSpace(edt_overtime_rate.Text) ? 0 : Convert.ToDecimal(edt_overtime_rate.Text);
+                        tb_Employees.workingdays = Convert.ToInt32(workingdays.Value);
+                        tb_Employees.FaceImage = _selectedImageBytes;
+                        tb_Employees.EmployeePassword = edt_password.Text.Trim();
+                        db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
 
-                    db.SaveChanges();
+                        await SyncEmployeeToDevice(tb_Employees);
 
-                    toast.Width = this.Width;
-                    toast.txt_caption.Text = "تم تعديل موظف حالى";
-                    toast.Show();
-                    this.Close();
+                        // ← toast جديد هنا
+                        toast toast = new toast();
+                        toast.Width = this.Width;
+                        toast.txt_caption.Text = "تم تعديل بيانات الموظف بنجاح";
+                        toast.Show();
+                        this.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // ← dialog جديد هنا
+                dialog dialog = new dialog();
+                dialog.Width = this.Width;
+                dialog.txt_capthion.Text = "حدث خطأ: " + ex.Message;
+                dialog.Show();
+            }
+        }
 
+        private async Task SyncEmployeeToDevice(Employee emp)
+        {
+            try
+            {
+                if (emp == null) return;
+
+                if (_hikvision == null)
+                    _hikvision = new HikvisionService(DEVICE_IP, DEVICE_USER, DEVICE_PASS);
+
+                bool connected = await _hikvision.TestConnectionAsync();
+                if (!connected)
+                {
+                    MessageBox.Show("تعذر الاتصال بجهاز البصمة", "تنبيه",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // ✅ لو مفيش صورة جديدة اتختارت - بس سجّل البيانات بدون صورة
+                if (!_newImageSelected)
+                {
+                    var regOnly = await _hikvision.RegisterEmployeeAsync(
+                        emp.EmployeeId, emp.EmployeeName, emp.EmployeePassword ?? "");
+
+                    if (!regOnly.Success)
+                        MessageBox.Show($"فشل تسجيل الموظف:\n{regOnly.Message}");
+
+                    return; // ← خلاص، مفيش صورة تترفع
+                }
+
+                // ✅ لو في صورة جديدة - احذف المستخدم وأعد إنشاؤه مع الصورة الجديدة
+                await _hikvision.DeleteUserFromDeviceAsync(emp.EmployeeId);
+                await Task.Delay(500);
+
+                var regResult = await _hikvision.RegisterEmployeeAsync(
+                    emp.EmployeeId, emp.EmployeeName, emp.EmployeePassword ?? "");
+
+                if (!regResult.Success)
+                {
+                    MessageBox.Show($"فشل تسجيل الموظف:\n{regResult.Message}");
+                    return;
+                }
+
+                // ✅ ارفع الصورة الجديدة بالظبط زي أول مرة
+                string tempPath = System.IO.Path.Combine(
+                    System.IO.Path.GetTempPath(),
+                    $"face_{emp.EmployeeId}.jpg");
+
+                System.IO.File.WriteAllBytes(tempPath, _selectedImageBytes);
+
+                var faceResult = await _hikvision.UploadFaceAsync(emp.EmployeeId, tempPath);
+
+                if (System.IO.File.Exists(tempPath))
+                    System.IO.File.Delete(tempPath);
+
+                if (!faceResult.Success)
+                    MessageBox.Show($"تحذير: فشل رفع الصورة:\n{faceResult.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطأ: {ex.Message}");
+            }
+        }
+        // ✅ إصلاح using declarations لـ C# 7.3
+
+
+        private void edt_salery_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(edt_salery.Text))
+            {
+                decimal result;
+                if (!decimal.TryParse(edt_salery.Text, out result))
+                {
+                    MessageBox.Show("يرجى إدخال أرقام فقط", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
 
-        
-
-        private void label3_Click(object sender, EventArgs e)
+        private void LoadEmployeeData()
         {
-
-        }
-
-        private void edt_salery_TextChanged(object sender, EventArgs e)
-        {
-            sumsaler();
-        }
-
-        private void edt_salerypay_TextChanged(object sender, EventArgs e)
-        {
-            sumsaler();
-            if (string.IsNullOrWhiteSpace(edt_salerypay.Text))
+            try
             {
-                // إذا كانت القيمة فارغة، يمكنك تعيين القيمة الافتراضية مرة أخرى
-                edt_salerypay.Text = "0";
+                tb_Employees = db.Employees.Where(x => x.EmployeeId == id).FirstOrDefault();
+
+                if (tb_Employees != null)
+                {
+                    edt_name.Text = tb_Employees.EmployeeName;
+                    edt_typeemp.Text = tb_Employees.JobTitle;
+                    edt_freeday.Text = tb_Employees.SalaryType;
+                    edt_salery.Text = tb_Employees.SalaryValue.ToString();
+                    edt_work_hours.Text = tb_Employees.RequiredMonthlyHours.ToString();
+                    edt_overtime_rate.Text = tb_Employees.OvertimeRate.ToString();
+                    workingdays.Value = Convert.ToInt32(tb_Employees.workingdays);
+                    edt_password.Text = tb_Employees.EmployeePassword ?? "";
+                    // ✅ تحميل صورة الموظف لو موجودة
+                    if (tb_Employees.FaceImage != null && tb_Employees.FaceImage.Length > 0)
+                    {
+                        _selectedImageBytes = tb_Employees.FaceImage;
+                        using (var ms = new System.IO.MemoryStream(_selectedImageBytes))
+                        {
+                            // ✅ إصلاح PictureEdit - استخدام Image property مباشرة
+                            pic_employee.Image = Image.FromStream(ms);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message);
             }
         }
 
-        private void edt_salerystay_TextChanged(object sender, EventArgs e)
-        {
-            sumsaler();
-        }
+       
+        private void edt_name_TextChanged(object sender, EventArgs e) { }
+      
 
-        private void btnAddImage_Click(object sender, EventArgs e)
+        private void frm_employees_add_Load(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog
+            if (id == 0)
             {
-                Title = "Select an Image",
-                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif",  // أنواع الصور المدعومة
-                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)  // مجلد الصور الافتراضي
-            };
+                if (edt_typeemp.Items.Count > 0)
+                    edt_typeemp.SelectedIndex = 0;
 
-            // إظهار نافذة اختيار الملفات والتحقق إذا كان المستخدم قد اختار صورة
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                if (edt_freeday.Items.Count > 0)
+                    edt_freeday.SelectedIndex = 0;
+            }
+            else
             {
-                // تحميل الصورة المختارة في PictureEdit
-                pic_cover.Image = Image.FromFile(openFileDialog.FileName);
+                LoadEmployeeData();
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        public byte[] FaceImage { get; set; }
+        public string FaceImagePath { get; set; }
 
-        }
-        private void sumsaler()
+        private byte[] _selectedImageBytes;
+        private byte[] PrepareImageForHikvision(string imagePath)
         {
-            saltot = Convert.ToDouble(edt_salery.Text);
-            salpay = Convert.ToDouble(edt_salerypay.Text);
-            salstay = saltot - salpay;
-            edt_salerystay.Text = salstay.ToString();
-            
+            using (var original = Image.FromFile(imagePath))
+            {
+                int targetWidth = 640;
+                int targetHeight = 480;
+
+                // ✅ حساب النسبة الصحيحة بدون تشويه
+                float ratioX = (float)targetWidth / original.Width;
+                float ratioY = (float)targetHeight / original.Height;
+                float ratio = Math.Min(ratioX, ratioY);
+
+                int newWidth = (int)(original.Width * ratio);
+                int newHeight = (int)(original.Height * ratio);
+
+                // ✅ توسيط الصورة في الكادر
+                int offsetX = (targetWidth - newWidth) / 2;
+                int offsetY = (targetHeight - newHeight) / 2;
+
+                using (var bitmap = new Bitmap(targetWidth, targetHeight,
+                    System.Drawing.Imaging.PixelFormat.Format24bppRgb))
+                {
+                    using (var g = Graphics.FromImage(bitmap))
+                    {
+                        g.Clear(Color.White);
+                        g.InterpolationMode =
+                            System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+                        // ✅ رسم الصورة بنسبتها الصحيحة في المنتصف
+                        g.DrawImage(original, offsetX, offsetY, newWidth, newHeight);
+                    }
+
+                    using (var ms = new System.IO.MemoryStream())
+                    {
+                        // ✅ JPEG بجودة 90% عشان الوجه يبقى واضح للجهاز
+                        var jpegEncoder = System.Drawing.Imaging.ImageCodecInfo
+                            .GetImageEncoders()
+                            .FirstOrDefault(c => c.FormatID ==
+                                System.Drawing.Imaging.ImageFormat.Jpeg.Guid);
+
+                        var encoderParams = new System.Drawing.Imaging.EncoderParameters(1);
+                        encoderParams.Param[0] = new System.Drawing.Imaging.EncoderParameter(
+                            System.Drawing.Imaging.Encoder.Quality, 90L);
+
+                        bitmap.Save(ms, jpegEncoder, encoderParams);
+                        return ms.ToArray();
+                    }
+                }
+            }
+        }
+
+        private bool _newImageSelected = false; // ← إضافة جديدة
+                                                // ✅ إصلاح using declarations + PictureEdit SizeMode
+        private void btn_select_image_Click(object sender, EventArgs e)
+        {
+            using (var openFile = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png",
+                Title = "اختار صورة الموظف"
+            })
+            {
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // ✅ شيك حجم الصورة قبل أي حاجة
+                        long fileSizeKB = new System.IO.FileInfo(openFile.FileName).Length / 1024;
+                        if (fileSizeKB > 200)
+                        {
+                            dialog dialog = new dialog();
+                            dialog.Width = this.Width;
+                            dialog.txt_capthion.Text = $"حجم الصورة {fileSizeKB} KB - يجب أن يكون أقل من 200 KB";
+                            dialog.Show();
+                            return;
+                        }
+
+                        _selectedImageBytes = PrepareImageForHikvision(openFile.FileName);
+                        _newImageSelected = true;
+
+                        using (var ms = new System.IO.MemoryStream(_selectedImageBytes))
+                        {
+                            pic_employee.Image = Image.FromStream(ms);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("خطأ في معالجة الصورة: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

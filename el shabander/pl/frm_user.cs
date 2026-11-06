@@ -14,7 +14,7 @@ namespace el_shabander.pl
 {
     public partial class frm_user : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_user tb_user = new tb_user();
         bl.methods methods = new bl.methods();
         toast toast = new toast();
@@ -27,7 +27,7 @@ namespace el_shabander.pl
 
 
          
-            el_shabander.DB_restoraintEntities dbContext = new el_shabander.DB_restoraintEntities();
+            el_shabander.DB_BarbershopEntities dbContext = new el_shabander.DB_BarbershopEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.tb_user.LoadAsync().ContinueWith(loadTask =>
             {
@@ -79,7 +79,7 @@ namespace el_shabander.pl
 
         public void updata_data()
         {
-            db = new DB_restoraintEntities();
+            db = new DB_BarbershopEntities();
             gridControl1.DataSource = db.tb_user.ToList();
           //  string gg = gridView1.GetRowCellValue(3, "user_state");
           

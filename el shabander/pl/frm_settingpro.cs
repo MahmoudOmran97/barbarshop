@@ -23,7 +23,7 @@ namespace el_shabander.pl
     public partial class frm_settingpro : Form
     {
 
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         bl.methods methods = new bl.methods();
         public frm_settingpro()
         {
@@ -59,8 +59,11 @@ namespace el_shabander.pl
                 Properties.Settings.Default.license = edt_serilnam.Text;
                 Properties.Settings.Default.EmailInterval = (int)edt_time.Value;
                 Properties.Settings.Default.invoceprint = txt_invoce.Text;
-                Properties.Settings.Default.parstaprint = txt_parasta.Text;
-                Properties.Settings.Default.checkinprint = txt_checkin.Text;
+                Properties.Settings.Default.user_hik= txt_admin.Text;
+                Properties.Settings.Default.ip_hik= txt_ip.Text ;
+                Properties.Settings.Default.pass_hik= txt_pass.Text ;
+                //  Properties.Settings.Default.parstaprint = txt_parasta.Text;
+                //   Properties.Settings.Default.checkinprint = txt_checkin.Text;
                 Properties.Settings.Default.Save();
             }
             else
@@ -101,25 +104,28 @@ namespace el_shabander.pl
             }
 
            
-            txt_parasta.Items.Clear();
+          //  txt_parasta.Items.Clear();
             foreach (string printer in PrinterSettings.InstalledPrinters)
             {
-                txt_parasta.Items.Add(printer);
+              //  txt_parasta.Items.Add(printer);
             }
 
-            txt_checkin.Items.Clear();
+         //   txt_checkin.Items.Clear();
             foreach (string printer in PrinterSettings.InstalledPrinters)
             {
-                txt_checkin.Items.Add(printer);
+              //  txt_checkin.Items.Add(printer);
             }
 
             txt_invoce.SelectedItem = Properties.Settings.Default.invoceprint ?? new PrinterSettings().PrinterName;
-            txt_parasta.SelectedItem = Properties.Settings.Default.parstaprint ?? new PrinterSettings().PrinterName;
-            txt_checkin.SelectedItem = Properties.Settings.Default.checkinprint ?? new PrinterSettings().PrinterName;
+           // txt_parasta.SelectedItem = Properties.Settings.Default.parstaprint ?? new PrinterSettings().PrinterName;
+          //  txt_checkin.SelectedItem = Properties.Settings.Default.checkinprint ?? new PrinterSettings().PrinterName;
 
             edt_serildevice.Text = Properties.Settings.Default.serail;
             edt_serilnam.Text = Properties.Settings.Default.license;
             edt_time.Value = Properties.Settings.Default.EmailInterval;
+            txt_admin.Text = Properties.Settings.Default.user_hik;
+            txt_ip.Text = Properties.Settings.Default.ip_hik;
+            txt_pass.Text = Properties.Settings.Default.pass_hik;
             if (Properties.Settings.Default.darkmode == true)
             {
                 dark.IsOn = true;
@@ -141,6 +147,7 @@ namespace el_shabander.pl
                 edt_phone.Text = setting.phonenam; // رقم الهاتف
                 txt_print.Text = setting.printty;
                 txt_printcode.Text = setting.printcod;
+               
                 try
                 {
                     // تحويل الشعار من بايت إلى صورة وعرضها
@@ -230,7 +237,7 @@ namespace el_shabander.pl
         {
             try
             {
-                using (var db = new DB_restoraintEntities())
+                using (var db = new DB_BarbershopEntities())
                 {
                     string dbname = db.Database.Connection.Database;
                     string dbbackup = "DMMback" + DateTime.Now.ToString("yyyyMMddHHmm");
@@ -300,7 +307,7 @@ namespace el_shabander.pl
         {
             try
             {
-                using (var db = new DB_restoraintEntities())
+                using (var db = new DB_BarbershopEntities())
                 {
                     string dbname = db.Database.Connection.Database;
 
@@ -354,8 +361,8 @@ namespace el_shabander.pl
         {
             var lastDate = DateTime.Now.Date;
 
-            // جمع البيانات من جدول tb_sell_table
-            var totalSum = db.tb_sell_table
+            // جمع البيانات من جدول tb_appointment
+            var totalSum = db.tb_appointment
                 .Where(x => DbFunctions.TruncateTime(x.sell_date) == lastDate)
                 .Select(x => new
                 {
@@ -367,7 +374,7 @@ namespace el_shabander.pl
                 }).ToList();
 
             // جمع البيانات من جدول tb_sell_takeway
-            var totalSumtake = db.tb_sell_takeway
+         /*   var totalSumtake = db.tb_sell_takeway
                 .Where(x => DbFunctions.TruncateTime(x.sell_date) == lastDate)
                 .Select(x => new
                 {
@@ -376,11 +383,11 @@ namespace el_shabander.pl
                     Returned = x.sell_tprice,
                     PaidAmount = x.pay,
                     invoice = x.invocie_id
-                }).ToList();
+                }).ToList();*/
 
             // دمج البيانات مع ترتيبها حسب التاريخ
             var combinedData = totalSum
-                .Concat(totalSumtake)
+              
                 .OrderBy(x => x.Date)
                 .ToList();
 

@@ -15,82 +15,113 @@ namespace el_shabander.pl
 {
     public partial class frm_employee_absent : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
-        tb_safe tb_Safe = new tb_safe();
-        bl.methods methods = new bl.methods();
-        tb_employees tb_Employees = new tb_employees();
-        double saltot, salpay;
-        // double storadd, stortotal, storstay;
-        // DateTime time;
-        //pl.frm_supp frm_Cat = new frm_supp();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         public int id;
-        public frm_employee_absent()
 
+        public frm_employee_absent()
         {
             InitializeComponent();
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-
-            tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
-            double saltot = Math.Round(Convert.ToDouble(tb_Employees.emp_salers) / 30);
-            salpay = saltot * Convert.ToDouble(txt_qt.Text);
-            tb_Employees.emp_dat = edt_dat.Text;
-            tb_Employees.emp_absent = Convert.ToDouble(edt_spen.Text) + Convert.ToDouble(txt_qt.Text);
-            tb_Employees.emp_staysalers -= salpay;
-            db.Entry(tb_Employees).State = System.Data.Entity.EntityState.Modified;
-
-            db.SaveChanges();
-
-            this.Close();
-
-
-
-        }
-
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void edt_name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tb_Employees = db.tb_employees.Where(x => x.emp_name == edt_name.Text).FirstOrDefault();
-            edt_spen.Text = tb_Employees.emp_absent.ToString();
-            edt_dat.Text = tb_Employees.emp_dat;
-
-        }
-
-
-
-
-
-
-
         private void frm_stor_add_Activated(object sender, EventArgs e)
         {
-
-            // edt_countsafe.Text = tb_Safe.safe_count.ToString();
         }
-
-
 
         private void frm_stor_add_Load(object sender, EventArgs e)
         {
-            var r1 = db.tb_employees.Select(x => x.emp_name).ToList();
-            // var r2 = db.tb_safe.Select(x => x.safe_name).ToList();
-            edt_name.DataSource = r1;
-            // edt_safe.DataSource = r2;
-            AutoCompleteStringCollection acsc1 = new AutoCompleteStringCollection();
-            //  AutoCompleteStringCollection acsc2 = new AutoCompleteStringCollection();
-            acsc1.AddRange(r1.ToArray());
-            //  acsc2.AddRange(r2.ToArray());
-            edt_name.AutoCompleteCustomSource = acsc1;
+            LoadAttendanceData();
+        }
+
+        private void LoadAttendanceData()
+        {
+            try
+            {
+                var attendance = db.Attendances.FirstOrDefault(x => x.AttendanceId == id);
+
+                if (attendance != null)
+                {
+                    // عرض البيانات
+                    NameEmployee.Text = attendance.NameEmployee ?? "";
+                    Status.Text = attendance.Status ?? "";
+                    WorkedHours.Text = attendance.WorkedHours?.ToString("0.00") ?? "0";
+                    OvertimeHours.Text = attendance.OvertimeHours?.ToString("0.00") ?? "0";
+                    AttendDate.Text = attendance.AttendDate?.ToString("dd/MM/yyyy") ?? "";
+
+                    // وقت الحضور
+                    if (attendance.CheckIn.HasValue)
+                    {
+                        TimeSpan checkIn = attendance.CheckIn.Value;
+                        CheckIn.Text = DateTime.Today.Add(checkIn).ToString("hh:mm:ss tt");
+                    }
+                    else
+                    {
+                        CheckIn.Text = "لم يتم التسجيل";
+                    }
+
+                    // وقت الانصراف
+                    if (attendance.CheckOut.HasValue)
+                    {
+                        TimeSpan checkOut = attendance.CheckOut.Value;
+                        CheckOut.Text = DateTime.Today.Add(checkOut).ToString("hh:mm:ss tt");
+                    }
+                    else
+                    {
+                        CheckOut.Text = "لم يتم التسجيل";
+                    }
+
+                    // تغيير لون المربع حسب الحالة
+                    SetStatusColor(attendance.Status);
+
+                    // جعل الحقول للقراءة فقط
+                    NameEmployee.ReadOnly = true;
+                    Status.ReadOnly = true;
+                    WorkedHours.ReadOnly = true;
+                    OvertimeHours.ReadOnly = true;
+                    AttendDate.ReadOnly = true;
+                    CheckIn.ReadOnly = true;
+                    CheckOut.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("لم يتم العثور على بيانات الحضور", "تنبيه",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message,
+                                "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // دالة لتغيير لون المربع حسب الحالة
+        private void SetStatusColor(string status)
+        {
+            if (string.IsNullOrEmpty(status))
+            {
+                panel_status.BackColor = Color.Gray;
+                return;
+            }
+
+            status = status.Trim();
+
+            if (status == "حاضر")
+            {
+                panel_status.BackColor = Color.LightGreen;
+            }
+            else if (status == "غائب")
+            {
+                panel_status.BackColor = Color.Red;
+            }
+            else if (status == "إجازة")
+            {
+                panel_status.BackColor = Color.Orange;
+            }
+            else
+            {
+                panel_status.BackColor = Color.Gray;
+            }
         }
     }
 }

@@ -59,16 +59,19 @@ namespace el_shabander.pl
             this.pn_prog = new DevExpress.XtraWaitForm.ProgressPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txt_print = new System.Windows.Forms.ComboBox();
-            this.txt_checkin = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txt_parasta = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.txt_invoce = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_printcode = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_pass = new System.Windows.Forms.TextBox();
+            this.txt_admin = new System.Windows.Forms.TextBox();
+            this.txt_ip = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dark.Properties)).BeginInit();
@@ -77,33 +80,36 @@ namespace el_shabander.pl
             this.groupBox1.SuspendLayout();
             this.frm_cat.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(446, 149);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(429, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 36);
+            this.label3.Size = new System.Drawing.Size(126, 36);
             this.label3.TabIndex = 29;
             this.label3.Text = "العنوان";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.BackColor = System.Drawing.Color.Silver;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(444, 44);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(450, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 36);
+            this.label6.Size = new System.Drawing.Size(143, 36);
             this.label6.TabIndex = 30;
             this.label6.Text = "سريل الجهاز";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
@@ -148,15 +154,16 @@ namespace el_shabander.pl
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(468, 85);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(450, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 36);
+            this.label5.Size = new System.Drawing.Size(143, 36);
             this.label5.TabIndex = 28;
             this.label5.Text = "الترخيص";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
@@ -317,21 +324,22 @@ namespace el_shabander.pl
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(434, 247);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(429, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 36);
+            this.label4.Size = new System.Drawing.Size(126, 36);
             this.label4.TabIndex = 31;
             this.label4.Text = "رقم الهاتف";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // edt_addres
             // 
             this.edt_addres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.edt_addres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_addres.Location = new System.Drawing.Point(41, 159);
+            this.edt_addres.Location = new System.Drawing.Point(41, 119);
             this.edt_addres.Name = "edt_addres";
             this.edt_addres.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.edt_addres.Size = new System.Drawing.Size(382, 31);
@@ -341,12 +349,12 @@ namespace el_shabander.pl
             // edt_logo
             // 
             this.edt_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.edt_logo.Location = new System.Drawing.Point(79, 319);
+            this.edt_logo.Location = new System.Drawing.Point(111, 238);
             this.edt_logo.Name = "edt_logo";
             this.edt_logo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.edt_logo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.edt_logo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.edt_logo.Size = new System.Drawing.Size(293, 274);
+            this.edt_logo.Size = new System.Drawing.Size(226, 202);
             this.edt_logo.TabIndex = 28;
             // 
             // groupBox1
@@ -363,7 +371,7 @@ namespace el_shabander.pl
             this.groupBox1.Location = new System.Drawing.Point(639, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(562, 652);
+            this.groupBox1.Size = new System.Drawing.Size(562, 445);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "اعدادات عامة";
@@ -374,7 +382,7 @@ namespace el_shabander.pl
             this.btnAddImage.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddImage.Appearance.Options.UseFont = true;
             this.btnAddImage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddImage.ImageOptions.Image")));
-            this.btnAddImage.Location = new System.Drawing.Point(378, 521);
+            this.btnAddImage.Location = new System.Drawing.Point(389, 271);
             this.btnAddImage.Name = "btnAddImage";
             this.btnAddImage.Size = new System.Drawing.Size(166, 45);
             this.btnAddImage.TabIndex = 33;
@@ -385,7 +393,7 @@ namespace el_shabander.pl
             // 
             this.edt_phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.edt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edt_phone.Location = new System.Drawing.Point(41, 249);
+            this.edt_phone.Location = new System.Drawing.Point(41, 180);
             this.edt_phone.Name = "edt_phone";
             this.edt_phone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.edt_phone.Size = new System.Drawing.Size(382, 31);
@@ -406,19 +414,21 @@ namespace el_shabander.pl
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(429, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 36);
+            this.label1.Size = new System.Drawing.Size(126, 36);
             this.label1.TabIndex = 24;
             this.label1.Text = "اسم الشركة";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frm_cat
             // 
             this.frm_cat.BackColor = System.Drawing.Color.LightCyan;
+            this.frm_cat.Controls.Add(this.groupBox6);
             this.frm_cat.Controls.Add(this.pn_prog);
             this.frm_cat.Controls.Add(this.groupBox5);
             this.frm_cat.Controls.Add(this.groupBox3);
@@ -452,7 +462,7 @@ namespace el_shabander.pl
             this.pn_prog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pn_prog.Caption = "                      الرجاء الانتظار  ";
             this.pn_prog.Description = "تحتاج هذة العملية بعض الوقت";
-            this.pn_prog.Location = new System.Drawing.Point(416, 281);
+            this.pn_prog.Location = new System.Drawing.Point(416, 229);
             this.pn_prog.Name = "pn_prog";
             this.pn_prog.Size = new System.Drawing.Size(379, 85);
             this.pn_prog.TabIndex = 33;
@@ -462,10 +472,6 @@ namespace el_shabander.pl
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txt_print);
-            this.groupBox5.Controls.Add(this.txt_checkin);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.txt_parasta);
-            this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.txt_invoce);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.label7);
@@ -494,61 +500,13 @@ namespace el_shabander.pl
             this.txt_print.Size = new System.Drawing.Size(379, 33);
             this.txt_print.TabIndex = 31;
             // 
-            // txt_checkin
-            // 
-            this.txt_checkin.BackColor = System.Drawing.Color.PeachPuff;
-            this.txt_checkin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_checkin.FormattingEnabled = true;
-            this.txt_checkin.Location = new System.Drawing.Point(19, 197);
-            this.txt_checkin.Name = "txt_checkin";
-            this.txt_checkin.Size = new System.Drawing.Size(379, 33);
-            this.txt_checkin.TabIndex = 43;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(425, 194);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(134, 36);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "طابعة المطبخ";
-            // 
-            // txt_parasta
-            // 
-            this.txt_parasta.BackColor = System.Drawing.Color.PeachPuff;
-            this.txt_parasta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_parasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_parasta.FormattingEnabled = true;
-            this.txt_parasta.Location = new System.Drawing.Point(19, 161);
-            this.txt_parasta.Name = "txt_parasta";
-            this.txt_parasta.Size = new System.Drawing.Size(379, 33);
-            this.txt_parasta.TabIndex = 41;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(421, 158);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 36);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "طابعة الباريستا";
-            // 
             // txt_invoce
             // 
             this.txt_invoce.BackColor = System.Drawing.Color.PeachPuff;
             this.txt_invoce.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_invoce.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_invoce.FormattingEnabled = true;
-            this.txt_invoce.Location = new System.Drawing.Point(19, 125);
+            this.txt_invoce.Location = new System.Drawing.Point(19, 187);
             this.txt_invoce.Name = "txt_invoce";
             this.txt_invoce.Size = new System.Drawing.Size(379, 33);
             this.txt_invoce.TabIndex = 39;
@@ -556,29 +514,31 @@ namespace el_shabander.pl
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.BackColor = System.Drawing.Color.Silver;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(422, 122);
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(404, 188);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 36);
+            this.label11.Size = new System.Drawing.Size(189, 36);
             this.label11.TabIndex = 38;
             this.label11.Text = "طابعة الفاتورة";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(404, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 36);
+            this.label7.Size = new System.Drawing.Size(189, 36);
             this.label7.TabIndex = 37;
             this.label7.Text = " نوع طباعة الفاتورة";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_printcode
             // 
@@ -589,7 +549,7 @@ namespace el_shabander.pl
             this.txt_printcode.Items.AddRange(new object[] {
             "50mmx25mm",
             "40mm×20mm"});
-            this.txt_printcode.Location = new System.Drawing.Point(19, 89);
+            this.txt_printcode.Location = new System.Drawing.Point(19, 120);
             this.txt_printcode.Name = "txt_printcode";
             this.txt_printcode.Size = new System.Drawing.Size(379, 33);
             this.txt_printcode.TabIndex = 36;
@@ -597,15 +557,16 @@ namespace el_shabander.pl
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.BackColor = System.Drawing.Color.Silver;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(407, 86);
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(404, 119);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(171, 36);
+            this.label10.Size = new System.Drawing.Size(189, 36);
             this.label10.TabIndex = 35;
             this.label10.Text = "نوع طباعة الباركود";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_save
             // 
@@ -619,6 +580,98 @@ namespace el_shabander.pl
             this.btn_save.TabIndex = 20;
             this.btn_save.Text = "حفظ";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click_1);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txt_pass);
+            this.groupBox6.Controls.Add(this.txt_admin);
+            this.groupBox6.Controls.Add(this.txt_ip);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Font = new System.Drawing.Font("Cairo", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(639, 458);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox6.Size = new System.Drawing.Size(562, 210);
+            this.groupBox6.TabIndex = 34;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "جهاز الحضور والانصراف";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.BackColor = System.Drawing.Color.Silver;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(429, 166);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(126, 36);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "كلمة المرور";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.BackColor = System.Drawing.Color.Silver;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(429, 54);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(126, 36);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "عنوان ip";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.BackColor = System.Drawing.Color.Silver;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.Font = new System.Drawing.Font("Cairo", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(429, 110);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 36);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "اسم المستخدم";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_pass
+            // 
+            this.txt_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass.Location = new System.Drawing.Point(28, 174);
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_pass.Size = new System.Drawing.Size(382, 31);
+            this.txt_pass.TabIndex = 41;
+            this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_admin
+            // 
+            this.txt_admin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_admin.Location = new System.Drawing.Point(28, 113);
+            this.txt_admin.Name = "txt_admin";
+            this.txt_admin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_admin.Size = new System.Drawing.Size(382, 31);
+            this.txt_admin.TabIndex = 40;
+            this.txt_admin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_ip
+            // 
+            this.txt_ip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ip.Location = new System.Drawing.Point(28, 59);
+            this.txt_ip.Name = "txt_ip";
+            this.txt_ip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_ip.Size = new System.Drawing.Size(382, 31);
+            this.txt_ip.TabIndex = 39;
+            this.txt_ip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frm_settingpro
             // 
@@ -649,7 +702,8 @@ namespace el_shabander.pl
             this.groupBox1.PerformLayout();
             this.frm_cat.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -689,11 +743,14 @@ namespace el_shabander.pl
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox txt_printcode;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox txt_parasta;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox txt_invoce;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox txt_checkin;
+        private System.Windows.Forms.GroupBox groupBox6;
+        public System.Windows.Forms.TextBox txt_pass;
+        public System.Windows.Forms.TextBox txt_admin;
+        public System.Windows.Forms.TextBox txt_ip;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

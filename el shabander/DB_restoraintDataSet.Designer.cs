@@ -36,15 +36,15 @@ namespace el_shabander {
         
         private tb_order_buyDataTable tabletb_order_buy;
         
-        private tb_order_sell_tableDataTable tabletb_order_sell_table;
+        private tb_order_appointmentDataTable tabletb_order_appointment;
         
         private tb_order_sell_takewayDataTable tabletb_order_sell_takeway;
         
-        private tb_productDataTable tabletb_product;
+        private tb_serviceDataTable tabletb_service;
         
         private tb_safeDataTable tabletb_safe;
         
-        private tb_sell_tableDataTable tabletb_sell_table;
+        private tb_appointmentDataTable tabletb_appointment;
         
         private tb_sell_takewayDataTable tabletb_sell_takeway;
         
@@ -54,7 +54,7 @@ namespace el_shabander {
         
         private tb_suppDataTable tabletb_supp;
         
-        private tb_tableDataTable tabletb_table;
+        private tb_chairDataTable tabletb_chair;
         
         private tb_userDataTable tabletb_user;
         
@@ -106,20 +106,20 @@ namespace el_shabander {
                 if ((ds.Tables["tb_order_buy"] != null)) {
                     base.Tables.Add(new tb_order_buyDataTable(ds.Tables["tb_order_buy"]));
                 }
-                if ((ds.Tables["tb_order_sell_table"] != null)) {
-                    base.Tables.Add(new tb_order_sell_tableDataTable(ds.Tables["tb_order_sell_table"]));
+                if ((ds.Tables["tb_order_appointment"] != null)) {
+                    base.Tables.Add(new tb_order_appointmentDataTable(ds.Tables["tb_order_appointment"]));
                 }
                 if ((ds.Tables["tb_order_sell_takeway"] != null)) {
                     base.Tables.Add(new tb_order_sell_takewayDataTable(ds.Tables["tb_order_sell_takeway"]));
                 }
-                if ((ds.Tables["tb_product"] != null)) {
-                    base.Tables.Add(new tb_productDataTable(ds.Tables["tb_product"]));
+                if ((ds.Tables["tb_service"] != null)) {
+                    base.Tables.Add(new tb_serviceDataTable(ds.Tables["tb_service"]));
                 }
                 if ((ds.Tables["tb_safe"] != null)) {
                     base.Tables.Add(new tb_safeDataTable(ds.Tables["tb_safe"]));
                 }
-                if ((ds.Tables["tb_sell_table"] != null)) {
-                    base.Tables.Add(new tb_sell_tableDataTable(ds.Tables["tb_sell_table"]));
+                if ((ds.Tables["tb_appointment"] != null)) {
+                    base.Tables.Add(new tb_appointmentDataTable(ds.Tables["tb_appointment"]));
                 }
                 if ((ds.Tables["tb_sell_takeway"] != null)) {
                     base.Tables.Add(new tb_sell_takewayDataTable(ds.Tables["tb_sell_takeway"]));
@@ -133,8 +133,8 @@ namespace el_shabander {
                 if ((ds.Tables["tb_supp"] != null)) {
                     base.Tables.Add(new tb_suppDataTable(ds.Tables["tb_supp"]));
                 }
-                if ((ds.Tables["tb_table"] != null)) {
-                    base.Tables.Add(new tb_tableDataTable(ds.Tables["tb_table"]));
+                if ((ds.Tables["tb_chair"] != null)) {
+                    base.Tables.Add(new tb_chairDataTable(ds.Tables["tb_chair"]));
                 }
                 if ((ds.Tables["tb_user"] != null)) {
                     base.Tables.Add(new tb_userDataTable(ds.Tables["tb_user"]));
@@ -224,9 +224,9 @@ namespace el_shabander {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tb_order_sell_tableDataTable tb_order_sell_table {
+        public tb_order_appointmentDataTable tb_order_appointment {
             get {
-                return this.tabletb_order_sell_table;
+                return this.tabletb_order_appointment;
             }
         }
         
@@ -244,9 +244,9 @@ namespace el_shabander {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tb_productDataTable tb_product {
+        public tb_serviceDataTable tb_service {
             get {
-                return this.tabletb_product;
+                return this.tabletb_service;
             }
         }
         
@@ -264,9 +264,9 @@ namespace el_shabander {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tb_sell_tableDataTable tb_sell_table {
+        public tb_appointmentDataTable tb_appointment {
             get {
-                return this.tabletb_sell_table;
+                return this.tabletb_appointment;
             }
         }
         
@@ -314,9 +314,9 @@ namespace el_shabander {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tb_tableDataTable tb_table {
+        public tb_chairDataTable tb_chair {
             get {
-                return this.tabletb_table;
+                return this.tabletb_chair;
             }
         }
         
@@ -425,20 +425,20 @@ namespace el_shabander {
                 if ((ds.Tables["tb_order_buy"] != null)) {
                     base.Tables.Add(new tb_order_buyDataTable(ds.Tables["tb_order_buy"]));
                 }
-                if ((ds.Tables["tb_order_sell_table"] != null)) {
-                    base.Tables.Add(new tb_order_sell_tableDataTable(ds.Tables["tb_order_sell_table"]));
+                if ((ds.Tables["tb_order_appointment"] != null)) {
+                    base.Tables.Add(new tb_order_appointmentDataTable(ds.Tables["tb_order_appointment"]));
                 }
                 if ((ds.Tables["tb_order_sell_takeway"] != null)) {
                     base.Tables.Add(new tb_order_sell_takewayDataTable(ds.Tables["tb_order_sell_takeway"]));
                 }
-                if ((ds.Tables["tb_product"] != null)) {
-                    base.Tables.Add(new tb_productDataTable(ds.Tables["tb_product"]));
+                if ((ds.Tables["tb_service"] != null)) {
+                    base.Tables.Add(new tb_serviceDataTable(ds.Tables["tb_service"]));
                 }
                 if ((ds.Tables["tb_safe"] != null)) {
                     base.Tables.Add(new tb_safeDataTable(ds.Tables["tb_safe"]));
                 }
-                if ((ds.Tables["tb_sell_table"] != null)) {
-                    base.Tables.Add(new tb_sell_tableDataTable(ds.Tables["tb_sell_table"]));
+                if ((ds.Tables["tb_appointment"] != null)) {
+                    base.Tables.Add(new tb_appointmentDataTable(ds.Tables["tb_appointment"]));
                 }
                 if ((ds.Tables["tb_sell_takeway"] != null)) {
                     base.Tables.Add(new tb_sell_takewayDataTable(ds.Tables["tb_sell_takeway"]));
@@ -452,8 +452,8 @@ namespace el_shabander {
                 if ((ds.Tables["tb_supp"] != null)) {
                     base.Tables.Add(new tb_suppDataTable(ds.Tables["tb_supp"]));
                 }
-                if ((ds.Tables["tb_table"] != null)) {
-                    base.Tables.Add(new tb_tableDataTable(ds.Tables["tb_table"]));
+                if ((ds.Tables["tb_chair"] != null)) {
+                    base.Tables.Add(new tb_chairDataTable(ds.Tables["tb_chair"]));
                 }
                 if ((ds.Tables["tb_user"] != null)) {
                     base.Tables.Add(new tb_userDataTable(ds.Tables["tb_user"]));
@@ -530,10 +530,10 @@ namespace el_shabander {
                     this.tabletb_order_buy.InitVars();
                 }
             }
-            this.tabletb_order_sell_table = ((tb_order_sell_tableDataTable)(base.Tables["tb_order_sell_table"]));
+            this.tabletb_order_appointment = ((tb_order_appointmentDataTable)(base.Tables["tb_order_appointment"]));
             if ((initTable == true)) {
-                if ((this.tabletb_order_sell_table != null)) {
-                    this.tabletb_order_sell_table.InitVars();
+                if ((this.tabletb_order_appointment != null)) {
+                    this.tabletb_order_appointment.InitVars();
                 }
             }
             this.tabletb_order_sell_takeway = ((tb_order_sell_takewayDataTable)(base.Tables["tb_order_sell_takeway"]));
@@ -542,10 +542,10 @@ namespace el_shabander {
                     this.tabletb_order_sell_takeway.InitVars();
                 }
             }
-            this.tabletb_product = ((tb_productDataTable)(base.Tables["tb_product"]));
+            this.tabletb_service = ((tb_serviceDataTable)(base.Tables["tb_service"]));
             if ((initTable == true)) {
-                if ((this.tabletb_product != null)) {
-                    this.tabletb_product.InitVars();
+                if ((this.tabletb_service != null)) {
+                    this.tabletb_service.InitVars();
                 }
             }
             this.tabletb_safe = ((tb_safeDataTable)(base.Tables["tb_safe"]));
@@ -554,10 +554,10 @@ namespace el_shabander {
                     this.tabletb_safe.InitVars();
                 }
             }
-            this.tabletb_sell_table = ((tb_sell_tableDataTable)(base.Tables["tb_sell_table"]));
+            this.tabletb_appointment = ((tb_appointmentDataTable)(base.Tables["tb_appointment"]));
             if ((initTable == true)) {
-                if ((this.tabletb_sell_table != null)) {
-                    this.tabletb_sell_table.InitVars();
+                if ((this.tabletb_appointment != null)) {
+                    this.tabletb_appointment.InitVars();
                 }
             }
             this.tabletb_sell_takeway = ((tb_sell_takewayDataTable)(base.Tables["tb_sell_takeway"]));
@@ -584,10 +584,10 @@ namespace el_shabander {
                     this.tabletb_supp.InitVars();
                 }
             }
-            this.tabletb_table = ((tb_tableDataTable)(base.Tables["tb_table"]));
+            this.tabletb_chair = ((tb_chairDataTable)(base.Tables["tb_chair"]));
             if ((initTable == true)) {
-                if ((this.tabletb_table != null)) {
-                    this.tabletb_table.InitVars();
+                if ((this.tabletb_chair != null)) {
+                    this.tabletb_chair.InitVars();
                 }
             }
             this.tabletb_user = ((tb_userDataTable)(base.Tables["tb_user"]));
@@ -624,16 +624,16 @@ namespace el_shabander {
             base.Tables.Add(this.tabletb_main);
             this.tabletb_order_buy = new tb_order_buyDataTable();
             base.Tables.Add(this.tabletb_order_buy);
-            this.tabletb_order_sell_table = new tb_order_sell_tableDataTable();
-            base.Tables.Add(this.tabletb_order_sell_table);
+            this.tabletb_order_appointment = new tb_order_appointmentDataTable();
+            base.Tables.Add(this.tabletb_order_appointment);
             this.tabletb_order_sell_takeway = new tb_order_sell_takewayDataTable();
             base.Tables.Add(this.tabletb_order_sell_takeway);
-            this.tabletb_product = new tb_productDataTable();
-            base.Tables.Add(this.tabletb_product);
+            this.tabletb_service = new tb_serviceDataTable();
+            base.Tables.Add(this.tabletb_service);
             this.tabletb_safe = new tb_safeDataTable();
             base.Tables.Add(this.tabletb_safe);
-            this.tabletb_sell_table = new tb_sell_tableDataTable();
-            base.Tables.Add(this.tabletb_sell_table);
+            this.tabletb_appointment = new tb_appointmentDataTable();
+            base.Tables.Add(this.tabletb_appointment);
             this.tabletb_sell_takeway = new tb_sell_takewayDataTable();
             base.Tables.Add(this.tabletb_sell_takeway);
             this.tabletb_spend_cus = new tb_spend_cusDataTable();
@@ -642,8 +642,8 @@ namespace el_shabander {
             base.Tables.Add(this.tabletb_stor);
             this.tabletb_supp = new tb_suppDataTable();
             base.Tables.Add(this.tabletb_supp);
-            this.tabletb_table = new tb_tableDataTable();
-            base.Tables.Add(this.tabletb_table);
+            this.tabletb_chair = new tb_chairDataTable();
+            base.Tables.Add(this.tabletb_chair);
             this.tabletb_user = new tb_userDataTable();
             base.Tables.Add(this.tabletb_user);
             this._tabletb_spend_supp = new _tb_spend_suppDataTable();
@@ -688,7 +688,7 @@ namespace el_shabander {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetb_order_sell_table() {
+        private bool ShouldSerializetb_order_appointment() {
             return false;
         }
         
@@ -700,7 +700,7 @@ namespace el_shabander {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetb_product() {
+        private bool ShouldSerializetb_service() {
             return false;
         }
         
@@ -712,7 +712,7 @@ namespace el_shabander {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetb_sell_table() {
+        private bool ShouldSerializetb_appointment() {
             return false;
         }
         
@@ -742,7 +742,7 @@ namespace el_shabander {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetb_table() {
+        private bool ShouldSerializetb_chair() {
             return false;
         }
         
@@ -832,19 +832,19 @@ namespace el_shabander {
         public delegate void tb_order_buyRowChangeEventHandler(object sender, tb_order_buyRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tb_order_sell_tableRowChangeEventHandler(object sender, tb_order_sell_tableRowChangeEvent e);
+        public delegate void tb_order_appointmentRowChangeEventHandler(object sender, tb_order_appointmentRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tb_order_sell_takewayRowChangeEventHandler(object sender, tb_order_sell_takewayRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tb_productRowChangeEventHandler(object sender, tb_productRowChangeEvent e);
+        public delegate void tb_serviceRowChangeEventHandler(object sender, tb_serviceRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tb_safeRowChangeEventHandler(object sender, tb_safeRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tb_sell_tableRowChangeEventHandler(object sender, tb_sell_tableRowChangeEvent e);
+        public delegate void tb_appointmentRowChangeEventHandler(object sender, tb_appointmentRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tb_sell_takewayRowChangeEventHandler(object sender, tb_sell_takewayRowChangeEvent e);
@@ -859,7 +859,7 @@ namespace el_shabander {
         public delegate void tb_suppRowChangeEventHandler(object sender, tb_suppRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tb_tableRowChangeEventHandler(object sender, tb_tableRowChangeEvent e);
+        public delegate void tb_chairRowChangeEventHandler(object sender, tb_chairRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tb_userRowChangeEventHandler(object sender, tb_userRowChangeEvent e);
@@ -2933,7 +2933,7 @@ namespace el_shabander {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tb_order_sell_tableDataTable : global::System.Data.TypedTableBase<tb_order_sell_tableRow> {
+        public partial class tb_order_appointmentDataTable : global::System.Data.TypedTableBase<tb_order_appointmentRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -2953,8 +2953,8 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableDataTable() {
-                this.TableName = "tb_order_sell_table";
+            public tb_order_appointmentDataTable() {
+                this.TableName = "tb_order_appointment";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2962,7 +2962,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_order_sell_tableDataTable(global::System.Data.DataTable table) {
+            internal tb_order_appointmentDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2979,7 +2979,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tb_order_sell_tableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tb_order_appointmentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -3059,34 +3059,34 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableRow this[int index] {
+            public tb_order_appointmentRow this[int index] {
                 get {
-                    return ((tb_order_sell_tableRow)(this.Rows[index]));
+                    return ((tb_order_appointmentRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_order_sell_tableRowChangeEventHandler tb_order_sell_tableRowChanging;
+            public event tb_order_appointmentRowChangeEventHandler tb_order_appointmentRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_order_sell_tableRowChangeEventHandler tb_order_sell_tableRowChanged;
+            public event tb_order_appointmentRowChangeEventHandler tb_order_appointmentRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_order_sell_tableRowChangeEventHandler tb_order_sell_tableRowDeleting;
+            public event tb_order_appointmentRowChangeEventHandler tb_order_appointmentRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_order_sell_tableRowChangeEventHandler tb_order_sell_tableRowDeleted;
+            public event tb_order_appointmentRowChangeEventHandler tb_order_appointmentRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtb_order_sell_tableRow(tb_order_sell_tableRow row) {
+            public void Addtb_order_appointmentRow(tb_order_appointmentRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableRow Addtb_order_sell_tableRow(string name_sell, double price_sell, double qt_sell, double tprice_sell, int sell_id, string weight, double total_earnings) {
-                tb_order_sell_tableRow rowtb_order_sell_tableRow = ((tb_order_sell_tableRow)(this.NewRow()));
+            public tb_order_appointmentRow Addtb_order_appointmentRow(string name_sell, double price_sell, double qt_sell, double tprice_sell, int sell_id, string weight, double total_earnings) {
+                tb_order_appointmentRow rowtb_order_appointmentRow = ((tb_order_appointmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         name_sell,
@@ -3096,22 +3096,22 @@ namespace el_shabander {
                         sell_id,
                         weight,
                         total_earnings};
-                rowtb_order_sell_tableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtb_order_sell_tableRow);
-                return rowtb_order_sell_tableRow;
+                rowtb_order_appointmentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtb_order_appointmentRow);
+                return rowtb_order_appointmentRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableRow FindByid(int id) {
-                return ((tb_order_sell_tableRow)(this.Rows.Find(new object[] {
+            public tb_order_appointmentRow FindByid(int id) {
+                return ((tb_order_appointmentRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tb_order_sell_tableDataTable cln = ((tb_order_sell_tableDataTable)(base.Clone()));
+                tb_order_appointmentDataTable cln = ((tb_order_appointmentDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3119,7 +3119,7 @@ namespace el_shabander {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tb_order_sell_tableDataTable();
+                return new tb_order_appointmentDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3168,28 +3168,28 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableRow Newtb_order_sell_tableRow() {
-                return ((tb_order_sell_tableRow)(this.NewRow()));
+            public tb_order_appointmentRow Newtb_order_appointmentRow() {
+                return ((tb_order_appointmentRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tb_order_sell_tableRow(builder);
+                return new tb_order_appointmentRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tb_order_sell_tableRow);
+                return typeof(tb_order_appointmentRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tb_order_sell_tableRowChanged != null)) {
-                    this.tb_order_sell_tableRowChanged(this, new tb_order_sell_tableRowChangeEvent(((tb_order_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_order_appointmentRowChanged != null)) {
+                    this.tb_order_appointmentRowChanged(this, new tb_order_appointmentRowChangeEvent(((tb_order_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3197,8 +3197,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tb_order_sell_tableRowChanging != null)) {
-                    this.tb_order_sell_tableRowChanging(this, new tb_order_sell_tableRowChangeEvent(((tb_order_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_order_appointmentRowChanging != null)) {
+                    this.tb_order_appointmentRowChanging(this, new tb_order_appointmentRowChangeEvent(((tb_order_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3206,8 +3206,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tb_order_sell_tableRowDeleted != null)) {
-                    this.tb_order_sell_tableRowDeleted(this, new tb_order_sell_tableRowChangeEvent(((tb_order_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_order_appointmentRowDeleted != null)) {
+                    this.tb_order_appointmentRowDeleted(this, new tb_order_appointmentRowChangeEvent(((tb_order_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3215,14 +3215,14 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tb_order_sell_tableRowDeleting != null)) {
-                    this.tb_order_sell_tableRowDeleting(this, new tb_order_sell_tableRowChangeEvent(((tb_order_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_order_appointmentRowDeleting != null)) {
+                    this.tb_order_appointmentRowDeleting(this, new tb_order_appointmentRowChangeEvent(((tb_order_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetb_order_sell_tableRow(tb_order_sell_tableRow row) {
+            public void Removetb_order_appointmentRow(tb_order_appointmentRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3249,7 +3249,7 @@ namespace el_shabander {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tb_order_sell_tableDataTable";
+                attribute2.FixedValue = "tb_order_appointmentDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3657,7 +3657,7 @@ namespace el_shabander {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tb_productDataTable : global::System.Data.TypedTableBase<tb_productRow> {
+        public partial class tb_serviceDataTable : global::System.Data.TypedTableBase<tb_serviceRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -3673,8 +3673,8 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productDataTable() {
-                this.TableName = "tb_product";
+            public tb_serviceDataTable() {
+                this.TableName = "tb_service";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3682,7 +3682,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_productDataTable(global::System.Data.DataTable table) {
+            internal tb_serviceDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3699,7 +3699,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tb_productDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tb_serviceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -3763,34 +3763,34 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productRow this[int index] {
+            public tb_serviceRow this[int index] {
                 get {
-                    return ((tb_productRow)(this.Rows[index]));
+                    return ((tb_serviceRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_productRowChangeEventHandler tb_productRowChanging;
+            public event tb_serviceRowChangeEventHandler tb_serviceRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_productRowChangeEventHandler tb_productRowChanged;
+            public event tb_serviceRowChangeEventHandler tb_serviceRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_productRowChangeEventHandler tb_productRowDeleting;
+            public event tb_serviceRowChangeEventHandler tb_serviceRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_productRowChangeEventHandler tb_productRowDeleted;
+            public event tb_serviceRowChangeEventHandler tb_serviceRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtb_productRow(tb_productRow row) {
+            public void Addtb_serviceRow(tb_serviceRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productRow Addtb_productRow(string name_main, string name_product, double price, string name_cat, double cost) {
-                tb_productRow rowtb_productRow = ((tb_productRow)(this.NewRow()));
+            public tb_serviceRow Addtb_serviceRow(string name_main, string name_product, double price, string name_cat, double cost) {
+                tb_serviceRow rowtb_serviceRow = ((tb_serviceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         name_main,
@@ -3798,22 +3798,22 @@ namespace el_shabander {
                         price,
                         name_cat,
                         cost};
-                rowtb_productRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtb_productRow);
-                return rowtb_productRow;
+                rowtb_serviceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtb_serviceRow);
+                return rowtb_serviceRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productRow FindByid(int id) {
-                return ((tb_productRow)(this.Rows.Find(new object[] {
+            public tb_serviceRow FindByid(int id) {
+                return ((tb_serviceRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tb_productDataTable cln = ((tb_productDataTable)(base.Clone()));
+                tb_serviceDataTable cln = ((tb_serviceDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3821,7 +3821,7 @@ namespace el_shabander {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tb_productDataTable();
+                return new tb_serviceDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3865,28 +3865,28 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productRow Newtb_productRow() {
-                return ((tb_productRow)(this.NewRow()));
+            public tb_serviceRow Newtb_serviceRow() {
+                return ((tb_serviceRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tb_productRow(builder);
+                return new tb_serviceRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tb_productRow);
+                return typeof(tb_serviceRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tb_productRowChanged != null)) {
-                    this.tb_productRowChanged(this, new tb_productRowChangeEvent(((tb_productRow)(e.Row)), e.Action));
+                if ((this.tb_serviceRowChanged != null)) {
+                    this.tb_serviceRowChanged(this, new tb_serviceRowChangeEvent(((tb_serviceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3894,8 +3894,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tb_productRowChanging != null)) {
-                    this.tb_productRowChanging(this, new tb_productRowChangeEvent(((tb_productRow)(e.Row)), e.Action));
+                if ((this.tb_serviceRowChanging != null)) {
+                    this.tb_serviceRowChanging(this, new tb_serviceRowChangeEvent(((tb_serviceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3903,8 +3903,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tb_productRowDeleted != null)) {
-                    this.tb_productRowDeleted(this, new tb_productRowChangeEvent(((tb_productRow)(e.Row)), e.Action));
+                if ((this.tb_serviceRowDeleted != null)) {
+                    this.tb_serviceRowDeleted(this, new tb_serviceRowChangeEvent(((tb_serviceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3912,14 +3912,14 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tb_productRowDeleting != null)) {
-                    this.tb_productRowDeleting(this, new tb_productRowChangeEvent(((tb_productRow)(e.Row)), e.Action));
+                if ((this.tb_serviceRowDeleting != null)) {
+                    this.tb_serviceRowDeleting(this, new tb_serviceRowChangeEvent(((tb_serviceRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetb_productRow(tb_productRow row) {
+            public void Removetb_serviceRow(tb_serviceRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3946,7 +3946,7 @@ namespace el_shabander {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tb_productDataTable";
+                attribute2.FixedValue = "tb_serviceDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4283,7 +4283,7 @@ namespace el_shabander {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tb_sell_tableDataTable : global::System.Data.TypedTableBase<tb_sell_tableRow> {
+        public partial class tb_appointmentDataTable : global::System.Data.TypedTableBase<tb_appointmentRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -4313,8 +4313,8 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableDataTable() {
-                this.TableName = "tb_sell_table";
+            public tb_appointmentDataTable() {
+                this.TableName = "tb_appointment";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -4322,7 +4322,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_sell_tableDataTable(global::System.Data.DataTable table) {
+            internal tb_appointmentDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -4339,7 +4339,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tb_sell_tableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tb_appointmentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -4459,34 +4459,34 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableRow this[int index] {
+            public tb_appointmentRow this[int index] {
                 get {
-                    return ((tb_sell_tableRow)(this.Rows[index]));
+                    return ((tb_appointmentRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_sell_tableRowChangeEventHandler tb_sell_tableRowChanging;
+            public event tb_appointmentRowChangeEventHandler tb_appointmentRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_sell_tableRowChangeEventHandler tb_sell_tableRowChanged;
+            public event tb_appointmentRowChangeEventHandler tb_appointmentRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_sell_tableRowChangeEventHandler tb_sell_tableRowDeleting;
+            public event tb_appointmentRowChangeEventHandler tb_appointmentRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_sell_tableRowChangeEventHandler tb_sell_tableRowDeleted;
+            public event tb_appointmentRowChangeEventHandler tb_appointmentRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtb_sell_tableRow(tb_sell_tableRow row) {
+            public void Addtb_appointmentRow(tb_appointmentRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableRow Addtb_sell_tableRow(string sell_cus, double sell_tprice, System.DateTime sell_date, double pay, double stay, double total_price, int cus_id, string safe, double sell_add, double cut, int invocie_id, double total_earnings) {
-                tb_sell_tableRow rowtb_sell_tableRow = ((tb_sell_tableRow)(this.NewRow()));
+            public tb_appointmentRow Addtb_appointmentRow(string sell_cus, double sell_tprice, System.DateTime sell_date, double pay, double stay, double total_price, int cus_id, string safe, double sell_add, double cut, int invocie_id, double total_earnings) {
+                tb_appointmentRow rowtb_appointmentRow = ((tb_appointmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         sell_cus,
@@ -4501,22 +4501,22 @@ namespace el_shabander {
                         cut,
                         invocie_id,
                         total_earnings};
-                rowtb_sell_tableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtb_sell_tableRow);
-                return rowtb_sell_tableRow;
+                rowtb_appointmentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtb_appointmentRow);
+                return rowtb_appointmentRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableRow FindByid(int id) {
-                return ((tb_sell_tableRow)(this.Rows.Find(new object[] {
+            public tb_appointmentRow FindByid(int id) {
+                return ((tb_appointmentRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tb_sell_tableDataTable cln = ((tb_sell_tableDataTable)(base.Clone()));
+                tb_appointmentDataTable cln = ((tb_appointmentDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -4524,7 +4524,7 @@ namespace el_shabander {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tb_sell_tableDataTable();
+                return new tb_appointmentDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4588,28 +4588,28 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableRow Newtb_sell_tableRow() {
-                return ((tb_sell_tableRow)(this.NewRow()));
+            public tb_appointmentRow Newtb_appointmentRow() {
+                return ((tb_appointmentRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tb_sell_tableRow(builder);
+                return new tb_appointmentRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tb_sell_tableRow);
+                return typeof(tb_appointmentRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tb_sell_tableRowChanged != null)) {
-                    this.tb_sell_tableRowChanged(this, new tb_sell_tableRowChangeEvent(((tb_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_appointmentRowChanged != null)) {
+                    this.tb_appointmentRowChanged(this, new tb_appointmentRowChangeEvent(((tb_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4617,8 +4617,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tb_sell_tableRowChanging != null)) {
-                    this.tb_sell_tableRowChanging(this, new tb_sell_tableRowChangeEvent(((tb_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_appointmentRowChanging != null)) {
+                    this.tb_appointmentRowChanging(this, new tb_appointmentRowChangeEvent(((tb_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4626,8 +4626,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tb_sell_tableRowDeleted != null)) {
-                    this.tb_sell_tableRowDeleted(this, new tb_sell_tableRowChangeEvent(((tb_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_appointmentRowDeleted != null)) {
+                    this.tb_appointmentRowDeleted(this, new tb_appointmentRowChangeEvent(((tb_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4635,14 +4635,14 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tb_sell_tableRowDeleting != null)) {
-                    this.tb_sell_tableRowDeleting(this, new tb_sell_tableRowChangeEvent(((tb_sell_tableRow)(e.Row)), e.Action));
+                if ((this.tb_appointmentRowDeleting != null)) {
+                    this.tb_appointmentRowDeleting(this, new tb_appointmentRowChangeEvent(((tb_appointmentRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetb_sell_tableRow(tb_sell_tableRow row) {
+            public void Removetb_appointmentRow(tb_appointmentRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -4669,7 +4669,7 @@ namespace el_shabander {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tb_sell_tableDataTable";
+                attribute2.FixedValue = "tb_appointmentDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -6208,18 +6208,18 @@ namespace el_shabander {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tb_tableDataTable : global::System.Data.TypedTableBase<tb_tableRow> {
+        public partial class tb_chairDataTable : global::System.Data.TypedTableBase<tb_chairRow> {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnname_table;
+            private global::System.Data.DataColumn columnname_chair;
             
             private global::System.Data.DataColumn columntotall_price;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableDataTable() {
-                this.TableName = "tb_table";
+            public tb_chairDataTable() {
+                this.TableName = "tb_chair";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -6227,7 +6227,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_tableDataTable(global::System.Data.DataTable table) {
+            internal tb_chairDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -6244,7 +6244,7 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tb_tableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tb_chairDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -6259,9 +6259,9 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn name_tableColumn {
+            public global::System.Data.DataColumn name_chairColumn {
                 get {
-                    return this.columnname_table;
+                    return this.columnname_chair;
                 }
             }
             
@@ -6284,54 +6284,54 @@ namespace el_shabander {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableRow this[int index] {
+            public tb_chairRow this[int index] {
                 get {
-                    return ((tb_tableRow)(this.Rows[index]));
+                    return ((tb_chairRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_tableRowChangeEventHandler tb_tableRowChanging;
+            public event tb_chairRowChangeEventHandler tb_chairRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_tableRowChangeEventHandler tb_tableRowChanged;
+            public event tb_chairRowChangeEventHandler tb_chairRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_tableRowChangeEventHandler tb_tableRowDeleting;
+            public event tb_chairRowChangeEventHandler tb_chairRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tb_tableRowChangeEventHandler tb_tableRowDeleted;
+            public event tb_chairRowChangeEventHandler tb_chairRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtb_tableRow(tb_tableRow row) {
+            public void Addtb_chairRow(tb_chairRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableRow Addtb_tableRow(string name_table, double totall_price) {
-                tb_tableRow rowtb_tableRow = ((tb_tableRow)(this.NewRow()));
+            public tb_chairRow Addtb_chairRow(string name_chair, double totall_price) {
+                tb_chairRow rowtb_chairRow = ((tb_chairRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        name_table,
+                        name_chair,
                         totall_price};
-                rowtb_tableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtb_tableRow);
-                return rowtb_tableRow;
+                rowtb_chairRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtb_chairRow);
+                return rowtb_chairRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableRow FindByid(int id) {
-                return ((tb_tableRow)(this.Rows.Find(new object[] {
+            public tb_chairRow FindByid(int id) {
+                return ((tb_chairRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tb_tableDataTable cln = ((tb_tableDataTable)(base.Clone()));
+                tb_chairDataTable cln = ((tb_chairDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -6339,14 +6339,14 @@ namespace el_shabander {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tb_tableDataTable();
+                return new tb_chairDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columnname_table = base.Columns["name_table"];
+                this.columnname_chair = base.Columns["name_chair"];
                 this.columntotall_price = base.Columns["totall_price"];
             }
             
@@ -6355,8 +6355,8 @@ namespace el_shabander {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnname_table = new global::System.Data.DataColumn("name_table", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname_table);
+                this.columnname_chair = new global::System.Data.DataColumn("name_chair", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname_chair);
                 this.columntotall_price = new global::System.Data.DataColumn("totall_price", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotall_price);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -6367,33 +6367,33 @@ namespace el_shabander {
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
-                this.columnname_table.MaxLength = 50;
+                this.columnname_chair.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableRow Newtb_tableRow() {
-                return ((tb_tableRow)(this.NewRow()));
+            public tb_chairRow Newtb_chairRow() {
+                return ((tb_chairRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tb_tableRow(builder);
+                return new tb_chairRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tb_tableRow);
+                return typeof(tb_chairRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tb_tableRowChanged != null)) {
-                    this.tb_tableRowChanged(this, new tb_tableRowChangeEvent(((tb_tableRow)(e.Row)), e.Action));
+                if ((this.tb_chairRowChanged != null)) {
+                    this.tb_chairRowChanged(this, new tb_chairRowChangeEvent(((tb_chairRow)(e.Row)), e.Action));
                 }
             }
             
@@ -6401,8 +6401,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tb_tableRowChanging != null)) {
-                    this.tb_tableRowChanging(this, new tb_tableRowChangeEvent(((tb_tableRow)(e.Row)), e.Action));
+                if ((this.tb_chairRowChanging != null)) {
+                    this.tb_chairRowChanging(this, new tb_chairRowChangeEvent(((tb_chairRow)(e.Row)), e.Action));
                 }
             }
             
@@ -6410,8 +6410,8 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tb_tableRowDeleted != null)) {
-                    this.tb_tableRowDeleted(this, new tb_tableRowChangeEvent(((tb_tableRow)(e.Row)), e.Action));
+                if ((this.tb_chairRowDeleted != null)) {
+                    this.tb_chairRowDeleted(this, new tb_chairRowChangeEvent(((tb_chairRow)(e.Row)), e.Action));
                 }
             }
             
@@ -6419,14 +6419,14 @@ namespace el_shabander {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tb_tableRowDeleting != null)) {
-                    this.tb_tableRowDeleting(this, new tb_tableRowChangeEvent(((tb_tableRow)(e.Row)), e.Action));
+                if ((this.tb_chairRowDeleting != null)) {
+                    this.tb_chairRowDeleting(this, new tb_chairRowChangeEvent(((tb_chairRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetb_tableRow(tb_tableRow row) {
+            public void Removetb_chairRow(tb_chairRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -6453,7 +6453,7 @@ namespace el_shabander {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tb_tableDataTable";
+                attribute2.FixedValue = "tb_chairDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -8291,25 +8291,25 @@ namespace el_shabander {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tb_order_sell_tableRow : global::System.Data.DataRow {
+        public partial class tb_order_appointmentRow : global::System.Data.DataRow {
             
-            private tb_order_sell_tableDataTable tabletb_order_sell_table;
+            private tb_order_appointmentDataTable tabletb_order_appointment;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_order_sell_tableRow(global::System.Data.DataRowBuilder rb) : 
+            internal tb_order_appointmentRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletb_order_sell_table = ((tb_order_sell_tableDataTable)(this.Table));
+                this.tabletb_order_appointment = ((tb_order_appointmentDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tabletb_order_sell_table.idColumn]));
+                    return ((int)(this[this.tabletb_order_appointment.idColumn]));
                 }
                 set {
-                    this[this.tabletb_order_sell_table.idColumn] = value;
+                    this[this.tabletb_order_appointment.idColumn] = value;
                 }
             }
             
@@ -8318,14 +8318,14 @@ namespace el_shabander {
             public string name_sell {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_order_sell_table.name_sellColumn]));
+                        return ((string)(this[this.tabletb_order_appointment.name_sellColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name_sell\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'name_sell\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.name_sellColumn] = value;
+                    this[this.tabletb_order_appointment.name_sellColumn] = value;
                 }
             }
             
@@ -8334,14 +8334,14 @@ namespace el_shabander {
             public double price_sell {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_order_sell_table.price_sellColumn]));
+                        return ((double)(this[this.tabletb_order_appointment.price_sellColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'price_sell\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'price_sell\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.price_sellColumn] = value;
+                    this[this.tabletb_order_appointment.price_sellColumn] = value;
                 }
             }
             
@@ -8350,14 +8350,14 @@ namespace el_shabander {
             public double qt_sell {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_order_sell_table.qt_sellColumn]));
+                        return ((double)(this[this.tabletb_order_appointment.qt_sellColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'qt_sell\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'qt_sell\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.qt_sellColumn] = value;
+                    this[this.tabletb_order_appointment.qt_sellColumn] = value;
                 }
             }
             
@@ -8366,14 +8366,14 @@ namespace el_shabander {
             public double tprice_sell {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_order_sell_table.tprice_sellColumn]));
+                        return ((double)(this[this.tabletb_order_appointment.tprice_sellColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tprice_sell\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tprice_sell\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.tprice_sellColumn] = value;
+                    this[this.tabletb_order_appointment.tprice_sellColumn] = value;
                 }
             }
             
@@ -8382,14 +8382,14 @@ namespace el_shabander {
             public int sell_id {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_order_sell_table.sell_idColumn]));
+                        return ((int)(this[this.tabletb_order_appointment.sell_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sell_id\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sell_id\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.sell_idColumn] = value;
+                    this[this.tabletb_order_appointment.sell_idColumn] = value;
                 }
             }
             
@@ -8398,14 +8398,14 @@ namespace el_shabander {
             public string weight {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_order_sell_table.weightColumn]));
+                        return ((string)(this[this.tabletb_order_appointment.weightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'weight\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'weight\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.weightColumn] = value;
+                    this[this.tabletb_order_appointment.weightColumn] = value;
                 }
             }
             
@@ -8414,99 +8414,99 @@ namespace el_shabander {
             public double total_earnings {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_order_sell_table.total_earningsColumn]));
+                        return ((double)(this[this.tabletb_order_appointment.total_earningsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_earnings\' in table \'tb_order_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_earnings\' in table \'tb_order_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_order_sell_table.total_earningsColumn] = value;
+                    this[this.tabletb_order_appointment.total_earningsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isname_sellNull() {
-                return this.IsNull(this.tabletb_order_sell_table.name_sellColumn);
+                return this.IsNull(this.tabletb_order_appointment.name_sellColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setname_sellNull() {
-                this[this.tabletb_order_sell_table.name_sellColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.name_sellColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isprice_sellNull() {
-                return this.IsNull(this.tabletb_order_sell_table.price_sellColumn);
+                return this.IsNull(this.tabletb_order_appointment.price_sellColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setprice_sellNull() {
-                this[this.tabletb_order_sell_table.price_sellColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.price_sellColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isqt_sellNull() {
-                return this.IsNull(this.tabletb_order_sell_table.qt_sellColumn);
+                return this.IsNull(this.tabletb_order_appointment.qt_sellColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setqt_sellNull() {
-                this[this.tabletb_order_sell_table.qt_sellColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.qt_sellColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istprice_sellNull() {
-                return this.IsNull(this.tabletb_order_sell_table.tprice_sellColumn);
+                return this.IsNull(this.tabletb_order_appointment.tprice_sellColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settprice_sellNull() {
-                this[this.tabletb_order_sell_table.tprice_sellColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.tprice_sellColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Issell_idNull() {
-                return this.IsNull(this.tabletb_order_sell_table.sell_idColumn);
+                return this.IsNull(this.tabletb_order_appointment.sell_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setsell_idNull() {
-                this[this.tabletb_order_sell_table.sell_idColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.sell_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsweightNull() {
-                return this.IsNull(this.tabletb_order_sell_table.weightColumn);
+                return this.IsNull(this.tabletb_order_appointment.weightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetweightNull() {
-                this[this.tabletb_order_sell_table.weightColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.weightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istotal_earningsNull() {
-                return this.IsNull(this.tabletb_order_sell_table.total_earningsColumn);
+                return this.IsNull(this.tabletb_order_appointment.total_earningsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settotal_earningsNull() {
-                this[this.tabletb_order_sell_table.total_earningsColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_order_appointment.total_earningsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8736,25 +8736,25 @@ namespace el_shabander {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tb_productRow : global::System.Data.DataRow {
+        public partial class tb_serviceRow : global::System.Data.DataRow {
             
-            private tb_productDataTable tabletb_product;
+            private tb_serviceDataTable tabletb_service;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_productRow(global::System.Data.DataRowBuilder rb) : 
+            internal tb_serviceRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletb_product = ((tb_productDataTable)(this.Table));
+                this.tabletb_service = ((tb_serviceDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tabletb_product.idColumn]));
+                    return ((int)(this[this.tabletb_service.idColumn]));
                 }
                 set {
-                    this[this.tabletb_product.idColumn] = value;
+                    this[this.tabletb_service.idColumn] = value;
                 }
             }
             
@@ -8763,14 +8763,14 @@ namespace el_shabander {
             public string name_main {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_product.name_mainColumn]));
+                        return ((string)(this[this.tabletb_service.name_mainColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name_main\' in table \'tb_product\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'name_main\' in table \'tb_service\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_product.name_mainColumn] = value;
+                    this[this.tabletb_service.name_mainColumn] = value;
                 }
             }
             
@@ -8779,14 +8779,14 @@ namespace el_shabander {
             public string name_product {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_product.name_productColumn]));
+                        return ((string)(this[this.tabletb_service.name_productColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name_product\' in table \'tb_product\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'name_product\' in table \'tb_service\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_product.name_productColumn] = value;
+                    this[this.tabletb_service.name_productColumn] = value;
                 }
             }
             
@@ -8795,14 +8795,14 @@ namespace el_shabander {
             public double price {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_product.priceColumn]));
+                        return ((double)(this[this.tabletb_service.priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'tb_product\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'tb_service\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_product.priceColumn] = value;
+                    this[this.tabletb_service.priceColumn] = value;
                 }
             }
             
@@ -8811,14 +8811,14 @@ namespace el_shabander {
             public string name_cat {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_product.name_catColumn]));
+                        return ((string)(this[this.tabletb_service.name_catColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name_cat\' in table \'tb_product\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'name_cat\' in table \'tb_service\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_product.name_catColumn] = value;
+                    this[this.tabletb_service.name_catColumn] = value;
                 }
             }
             
@@ -8827,75 +8827,75 @@ namespace el_shabander {
             public double cost {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_product.costColumn]));
+                        return ((double)(this[this.tabletb_service.costColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cost\' in table \'tb_product\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cost\' in table \'tb_service\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_product.costColumn] = value;
+                    this[this.tabletb_service.costColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isname_mainNull() {
-                return this.IsNull(this.tabletb_product.name_mainColumn);
+                return this.IsNull(this.tabletb_service.name_mainColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setname_mainNull() {
-                this[this.tabletb_product.name_mainColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_service.name_mainColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isname_productNull() {
-                return this.IsNull(this.tabletb_product.name_productColumn);
+                return this.IsNull(this.tabletb_service.name_productColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setname_productNull() {
-                this[this.tabletb_product.name_productColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_service.name_productColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IspriceNull() {
-                return this.IsNull(this.tabletb_product.priceColumn);
+                return this.IsNull(this.tabletb_service.priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetpriceNull() {
-                this[this.tabletb_product.priceColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_service.priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isname_catNull() {
-                return this.IsNull(this.tabletb_product.name_catColumn);
+                return this.IsNull(this.tabletb_service.name_catColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setname_catNull() {
-                this[this.tabletb_product.name_catColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_service.name_catColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscostNull() {
-                return this.IsNull(this.tabletb_product.costColumn);
+                return this.IsNull(this.tabletb_service.costColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcostNull() {
-                this[this.tabletb_product.costColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_service.costColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8984,25 +8984,25 @@ namespace el_shabander {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tb_sell_tableRow : global::System.Data.DataRow {
+        public partial class tb_appointmentRow : global::System.Data.DataRow {
             
-            private tb_sell_tableDataTable tabletb_sell_table;
+            private tb_appointmentDataTable tabletb_appointment;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_sell_tableRow(global::System.Data.DataRowBuilder rb) : 
+            internal tb_appointmentRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletb_sell_table = ((tb_sell_tableDataTable)(this.Table));
+                this.tabletb_appointment = ((tb_appointmentDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tabletb_sell_table.idColumn]));
+                    return ((int)(this[this.tabletb_appointment.idColumn]));
                 }
                 set {
-                    this[this.tabletb_sell_table.idColumn] = value;
+                    this[this.tabletb_appointment.idColumn] = value;
                 }
             }
             
@@ -9011,14 +9011,14 @@ namespace el_shabander {
             public string sell_cus {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_sell_table.sell_cusColumn]));
+                        return ((string)(this[this.tabletb_appointment.sell_cusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sell_cus\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sell_cus\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.sell_cusColumn] = value;
+                    this[this.tabletb_appointment.sell_cusColumn] = value;
                 }
             }
             
@@ -9027,14 +9027,14 @@ namespace el_shabander {
             public double sell_tprice {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.sell_tpriceColumn]));
+                        return ((double)(this[this.tabletb_appointment.sell_tpriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sell_tprice\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sell_tprice\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.sell_tpriceColumn] = value;
+                    this[this.tabletb_appointment.sell_tpriceColumn] = value;
                 }
             }
             
@@ -9043,14 +9043,14 @@ namespace el_shabander {
             public System.DateTime sell_date {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletb_sell_table.sell_dateColumn]));
+                        return ((global::System.DateTime)(this[this.tabletb_appointment.sell_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sell_date\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sell_date\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.sell_dateColumn] = value;
+                    this[this.tabletb_appointment.sell_dateColumn] = value;
                 }
             }
             
@@ -9059,14 +9059,14 @@ namespace el_shabander {
             public double pay {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.payColumn]));
+                        return ((double)(this[this.tabletb_appointment.payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'pay\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pay\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.payColumn] = value;
+                    this[this.tabletb_appointment.payColumn] = value;
                 }
             }
             
@@ -9075,14 +9075,14 @@ namespace el_shabander {
             public double stay {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.stayColumn]));
+                        return ((double)(this[this.tabletb_appointment.stayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'stay\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'stay\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.stayColumn] = value;
+                    this[this.tabletb_appointment.stayColumn] = value;
                 }
             }
             
@@ -9091,14 +9091,14 @@ namespace el_shabander {
             public double total_price {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.total_priceColumn]));
+                        return ((double)(this[this.tabletb_appointment.total_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_price\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_price\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.total_priceColumn] = value;
+                    this[this.tabletb_appointment.total_priceColumn] = value;
                 }
             }
             
@@ -9107,14 +9107,14 @@ namespace el_shabander {
             public int cus_id {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_sell_table.cus_idColumn]));
+                        return ((int)(this[this.tabletb_appointment.cus_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cus_id\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cus_id\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.cus_idColumn] = value;
+                    this[this.tabletb_appointment.cus_idColumn] = value;
                 }
             }
             
@@ -9123,14 +9123,14 @@ namespace el_shabander {
             public string safe {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_sell_table.safeColumn]));
+                        return ((string)(this[this.tabletb_appointment.safeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'safe\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'safe\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.safeColumn] = value;
+                    this[this.tabletb_appointment.safeColumn] = value;
                 }
             }
             
@@ -9139,14 +9139,14 @@ namespace el_shabander {
             public double sell_add {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.sell_addColumn]));
+                        return ((double)(this[this.tabletb_appointment.sell_addColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sell_add\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sell_add\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.sell_addColumn] = value;
+                    this[this.tabletb_appointment.sell_addColumn] = value;
                 }
             }
             
@@ -9155,14 +9155,14 @@ namespace el_shabander {
             public double cut {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.cutColumn]));
+                        return ((double)(this[this.tabletb_appointment.cutColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cut\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cut\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.cutColumn] = value;
+                    this[this.tabletb_appointment.cutColumn] = value;
                 }
             }
             
@@ -9171,14 +9171,14 @@ namespace el_shabander {
             public int invocie_id {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_sell_table.invocie_idColumn]));
+                        return ((int)(this[this.tabletb_appointment.invocie_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'invocie_id\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'invocie_id\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.invocie_idColumn] = value;
+                    this[this.tabletb_appointment.invocie_idColumn] = value;
                 }
             }
             
@@ -9187,159 +9187,159 @@ namespace el_shabander {
             public double total_earnings {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_sell_table.total_earningsColumn]));
+                        return ((double)(this[this.tabletb_appointment.total_earningsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_earnings\' in table \'tb_sell_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_earnings\' in table \'tb_appointment\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_sell_table.total_earningsColumn] = value;
+                    this[this.tabletb_appointment.total_earningsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Issell_cusNull() {
-                return this.IsNull(this.tabletb_sell_table.sell_cusColumn);
+                return this.IsNull(this.tabletb_appointment.sell_cusColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setsell_cusNull() {
-                this[this.tabletb_sell_table.sell_cusColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.sell_cusColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Issell_tpriceNull() {
-                return this.IsNull(this.tabletb_sell_table.sell_tpriceColumn);
+                return this.IsNull(this.tabletb_appointment.sell_tpriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setsell_tpriceNull() {
-                this[this.tabletb_sell_table.sell_tpriceColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.sell_tpriceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Issell_dateNull() {
-                return this.IsNull(this.tabletb_sell_table.sell_dateColumn);
+                return this.IsNull(this.tabletb_appointment.sell_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setsell_dateNull() {
-                this[this.tabletb_sell_table.sell_dateColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.sell_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IspayNull() {
-                return this.IsNull(this.tabletb_sell_table.payColumn);
+                return this.IsNull(this.tabletb_appointment.payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetpayNull() {
-                this[this.tabletb_sell_table.payColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsstayNull() {
-                return this.IsNull(this.tabletb_sell_table.stayColumn);
+                return this.IsNull(this.tabletb_appointment.stayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetstayNull() {
-                this[this.tabletb_sell_table.stayColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.stayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istotal_priceNull() {
-                return this.IsNull(this.tabletb_sell_table.total_priceColumn);
+                return this.IsNull(this.tabletb_appointment.total_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settotal_priceNull() {
-                this[this.tabletb_sell_table.total_priceColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.total_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iscus_idNull() {
-                return this.IsNull(this.tabletb_sell_table.cus_idColumn);
+                return this.IsNull(this.tabletb_appointment.cus_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setcus_idNull() {
-                this[this.tabletb_sell_table.cus_idColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.cus_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IssafeNull() {
-                return this.IsNull(this.tabletb_sell_table.safeColumn);
+                return this.IsNull(this.tabletb_appointment.safeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetsafeNull() {
-                this[this.tabletb_sell_table.safeColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.safeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Issell_addNull() {
-                return this.IsNull(this.tabletb_sell_table.sell_addColumn);
+                return this.IsNull(this.tabletb_appointment.sell_addColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setsell_addNull() {
-                this[this.tabletb_sell_table.sell_addColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.sell_addColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscutNull() {
-                return this.IsNull(this.tabletb_sell_table.cutColumn);
+                return this.IsNull(this.tabletb_appointment.cutColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcutNull() {
-                this[this.tabletb_sell_table.cutColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.cutColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isinvocie_idNull() {
-                return this.IsNull(this.tabletb_sell_table.invocie_idColumn);
+                return this.IsNull(this.tabletb_appointment.invocie_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setinvocie_idNull() {
-                this[this.tabletb_sell_table.invocie_idColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.invocie_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istotal_earningsNull() {
-                return this.IsNull(this.tabletb_sell_table.total_earningsColumn);
+                return this.IsNull(this.tabletb_appointment.total_earningsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settotal_earningsNull() {
-                this[this.tabletb_sell_table.total_earningsColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_appointment.total_earningsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10318,41 +10318,41 @@ namespace el_shabander {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tb_tableRow : global::System.Data.DataRow {
+        public partial class tb_chairRow : global::System.Data.DataRow {
             
-            private tb_tableDataTable tabletb_table;
+            private tb_chairDataTable tabletb_chair;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tb_tableRow(global::System.Data.DataRowBuilder rb) : 
+            internal tb_chairRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletb_table = ((tb_tableDataTable)(this.Table));
+                this.tabletb_chair = ((tb_chairDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tabletb_table.idColumn]));
+                    return ((int)(this[this.tabletb_chair.idColumn]));
                 }
                 set {
-                    this[this.tabletb_table.idColumn] = value;
+                    this[this.tabletb_chair.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string name_table {
+            public string name_chair {
                 get {
                     try {
-                        return ((string)(this[this.tabletb_table.name_tableColumn]));
+                        return ((string)(this[this.tabletb_chair.name_chairColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name_table\' in table \'tb_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'name_chair\' in table \'tb_chair\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_table.name_tableColumn] = value;
+                    this[this.tabletb_chair.name_chairColumn] = value;
                 }
             }
             
@@ -10361,39 +10361,39 @@ namespace el_shabander {
             public double totall_price {
                 get {
                     try {
-                        return ((double)(this[this.tabletb_table.totall_priceColumn]));
+                        return ((double)(this[this.tabletb_chair.totall_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'totall_price\' in table \'tb_table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'totall_price\' in table \'tb_chair\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletb_table.totall_priceColumn] = value;
+                    this[this.tabletb_chair.totall_priceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isname_tableNull() {
-                return this.IsNull(this.tabletb_table.name_tableColumn);
+            public bool Isname_chairNull() {
+                return this.IsNull(this.tabletb_chair.name_chairColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setname_tableNull() {
-                this[this.tabletb_table.name_tableColumn] = global::System.Convert.DBNull;
+            public void Setname_chairNull() {
+                this[this.tabletb_chair.name_chairColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istotall_priceNull() {
-                return this.IsNull(this.tabletb_table.totall_priceColumn);
+                return this.IsNull(this.tabletb_chair.totall_priceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settotall_priceNull() {
-                this[this.tabletb_table.totall_priceColumn] = global::System.Convert.DBNull;
+                this[this.tabletb_chair.totall_priceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10965,22 +10965,22 @@ namespace el_shabander {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tb_order_sell_tableRowChangeEvent : global::System.EventArgs {
+        public class tb_order_appointmentRowChangeEvent : global::System.EventArgs {
             
-            private tb_order_sell_tableRow eventRow;
+            private tb_order_appointmentRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableRowChangeEvent(tb_order_sell_tableRow row, global::System.Data.DataRowAction action) {
+            public tb_order_appointmentRowChangeEvent(tb_order_appointmentRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_order_sell_tableRow Row {
+            public tb_order_appointmentRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11033,22 +11033,22 @@ namespace el_shabander {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tb_productRowChangeEvent : global::System.EventArgs {
+        public class tb_serviceRowChangeEvent : global::System.EventArgs {
             
-            private tb_productRow eventRow;
+            private tb_serviceRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productRowChangeEvent(tb_productRow row, global::System.Data.DataRowAction action) {
+            public tb_serviceRowChangeEvent(tb_serviceRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_productRow Row {
+            public tb_serviceRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11101,22 +11101,22 @@ namespace el_shabander {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tb_sell_tableRowChangeEvent : global::System.EventArgs {
+        public class tb_appointmentRowChangeEvent : global::System.EventArgs {
             
-            private tb_sell_tableRow eventRow;
+            private tb_appointmentRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableRowChangeEvent(tb_sell_tableRow row, global::System.Data.DataRowAction action) {
+            public tb_appointmentRowChangeEvent(tb_appointmentRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_sell_tableRow Row {
+            public tb_appointmentRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11271,22 +11271,22 @@ namespace el_shabander {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tb_tableRowChangeEvent : global::System.EventArgs {
+        public class tb_chairRowChangeEvent : global::System.EventArgs {
             
-            private tb_tableRow eventRow;
+            private tb_chairRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableRowChangeEvent(tb_tableRow row, global::System.Data.DataRowAction action) {
+            public tb_chairRowChangeEvent(tb_chairRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tb_tableRow Row {
+            public tb_chairRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -14327,7 +14327,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id FROM tb_order_bu
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tb_order_sell_tableTableAdapter : global::System.ComponentModel.Component {
+    public partial class tb_order_appointmentTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -14341,7 +14341,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id FROM tb_order_bu
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tb_order_sell_tableTableAdapter() {
+        public tb_order_appointmentTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -14438,7 +14438,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id FROM tb_order_bu
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tb_order_sell_table";
+            tableMapping.DataSetTable = "tb_order_appointment";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name_sell", "name_sell");
             tableMapping.ColumnMappings.Add("price_sell", "price_sell");
@@ -14450,7 +14450,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id FROM tb_order_bu
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_order_sell_table] WHERE (([id] = @Original_id) AND ((@IsNull_name_sell = 1 AND [name_sell] IS NULL) OR ([name_sell] = @Original_name_sell)) AND ((@IsNull_price_sell = 1 AND [price_sell] IS NULL) OR ([price_sell] = @Original_price_sell)) AND ((@IsNull_qt_sell = 1 AND [qt_sell] IS NULL) OR ([qt_sell] = @Original_qt_sell)) AND ((@IsNull_tprice_sell = 1 AND [tprice_sell] IS NULL) OR ([tprice_sell] = @Original_tprice_sell)) AND ((@IsNull_sell_id = 1 AND [sell_id] IS NULL) OR ([sell_id] = @Original_sell_id)) AND ((@IsNull_weight = 1 AND [weight] IS NULL) OR ([weight] = @Original_weight)) AND ((@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @Original_total_earnings)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_order_appointment] WHERE (([id] = @Original_id) AND ((@IsNull_name_sell = 1 AND [name_sell] IS NULL) OR ([name_sell] = @Original_name_sell)) AND ((@IsNull_price_sell = 1 AND [price_sell] IS NULL) OR ([price_sell] = @Original_price_sell)) AND ((@IsNull_qt_sell = 1 AND [qt_sell] IS NULL) OR ([qt_sell] = @Original_qt_sell)) AND ((@IsNull_tprice_sell = 1 AND [tprice_sell] IS NULL) OR ([tprice_sell] = @Original_tprice_sell)) AND ((@IsNull_sell_id = 1 AND [sell_id] IS NULL) OR ([sell_id] = @Original_sell_id)) AND ((@IsNull_weight = 1 AND [weight] IS NULL) OR ([weight] = @Original_weight)) AND ((@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @Original_total_earnings)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name_sell", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_sell", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -14469,8 +14469,8 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id FROM tb_order_bu
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total_earnings", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_earnings", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tb_order_sell_table] ([name_sell], [price_sell], [qt_sell], [tprice_sell], [sell_id], [weight], [total_earnings]) VALUES (@name_sell, @price_sell, @qt_sell, @tprice_sell, @sell_id, @weight, @total_earnings);
-SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_earnings FROM tb_order_sell_table WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tb_order_appointment] ([name_sell], [price_sell], [qt_sell], [tprice_sell], [sell_id], [weight], [total_earnings]) VALUES (@name_sell, @price_sell, @qt_sell, @tprice_sell, @sell_id, @weight, @total_earnings);
+SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_earnings FROM tb_order_appointment WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_sell", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_sell", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price_sell", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_sell", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -14481,8 +14481,8 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_earnings", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_earnings", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tb_order_sell_table] SET [name_sell] = @name_sell, [price_sell] = @price_sell, [qt_sell] = @qt_sell, [tprice_sell] = @tprice_sell, [sell_id] = @sell_id, [weight] = @weight, [total_earnings] = @total_earnings WHERE (([id] = @Original_id) AND ((@IsNull_name_sell = 1 AND [name_sell] IS NULL) OR ([name_sell] = @Original_name_sell)) AND ((@IsNull_price_sell = 1 AND [price_sell] IS NULL) OR ([price_sell] = @Original_price_sell)) AND ((@IsNull_qt_sell = 1 AND [qt_sell] IS NULL) OR ([qt_sell] = @Original_qt_sell)) AND ((@IsNull_tprice_sell = 1 AND [tprice_sell] IS NULL) OR ([tprice_sell] = @Original_tprice_sell)) AND ((@IsNull_sell_id = 1 AND [sell_id] IS NULL) OR ([sell_id] = @Original_sell_id)) AND ((@IsNull_weight = 1 AND [weight] IS NULL) OR ([weight] = @Original_weight)) AND ((@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @Original_total_earnings)));
-SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_earnings FROM tb_order_sell_table WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tb_order_appointment] SET [name_sell] = @name_sell, [price_sell] = @price_sell, [qt_sell] = @qt_sell, [tprice_sell] = @tprice_sell, [sell_id] = @sell_id, [weight] = @weight, [total_earnings] = @total_earnings WHERE (([id] = @Original_id) AND ((@IsNull_name_sell = 1 AND [name_sell] IS NULL) OR ([name_sell] = @Original_name_sell)) AND ((@IsNull_price_sell = 1 AND [price_sell] IS NULL) OR ([price_sell] = @Original_price_sell)) AND ((@IsNull_qt_sell = 1 AND [qt_sell] IS NULL) OR ([qt_sell] = @Original_qt_sell)) AND ((@IsNull_tprice_sell = 1 AND [tprice_sell] IS NULL) OR ([tprice_sell] = @Original_tprice_sell)) AND ((@IsNull_sell_id = 1 AND [sell_id] IS NULL) OR ([sell_id] = @Original_sell_id)) AND ((@IsNull_weight = 1 AND [weight] IS NULL) OR ([weight] = @Original_weight)) AND ((@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @Original_total_earnings)));
+SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_earnings FROM tb_order_appointment WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_sell", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_sell", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price_sell", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_sell", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -14523,7 +14523,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_ea" +
-                "rnings FROM dbo.tb_order_sell_table";
+                "rnings FROM dbo.tb_order_appointment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14531,7 +14531,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DB_restoraintDataSet.tb_order_sell_tableDataTable dataTable) {
+        public virtual int Fill(DB_restoraintDataSet.tb_order_appointmentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14544,9 +14544,9 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DB_restoraintDataSet.tb_order_sell_tableDataTable GetData() {
+        public virtual DB_restoraintDataSet.tb_order_appointmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DB_restoraintDataSet.tb_order_sell_tableDataTable dataTable = new DB_restoraintDataSet.tb_order_sell_tableDataTable();
+            DB_restoraintDataSet.tb_order_appointmentDataTable dataTable = new DB_restoraintDataSet.tb_order_appointmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14554,7 +14554,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DB_restoraintDataSet.tb_order_sell_tableDataTable dataTable) {
+        public virtual int Update(DB_restoraintDataSet.tb_order_appointmentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -14562,7 +14562,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DB_restoraintDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tb_order_sell_table");
+            return this.Adapter.Update(dataSet, "tb_order_appointment");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15425,7 +15425,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tb_productTableAdapter : global::System.ComponentModel.Component {
+    public partial class tb_serviceTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -15439,7 +15439,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tb_productTableAdapter() {
+        public tb_serviceTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -15536,7 +15536,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tb_product";
+            tableMapping.DataSetTable = "tb_service";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name_main", "name_main");
             tableMapping.ColumnMappings.Add("name_product", "name_product");
@@ -15546,7 +15546,7 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_product] WHERE (([id] = @Original_id) AND ((@IsNull_name_main = 1 AND [name_main] IS NULL) OR ([name_main] = @Original_name_main)) AND ((@IsNull_name_product = 1 AND [name_product] IS NULL) OR ([name_product] = @Original_name_product)) AND ((@IsNull_price = 1 AND [price] IS NULL) OR ([price] = @Original_price)) AND ((@IsNull_name_cat = 1 AND [name_cat] IS NULL) OR ([name_cat] = @Original_name_cat)) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_service] WHERE (([id] = @Original_id) AND ((@IsNull_name_main = 1 AND [name_main] IS NULL) OR ([name_main] = @Original_name_main)) AND ((@IsNull_name_product = 1 AND [name_product] IS NULL) OR ([name_product] = @Original_name_product)) AND ((@IsNull_price = 1 AND [price] IS NULL) OR ([price] = @Original_price)) AND ((@IsNull_name_cat = 1 AND [name_cat] IS NULL) OR ([name_cat] = @Original_name_cat)) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name_main", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_main", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -15561,8 +15561,8 @@ SELECT id, name_sell, price_sell, qt_sell, tprice_sell, sell_id, weight, total_e
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tb_product] ([name_main], [name_product], [price], [name_cat], [cost]) VALUES (@name_main, @name_product, @price, @name_cat, @cost);
-SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tb_service] ([name_main], [name_product], [price], [name_cat], [cost]) VALUES (@name_main, @name_product, @price, @name_cat, @cost);
+SELECT id, name_main, name_product, price, name_cat, cost FROM tb_service WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_main", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_main", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_product", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15571,8 +15571,8 @@ SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tb_product] SET [name_main] = @name_main, [name_product] = @name_product, [price] = @price, [name_cat] = @name_cat, [cost] = @cost WHERE (([id] = @Original_id) AND ((@IsNull_name_main = 1 AND [name_main] IS NULL) OR ([name_main] = @Original_name_main)) AND ((@IsNull_name_product = 1 AND [name_product] IS NULL) OR ([name_product] = @Original_name_product)) AND ((@IsNull_price = 1 AND [price] IS NULL) OR ([price] = @Original_price)) AND ((@IsNull_name_cat = 1 AND [name_cat] IS NULL) OR ([name_cat] = @Original_name_cat)) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)));
-SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tb_service] SET [name_main] = @name_main, [name_product] = @name_product, [price] = @price, [name_cat] = @name_cat, [cost] = @cost WHERE (([id] = @Original_id) AND ((@IsNull_name_main = 1 AND [name_main] IS NULL) OR ([name_main] = @Original_name_main)) AND ((@IsNull_name_product = 1 AND [name_product] IS NULL) OR ([name_product] = @Original_name_product)) AND ((@IsNull_price = 1 AND [price] IS NULL) OR ([price] = @Original_price)) AND ((@IsNull_name_cat = 1 AND [name_cat] IS NULL) OR ([name_cat] = @Original_name_cat)) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)));
+SELECT id, name_main, name_product, price, name_cat, cost FROM tb_service WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_main", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_main", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_product", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15606,7 +15606,7 @@ SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, name_main, name_product, price, name_cat, cost FROM dbo.tb_product";
+            this._commandCollection[0].CommandText = "SELECT id, name_main, name_product, price, name_cat, cost FROM dbo.tb_service";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15614,7 +15614,7 @@ SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DB_restoraintDataSet.tb_productDataTable dataTable) {
+        public virtual int Fill(DB_restoraintDataSet.tb_serviceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15627,9 +15627,9 @@ SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DB_restoraintDataSet.tb_productDataTable GetData() {
+        public virtual DB_restoraintDataSet.tb_serviceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DB_restoraintDataSet.tb_productDataTable dataTable = new DB_restoraintDataSet.tb_productDataTable();
+            DB_restoraintDataSet.tb_serviceDataTable dataTable = new DB_restoraintDataSet.tb_serviceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15637,7 +15637,7 @@ SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DB_restoraintDataSet.tb_productDataTable dataTable) {
+        public virtual int Update(DB_restoraintDataSet.tb_serviceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -15645,7 +15645,7 @@ SELECT id, name_main, name_product, price, name_cat, cost FROM tb_product WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DB_restoraintDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tb_product");
+            return this.Adapter.Update(dataSet, "tb_service");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16248,7 +16248,7 @@ SELECT id, safe_count, safe_name FROM tb_safe WHERE (id = @id)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tb_sell_tableTableAdapter : global::System.ComponentModel.Component {
+    public partial class tb_appointmentTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -16262,7 +16262,7 @@ SELECT id, safe_count, safe_name FROM tb_safe WHERE (id = @id)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tb_sell_tableTableAdapter() {
+        public tb_appointmentTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -16359,7 +16359,7 @@ SELECT id, safe_count, safe_name FROM tb_safe WHERE (id = @id)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tb_sell_table";
+            tableMapping.DataSetTable = "tb_appointment";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("sell_cus", "sell_cus");
             tableMapping.ColumnMappings.Add("sell_tprice", "sell_tprice");
@@ -16376,7 +16376,7 @@ SELECT id, safe_count, safe_name FROM tb_safe WHERE (id = @id)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_sell_table] WHERE (([id] = @Original_id) AND ((@IsNull_sell_cus = 1 AND [sell_cus] IS NULL) OR ([sell_cus] = @Original_sell_cus)) AND ((@IsNull_sell_tprice = 1 AND [sell_tprice] IS NULL) OR ([sell_tprice] = @Original_sell_tprice)) AND ((@IsNull_sell_date = 1 AND [sell_date] IS NULL) OR ([sell_date] = @Original_sell_date)) AND ((@IsNull_pay = 1 AND [pay] IS NULL) OR ([pay] = @Original_pay)) AND ((@IsNull_stay = 1 AND [stay] IS NULL) OR ([stay] = @Original_stay)) AND ((@IsNull_total_price = 1 AND [total_price] IS NULL) OR ([total_price] = @Original_total_price)) AND ((@IsNull_cus_id = 1 AND [cus_id] IS NULL) OR ([cus_id] = @Original_cus_id)) AND ((@IsNull_safe = 1 AND [safe] IS NULL) OR ([safe] = @Original_safe)) AND ((@IsNull_sell_add = 1 AND [sell_add] IS NULL) OR ([sell_add] = @Original_sell_add)) AND ((@IsNull_cut = 1 AND [cut] IS NULL) OR ([cut] = @Original_cut)) AND ((@IsNull_invocie_id = 1 AND [invocie_id] IS NULL) OR ([invocie_id] = @Original_invocie_id)) AND ((@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @Original_total_earnings)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_appointment] WHERE (([id] = @Original_id) AND ((@IsNull_sell_cus = 1 AND [sell_cus] IS NULL) OR ([sell_cus] = @Original_sell_cus)) AND ((@IsNull_sell_tprice = 1 AND [sell_tprice] IS NULL) OR ([sell_tprice] = @Original_sell_tprice)) AND ((@IsNull_sell_date = 1 AND [sell_date] IS NULL) OR ([sell_date] = @Original_sell_date)) AND ((@IsNull_pay = 1 AND [pay] IS NULL) OR ([pay] = @Original_pay)) AND ((@IsNull_stay = 1 AND [stay] IS NULL) OR ([stay] = @Original_stay)) AND ((@IsNull_total_price = 1 AND [total_price] IS NULL) OR ([total_price] = @Original_total_price)) AND ((@IsNull_cus_id = 1 AND [cus_id] IS NULL) OR ([cus_id] = @Original_cus_id)) AND ((@IsNull_safe = 1 AND [safe] IS NULL) OR ([safe] = @Original_safe)) AND ((@IsNull_sell_add = 1 AND [sell_add] IS NULL) OR ([sell_add] = @Original_sell_add)) AND ((@IsNull_cut = 1 AND [cut] IS NULL) OR ([cut] = @Original_cut)) AND ((@IsNull_invocie_id = 1 AND [invocie_id] IS NULL) OR ([invocie_id] = @Original_invocie_id)) AND ((@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @Original_total_earnings)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sell_cus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sell_cus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -16405,8 +16405,8 @@ SELECT id, safe_count, safe_name FROM tb_safe WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total_earnings", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_earnings", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tb_sell_table] ([sell_cus], [sell_tprice], [sell_date], [pay], [stay], [total_price], [cus_id], [safe], [sell_add], [cut], [invocie_id], [total_earnings]) VALUES (@sell_cus, @sell_tprice, @sell_date, @pay, @stay, @total_price, @cus_id, @safe, @sell_add, @cut, @invocie_id, @total_earnings);
-SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, safe, sell_add, cut, invocie_id, total_earnings FROM tb_sell_table WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tb_appointment] ([sell_cus], [sell_tprice], [sell_date], [pay], [stay], [total_price], [cus_id], [safe], [sell_add], [cut], [invocie_id], [total_earnings]) VALUES (@sell_cus, @sell_tprice, @sell_date, @pay, @stay, @total_price, @cus_id, @safe, @sell_add, @cut, @invocie_id, @total_earnings);
+SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, safe, sell_add, cut, invocie_id, total_earnings FROM tb_appointment WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sell_cus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sell_cus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sell_tprice", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sell_tprice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16422,26 +16422,26 @@ SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, saf
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_earnings", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_earnings", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tb_sell_table] SET [sell_cus] = @sell_cus, [sell_tprice] = @sell_tp" +
-                "rice, [sell_date] = @sell_date, [pay] = @pay, [stay] = @stay, [total_price] = @t" +
-                "otal_price, [cus_id] = @cus_id, [safe] = @safe, [sell_add] = @sell_add, [cut] = " +
-                "@cut, [invocie_id] = @invocie_id, [total_earnings] = @total_earnings WHERE (([id" +
-                "] = @Original_id) AND ((@IsNull_sell_cus = 1 AND [sell_cus] IS NULL) OR ([sell_c" +
-                "us] = @Original_sell_cus)) AND ((@IsNull_sell_tprice = 1 AND [sell_tprice] IS NU" +
-                "LL) OR ([sell_tprice] = @Original_sell_tprice)) AND ((@IsNull_sell_date = 1 AND " +
-                "[sell_date] IS NULL) OR ([sell_date] = @Original_sell_date)) AND ((@IsNull_pay =" +
-                " 1 AND [pay] IS NULL) OR ([pay] = @Original_pay)) AND ((@IsNull_stay = 1 AND [st" +
-                "ay] IS NULL) OR ([stay] = @Original_stay)) AND ((@IsNull_total_price = 1 AND [to" +
-                "tal_price] IS NULL) OR ([total_price] = @Original_total_price)) AND ((@IsNull_cu" +
-                "s_id = 1 AND [cus_id] IS NULL) OR ([cus_id] = @Original_cus_id)) AND ((@IsNull_s" +
-                "afe = 1 AND [safe] IS NULL) OR ([safe] = @Original_safe)) AND ((@IsNull_sell_add" +
-                " = 1 AND [sell_add] IS NULL) OR ([sell_add] = @Original_sell_add)) AND ((@IsNull" +
-                "_cut = 1 AND [cut] IS NULL) OR ([cut] = @Original_cut)) AND ((@IsNull_invocie_id" +
-                " = 1 AND [invocie_id] IS NULL) OR ([invocie_id] = @Original_invocie_id)) AND ((@" +
-                "IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = @" +
-                "Original_total_earnings)));\r\nSELECT id, sell_cus, sell_tprice, sell_date, pay, s" +
-                "tay, total_price, cus_id, safe, sell_add, cut, invocie_id, total_earnings FROM t" +
-                "b_sell_table WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tb_appointment] SET [sell_cus] = @sell_cus, [sell_tprice] = @sell_t" +
+                "price, [sell_date] = @sell_date, [pay] = @pay, [stay] = @stay, [total_price] = @" +
+                "total_price, [cus_id] = @cus_id, [safe] = @safe, [sell_add] = @sell_add, [cut] =" +
+                " @cut, [invocie_id] = @invocie_id, [total_earnings] = @total_earnings WHERE (([i" +
+                "d] = @Original_id) AND ((@IsNull_sell_cus = 1 AND [sell_cus] IS NULL) OR ([sell_" +
+                "cus] = @Original_sell_cus)) AND ((@IsNull_sell_tprice = 1 AND [sell_tprice] IS N" +
+                "ULL) OR ([sell_tprice] = @Original_sell_tprice)) AND ((@IsNull_sell_date = 1 AND" +
+                " [sell_date] IS NULL) OR ([sell_date] = @Original_sell_date)) AND ((@IsNull_pay " +
+                "= 1 AND [pay] IS NULL) OR ([pay] = @Original_pay)) AND ((@IsNull_stay = 1 AND [s" +
+                "tay] IS NULL) OR ([stay] = @Original_stay)) AND ((@IsNull_total_price = 1 AND [t" +
+                "otal_price] IS NULL) OR ([total_price] = @Original_total_price)) AND ((@IsNull_c" +
+                "us_id = 1 AND [cus_id] IS NULL) OR ([cus_id] = @Original_cus_id)) AND ((@IsNull_" +
+                "safe = 1 AND [safe] IS NULL) OR ([safe] = @Original_safe)) AND ((@IsNull_sell_ad" +
+                "d = 1 AND [sell_add] IS NULL) OR ([sell_add] = @Original_sell_add)) AND ((@IsNul" +
+                "l_cut = 1 AND [cut] IS NULL) OR ([cut] = @Original_cut)) AND ((@IsNull_invocie_i" +
+                "d = 1 AND [invocie_id] IS NULL) OR ([invocie_id] = @Original_invocie_id)) AND ((" +
+                "@IsNull_total_earnings = 1 AND [total_earnings] IS NULL) OR ([total_earnings] = " +
+                "@Original_total_earnings)));\r\nSELECT id, sell_cus, sell_tprice, sell_date, pay, " +
+                "stay, total_price, cus_id, safe, sell_add, cut, invocie_id, total_earnings FROM " +
+                "tb_appointment WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sell_cus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sell_cus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sell_tprice", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sell_tprice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16497,7 +16497,7 @@ SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, saf
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, safe" +
-                ", sell_add, cut, invocie_id, total_earnings FROM dbo.tb_sell_table";
+                ", sell_add, cut, invocie_id, total_earnings FROM dbo.tb_appointment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16505,7 +16505,7 @@ SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, saf
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DB_restoraintDataSet.tb_sell_tableDataTable dataTable) {
+        public virtual int Fill(DB_restoraintDataSet.tb_appointmentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -16518,9 +16518,9 @@ SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, saf
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DB_restoraintDataSet.tb_sell_tableDataTable GetData() {
+        public virtual DB_restoraintDataSet.tb_appointmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DB_restoraintDataSet.tb_sell_tableDataTable dataTable = new DB_restoraintDataSet.tb_sell_tableDataTable();
+            DB_restoraintDataSet.tb_appointmentDataTable dataTable = new DB_restoraintDataSet.tb_appointmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -16528,7 +16528,7 @@ SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, saf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DB_restoraintDataSet.tb_sell_tableDataTable dataTable) {
+        public virtual int Update(DB_restoraintDataSet.tb_appointmentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -16536,7 +16536,7 @@ SELECT id, sell_cus, sell_tprice, sell_date, pay, stay, total_price, cus_id, saf
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DB_restoraintDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tb_sell_table");
+            return this.Adapter.Update(dataSet, "tb_appointment");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19317,7 +19317,7 @@ SELECT id, supp_name, supp_phone, supp_email, supp_image, total_price, supp_max 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tb_tableTableAdapter : global::System.ComponentModel.Component {
+    public partial class tb_chairTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -19331,7 +19331,7 @@ SELECT id, supp_name, supp_phone, supp_email, supp_image, total_price, supp_max 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tb_tableTableAdapter() {
+        public tb_chairTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -19428,38 +19428,38 @@ SELECT id, supp_name, supp_phone, supp_email, supp_image, total_price, supp_max 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tb_table";
+            tableMapping.DataSetTable = "tb_chair";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("name_table", "name_table");
+            tableMapping.ColumnMappings.Add("name_chair", "name_chair");
             tableMapping.ColumnMappings.Add("totall_price", "totall_price");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_table] WHERE (([id] = @Original_id) AND ((@IsNull_name_table = 1 AND [name_table] IS NULL) OR ([name_table] = @Original_name_table)) AND ((@IsNull_totall_price = 1 AND [totall_price] IS NULL) OR ([totall_price] = @Original_totall_price)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tb_chair] WHERE (([id] = @Original_id) AND ((@IsNull_name_chair = 1 AND [name_chair] IS NULL) OR ([name_chair] = @Original_name_chair)) AND ((@IsNull_totall_price = 1 AND [totall_price] IS NULL) OR ([totall_price] = @Original_totall_price)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name_table", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_table", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_table", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_table", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name_chair", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_chair", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_chair", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_chair", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_totall_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totall_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totall_price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totall_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tb_table] ([name_table], [totall_price]) VALUES (@name_table, " +
-                "@totall_price);\r\nSELECT id, name_table, totall_price FROM tb_table WHERE (id = S" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tb_chair] ([name_chair], [totall_price]) VALUES (@name_chair, " +
+                "@totall_price);\r\nSELECT id, name_chair, totall_price FROM tb_chair WHERE (id = S" +
                 "COPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_table", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_table", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_chair", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_chair", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totall_price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totall_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tb_table] SET [name_table] = @name_table, [totall_price] = @totall_price WHERE (([id] = @Original_id) AND ((@IsNull_name_table = 1 AND [name_table] IS NULL) OR ([name_table] = @Original_name_table)) AND ((@IsNull_totall_price = 1 AND [totall_price] IS NULL) OR ([totall_price] = @Original_totall_price)));
-SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tb_chair] SET [name_chair] = @name_chair, [totall_price] = @totall_price WHERE (([id] = @Original_id) AND ((@IsNull_name_chair = 1 AND [name_chair] IS NULL) OR ([name_chair] = @Original_name_chair)) AND ((@IsNull_totall_price = 1 AND [totall_price] IS NULL) OR ([totall_price] = @Original_totall_price)));
+SELECT id, name_chair, totall_price FROM tb_chair WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_table", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_table", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_chair", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_chair", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totall_price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totall_price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name_table", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_table", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_table", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_table", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name_chair", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_chair", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name_chair", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_chair", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_totall_price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totall_price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totall_price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totall_price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -19478,7 +19478,7 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, name_table, totall_price FROM dbo.tb_table";
+            this._commandCollection[0].CommandText = "SELECT id, name_chair, totall_price FROM dbo.tb_chair";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19486,7 +19486,7 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DB_restoraintDataSet.tb_tableDataTable dataTable) {
+        public virtual int Fill(DB_restoraintDataSet.tb_chairDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -19499,9 +19499,9 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DB_restoraintDataSet.tb_tableDataTable GetData() {
+        public virtual DB_restoraintDataSet.tb_chairDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DB_restoraintDataSet.tb_tableDataTable dataTable = new DB_restoraintDataSet.tb_tableDataTable();
+            DB_restoraintDataSet.tb_chairDataTable dataTable = new DB_restoraintDataSet.tb_chairDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -19509,7 +19509,7 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DB_restoraintDataSet.tb_tableDataTable dataTable) {
+        public virtual int Update(DB_restoraintDataSet.tb_chairDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -19517,7 +19517,7 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DB_restoraintDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tb_table");
+            return this.Adapter.Update(dataSet, "tb_chair");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19539,15 +19539,15 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_name_table, global::System.Nullable<double> Original_totall_price) {
+        public virtual int Delete(int Original_id, string Original_name_chair, global::System.Nullable<double> Original_totall_price) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_name_table == null)) {
+            if ((Original_name_chair == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_name_table));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_name_chair));
             }
             if ((Original_totall_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
@@ -19577,12 +19577,12 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name_table, global::System.Nullable<double> totall_price) {
-            if ((name_table == null)) {
+        public virtual int Insert(string name_chair, global::System.Nullable<double> totall_price) {
+            if ((name_chair == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name_table));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name_chair));
             }
             if ((totall_price.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((double)(totall_price.Value));
@@ -19610,12 +19610,12 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name_table, global::System.Nullable<double> totall_price, int Original_id, string Original_name_table, global::System.Nullable<double> Original_totall_price, int id) {
-            if ((name_table == null)) {
+        public virtual int Update(string name_chair, global::System.Nullable<double> totall_price, int Original_id, string Original_name_chair, global::System.Nullable<double> Original_totall_price, int id) {
+            if ((name_chair == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name_table));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name_chair));
             }
             if ((totall_price.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(totall_price.Value));
@@ -19624,13 +19624,13 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id));
-            if ((Original_name_table == null)) {
+            if ((Original_name_chair == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_name_table));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_name_chair));
             }
             if ((Original_totall_price.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
@@ -19661,8 +19661,8 @@ SELECT id, name_table, totall_price FROM tb_table WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name_table, global::System.Nullable<double> totall_price, int Original_id, string Original_name_table, global::System.Nullable<double> Original_totall_price) {
-            return this.Update(name_table, totall_price, Original_id, Original_name_table, Original_totall_price, Original_id);
+        public virtual int Update(string name_chair, global::System.Nullable<double> totall_price, int Original_id, string Original_name_chair, global::System.Nullable<double> Original_totall_price) {
+            return this.Update(name_chair, totall_price, Original_id, Original_name_chair, Original_totall_price, Original_id);
         }
     }
     
@@ -20631,15 +20631,15 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
         
         private tb_order_buyTableAdapter _tb_order_buyTableAdapter;
         
-        private tb_order_sell_tableTableAdapter _tb_order_sell_tableTableAdapter;
+        private tb_order_appointmentTableAdapter _tb_order_appointmentTableAdapter;
         
         private tb_order_sell_takewayTableAdapter _tb_order_sell_takewayTableAdapter;
         
-        private tb_productTableAdapter _tb_productTableAdapter;
+        private tb_serviceTableAdapter _tb_serviceTableAdapter;
         
         private tb_safeTableAdapter _tb_safeTableAdapter;
         
-        private tb_sell_tableTableAdapter _tb_sell_tableTableAdapter;
+        private tb_appointmentTableAdapter _tb_appointmentTableAdapter;
         
         private tb_sell_takewayTableAdapter _tb_sell_takewayTableAdapter;
         
@@ -20649,7 +20649,7 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
         
         private tb_suppTableAdapter _tb_suppTableAdapter;
         
-        private tb_tableTableAdapter _tb_tableTableAdapter;
+        private tb_chairTableAdapter _tb_chairTableAdapter;
         
         private tb_userTableAdapter _tb_userTableAdapter;
         
@@ -20759,12 +20759,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tb_order_sell_tableTableAdapter tb_order_sell_tableTableAdapter {
+        public tb_order_appointmentTableAdapter tb_order_appointmentTableAdapter {
             get {
-                return this._tb_order_sell_tableTableAdapter;
+                return this._tb_order_appointmentTableAdapter;
             }
             set {
-                this._tb_order_sell_tableTableAdapter = value;
+                this._tb_order_appointmentTableAdapter = value;
             }
         }
         
@@ -20787,12 +20787,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tb_productTableAdapter tb_productTableAdapter {
+        public tb_serviceTableAdapter tb_serviceTableAdapter {
             get {
-                return this._tb_productTableAdapter;
+                return this._tb_serviceTableAdapter;
             }
             set {
-                this._tb_productTableAdapter = value;
+                this._tb_serviceTableAdapter = value;
             }
         }
         
@@ -20815,12 +20815,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tb_sell_tableTableAdapter tb_sell_tableTableAdapter {
+        public tb_appointmentTableAdapter tb_appointmentTableAdapter {
             get {
-                return this._tb_sell_tableTableAdapter;
+                return this._tb_appointmentTableAdapter;
             }
             set {
-                this._tb_sell_tableTableAdapter = value;
+                this._tb_appointmentTableAdapter = value;
             }
         }
         
@@ -20885,12 +20885,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tb_tableTableAdapter tb_tableTableAdapter {
+        public tb_chairTableAdapter tb_chairTableAdapter {
             get {
-                return this._tb_tableTableAdapter;
+                return this._tb_chairTableAdapter;
             }
             set {
-                this._tb_tableTableAdapter = value;
+                this._tb_chairTableAdapter = value;
             }
         }
         
@@ -20965,25 +20965,25 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                             && (this._tb_order_buyTableAdapter.Connection != null))) {
                     return this._tb_order_buyTableAdapter.Connection;
                 }
-                if (((this._tb_order_sell_tableTableAdapter != null) 
-                            && (this._tb_order_sell_tableTableAdapter.Connection != null))) {
-                    return this._tb_order_sell_tableTableAdapter.Connection;
+                if (((this._tb_order_appointmentTableAdapter != null) 
+                            && (this._tb_order_appointmentTableAdapter.Connection != null))) {
+                    return this._tb_order_appointmentTableAdapter.Connection;
                 }
                 if (((this._tb_order_sell_takewayTableAdapter != null) 
                             && (this._tb_order_sell_takewayTableAdapter.Connection != null))) {
                     return this._tb_order_sell_takewayTableAdapter.Connection;
                 }
-                if (((this._tb_productTableAdapter != null) 
-                            && (this._tb_productTableAdapter.Connection != null))) {
-                    return this._tb_productTableAdapter.Connection;
+                if (((this._tb_serviceTableAdapter != null) 
+                            && (this._tb_serviceTableAdapter.Connection != null))) {
+                    return this._tb_serviceTableAdapter.Connection;
                 }
                 if (((this._tb_safeTableAdapter != null) 
                             && (this._tb_safeTableAdapter.Connection != null))) {
                     return this._tb_safeTableAdapter.Connection;
                 }
-                if (((this._tb_sell_tableTableAdapter != null) 
-                            && (this._tb_sell_tableTableAdapter.Connection != null))) {
-                    return this._tb_sell_tableTableAdapter.Connection;
+                if (((this._tb_appointmentTableAdapter != null) 
+                            && (this._tb_appointmentTableAdapter.Connection != null))) {
+                    return this._tb_appointmentTableAdapter.Connection;
                 }
                 if (((this._tb_sell_takewayTableAdapter != null) 
                             && (this._tb_sell_takewayTableAdapter.Connection != null))) {
@@ -21001,9 +21001,9 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                             && (this._tb_suppTableAdapter.Connection != null))) {
                     return this._tb_suppTableAdapter.Connection;
                 }
-                if (((this._tb_tableTableAdapter != null) 
-                            && (this._tb_tableTableAdapter.Connection != null))) {
-                    return this._tb_tableTableAdapter.Connection;
+                if (((this._tb_chairTableAdapter != null) 
+                            && (this._tb_chairTableAdapter.Connection != null))) {
+                    return this._tb_chairTableAdapter.Connection;
                 }
                 if (((this._tb_userTableAdapter != null) 
                             && (this._tb_userTableAdapter.Connection != null))) {
@@ -21044,19 +21044,19 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                 if ((this._tb_order_buyTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tb_order_sell_tableTableAdapter != null)) {
+                if ((this._tb_order_appointmentTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._tb_order_sell_takewayTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tb_productTableAdapter != null)) {
+                if ((this._tb_serviceTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._tb_safeTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tb_sell_tableTableAdapter != null)) {
+                if ((this._tb_appointmentTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._tb_sell_takewayTableAdapter != null)) {
@@ -21071,7 +21071,7 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                 if ((this._tb_suppTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tb_tableTableAdapter != null)) {
+                if ((this._tb_chairTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._tb_userTableAdapter != null)) {
@@ -21100,12 +21100,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_chairTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_chair.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_tableTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_chairTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21145,12 +21145,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_sell_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_sell_table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_appointmentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_appointment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_sell_tableTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_appointmentTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21163,12 +21163,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_productTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_product.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_serviceTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_service.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_productTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_serviceTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21181,12 +21181,12 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tb_order_sell_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tb_order_sell_table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tb_order_appointmentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tb_order_appointment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tb_order_sell_tableTableAdapter.Update(updatedRows));
+                    result = (result + this._tb_order_appointmentTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21271,11 +21271,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_table.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_chairTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_chair.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_tableTableAdapter.Update(addedRows));
+                    result = (result + this._tb_chairTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21311,11 +21311,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_sell_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_sell_table.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_appointmentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_appointment.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_sell_tableTableAdapter.Update(addedRows));
+                    result = (result + this._tb_appointmentTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21327,11 +21327,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_productTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_product.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_serviceTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_service.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_productTableAdapter.Update(addedRows));
+                    result = (result + this._tb_serviceTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21343,11 +21343,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tb_order_sell_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tb_order_sell_table.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tb_order_appointmentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tb_order_appointment.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tb_order_sell_tableTableAdapter.Update(addedRows));
+                    result = (result + this._tb_order_appointmentTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21473,11 +21473,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_order_sell_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_order_sell_table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_order_appointmentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_order_appointment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_order_sell_tableTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_order_appointmentTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21489,11 +21489,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_productTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_product.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_serviceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_service.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_productTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_serviceTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21505,11 +21505,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_sell_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_sell_table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_appointmentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_appointment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_sell_tableTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_appointmentTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21545,11 +21545,11 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tb_tableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tb_table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tb_chairTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tb_chair.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tb_tableTableAdapter.Update(deletedRows));
+                    result = (result + this._tb_chairTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21630,8 +21630,8 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tb_order_sell_tableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tb_order_sell_tableTableAdapter.Connection) == false))) {
+            if (((this._tb_order_appointmentTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tb_order_appointmentTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -21640,8 +21640,8 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tb_productTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tb_productTableAdapter.Connection) == false))) {
+            if (((this._tb_serviceTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tb_serviceTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -21650,8 +21650,8 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tb_sell_tableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tb_sell_tableTableAdapter.Connection) == false))) {
+            if (((this._tb_appointmentTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tb_appointmentTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -21675,8 +21675,8 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tb_tableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tb_tableTableAdapter.Connection) == false))) {
+            if (((this._tb_chairTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tb_chairTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -21776,13 +21776,13 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tb_order_buyTableAdapter.Adapter);
                     }
                 }
-                if ((this._tb_order_sell_tableTableAdapter != null)) {
-                    revertConnections.Add(this._tb_order_sell_tableTableAdapter, this._tb_order_sell_tableTableAdapter.Connection);
-                    this._tb_order_sell_tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tb_order_sell_tableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tb_order_sell_tableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tb_order_sell_tableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_order_sell_tableTableAdapter.Adapter);
+                if ((this._tb_order_appointmentTableAdapter != null)) {
+                    revertConnections.Add(this._tb_order_appointmentTableAdapter, this._tb_order_appointmentTableAdapter.Connection);
+                    this._tb_order_appointmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tb_order_appointmentTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tb_order_appointmentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tb_order_appointmentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_order_appointmentTableAdapter.Adapter);
                     }
                 }
                 if ((this._tb_order_sell_takewayTableAdapter != null)) {
@@ -21794,13 +21794,13 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tb_order_sell_takewayTableAdapter.Adapter);
                     }
                 }
-                if ((this._tb_productTableAdapter != null)) {
-                    revertConnections.Add(this._tb_productTableAdapter, this._tb_productTableAdapter.Connection);
-                    this._tb_productTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tb_productTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tb_productTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tb_productTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_productTableAdapter.Adapter);
+                if ((this._tb_serviceTableAdapter != null)) {
+                    revertConnections.Add(this._tb_serviceTableAdapter, this._tb_serviceTableAdapter.Connection);
+                    this._tb_serviceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tb_serviceTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tb_serviceTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tb_serviceTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_serviceTableAdapter.Adapter);
                     }
                 }
                 if ((this._tb_safeTableAdapter != null)) {
@@ -21812,13 +21812,13 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tb_safeTableAdapter.Adapter);
                     }
                 }
-                if ((this._tb_sell_tableTableAdapter != null)) {
-                    revertConnections.Add(this._tb_sell_tableTableAdapter, this._tb_sell_tableTableAdapter.Connection);
-                    this._tb_sell_tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tb_sell_tableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tb_sell_tableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tb_sell_tableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_sell_tableTableAdapter.Adapter);
+                if ((this._tb_appointmentTableAdapter != null)) {
+                    revertConnections.Add(this._tb_appointmentTableAdapter, this._tb_appointmentTableAdapter.Connection);
+                    this._tb_appointmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tb_appointmentTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tb_appointmentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tb_appointmentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_appointmentTableAdapter.Adapter);
                     }
                 }
                 if ((this._tb_sell_takewayTableAdapter != null)) {
@@ -21857,13 +21857,13 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tb_suppTableAdapter.Adapter);
                     }
                 }
-                if ((this._tb_tableTableAdapter != null)) {
-                    revertConnections.Add(this._tb_tableTableAdapter, this._tb_tableTableAdapter.Connection);
-                    this._tb_tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tb_tableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tb_tableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tb_tableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_tableTableAdapter.Adapter);
+                if ((this._tb_chairTableAdapter != null)) {
+                    revertConnections.Add(this._tb_chairTableAdapter, this._tb_chairTableAdapter.Connection);
+                    this._tb_chairTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tb_chairTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tb_chairTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tb_chairTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tb_chairTableAdapter.Adapter);
                     }
                 }
                 if ((this._tb_userTableAdapter != null)) {
@@ -21966,25 +21966,25 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     this._tb_order_buyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_order_buyTableAdapter]));
                     this._tb_order_buyTableAdapter.Transaction = null;
                 }
-                if ((this._tb_order_sell_tableTableAdapter != null)) {
-                    this._tb_order_sell_tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_order_sell_tableTableAdapter]));
-                    this._tb_order_sell_tableTableAdapter.Transaction = null;
+                if ((this._tb_order_appointmentTableAdapter != null)) {
+                    this._tb_order_appointmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_order_appointmentTableAdapter]));
+                    this._tb_order_appointmentTableAdapter.Transaction = null;
                 }
                 if ((this._tb_order_sell_takewayTableAdapter != null)) {
                     this._tb_order_sell_takewayTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_order_sell_takewayTableAdapter]));
                     this._tb_order_sell_takewayTableAdapter.Transaction = null;
                 }
-                if ((this._tb_productTableAdapter != null)) {
-                    this._tb_productTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_productTableAdapter]));
-                    this._tb_productTableAdapter.Transaction = null;
+                if ((this._tb_serviceTableAdapter != null)) {
+                    this._tb_serviceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_serviceTableAdapter]));
+                    this._tb_serviceTableAdapter.Transaction = null;
                 }
                 if ((this._tb_safeTableAdapter != null)) {
                     this._tb_safeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_safeTableAdapter]));
                     this._tb_safeTableAdapter.Transaction = null;
                 }
-                if ((this._tb_sell_tableTableAdapter != null)) {
-                    this._tb_sell_tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_sell_tableTableAdapter]));
-                    this._tb_sell_tableTableAdapter.Transaction = null;
+                if ((this._tb_appointmentTableAdapter != null)) {
+                    this._tb_appointmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_appointmentTableAdapter]));
+                    this._tb_appointmentTableAdapter.Transaction = null;
                 }
                 if ((this._tb_sell_takewayTableAdapter != null)) {
                     this._tb_sell_takewayTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_sell_takewayTableAdapter]));
@@ -22002,9 +22002,9 @@ SELECT id, name_supp, date, mony_spend, mony_rev, mony_stay, safe FROM [tb-spend
                     this._tb_suppTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_suppTableAdapter]));
                     this._tb_suppTableAdapter.Transaction = null;
                 }
-                if ((this._tb_tableTableAdapter != null)) {
-                    this._tb_tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_tableTableAdapter]));
-                    this._tb_tableTableAdapter.Transaction = null;
+                if ((this._tb_chairTableAdapter != null)) {
+                    this._tb_chairTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_chairTableAdapter]));
+                    this._tb_chairTableAdapter.Transaction = null;
                 }
                 if ((this._tb_userTableAdapter != null)) {
                     this._tb_userTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tb_userTableAdapter]));

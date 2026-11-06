@@ -84,6 +84,8 @@ namespace el_shabander
             this.xrCrossBandLine1 = new DevExpress.XtraReports.UI.XRCrossBandLine();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.cusname = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_elshDataSet1)).BeginInit();
@@ -281,6 +283,8 @@ namespace el_shabander
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
+            this.cusname,
             this.logo,
             this.date,
             this.xrLabel11,
@@ -359,7 +363,7 @@ namespace el_shabander
             this.xrLabel4.StylePriority.UseBorderWidth = false;
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "الطاولة";
+            this.xrLabel4.Text = "المقعد";
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // customer
@@ -787,6 +791,46 @@ namespace el_shabander
             // 
             this.bindingSource1.DataSource = typeof(el_shabander.recpeipt);
             // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel1.BorderWidth = 0.5F;
+            this.xrLabel1.Dpi = 254F;
+            this.xrLabel1.Font = new System.Drawing.Font("Cairo", 5.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(632.133F, 254.9698F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(115.6025F, 46.20848F);
+            this.xrLabel1.StylePriority.UseBorders = false;
+            this.xrLabel1.StylePriority.UseBorderWidth = false;
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.Text = "العميل";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // cusname
+            // 
+            this.cusname.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.cusname.BorderWidth = 0.5F;
+            this.cusname.Dpi = 254F;
+            this.cusname.Font = new System.Drawing.Font("Cairo", 5.5F, System.Drawing.FontStyle.Bold);
+            this.cusname.LocationFloat = new DevExpress.Utils.PointFloat(418.8381F, 254.9697F);
+            this.cusname.Multiline = true;
+            this.cusname.Name = "cusname";
+            this.cusname.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.cusname.SizeF = new System.Drawing.SizeF(213.2949F, 46.20848F);
+            this.cusname.StylePriority.UseBorders = false;
+            this.cusname.StylePriority.UseBorderWidth = false;
+            this.cusname.StylePriority.UseFont = false;
+            this.cusname.StylePriority.UseTextAlignment = false;
+            this.cusname.Text = "cusname";
+            this.cusname.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // XtraReport4
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -893,5 +937,7 @@ namespace el_shabander
         private DevExpress.XtraReports.UI.XRCrossBandLine xrCrossBandLine3;
         private DevExpress.XtraReports.UI.XRCrossBandLine xrCrossBandLine1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        public DevExpress.XtraReports.UI.XRLabel cusname;
     }
 }

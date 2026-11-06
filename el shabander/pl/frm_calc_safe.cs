@@ -17,7 +17,7 @@ namespace el_shabander.pl
 {
     public partial class frm_calc_safe : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_safe tb_Safe = new tb_safe();
         bl.methods methods = new bl.methods();
         tb_employees tb_Employees = new tb_employees();
@@ -84,7 +84,7 @@ namespace el_shabander.pl
             // جلب البيانات من الجداول الثلاثة بناءً على اسم العميل
 
 
-            var sells = db.tb_sell_table
+            var sells = db.tb_appointment
                .Where(x => x.safe == edt_cus.Text)
                .Select(x => new
                {
@@ -98,7 +98,7 @@ namespace el_shabander.pl
                    // فرضًا لا يوجد مرتجع في عملية البيع
                }).ToList();
 
-            var spendcus = db.tb_sell_takeway
+           /* var spendcus = db.tb_sell_takeway
                 .Where(x => x.safe == edt_cus.Text)
                 .Select(x => new
                 {
@@ -110,7 +110,7 @@ namespace el_shabander.pl
                     PaidAmount = x.pay,
                     Remaining = x.pay - x.pay
                     // فرضًا لا يوجد مرتجع في سداد العميل
-                }).ToList();
+                }).ToList();*/
             var spendsupp = db.tb_spend_supp
                .Where(x => x.safe == edt_cus.Text)
                .Select(x => new
@@ -165,7 +165,7 @@ namespace el_shabander.pl
            }).ToList();
             // دمج البيانات في قائمة واحدة وترتيبها حسب التاريخ
             var combinedData = sells
-                .Concat(spendcus)
+                
                 .Concat(spendsupp)
                 .Concat(pay)
                 .Concat(stor)

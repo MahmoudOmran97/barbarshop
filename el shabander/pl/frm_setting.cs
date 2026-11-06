@@ -47,7 +47,7 @@ namespace el_shabander.pl
 
                 // تحديث سلسلة الاتصال في ملف التكوين
                 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var connectionStringSettings = config.ConnectionStrings.ConnectionStrings["DB_restoraintEntities"];
+                var connectionStringSettings = config.ConnectionStrings.ConnectionStrings["DB_BarbershopEntities"];
                 if (connectionStringSettings != null)
                 {
                     connectionStringSettings.ConnectionString = constr.ToString();

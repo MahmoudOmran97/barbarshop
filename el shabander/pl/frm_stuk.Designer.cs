@@ -116,7 +116,7 @@ namespace el_shabander.pl
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(el_shabander.tb_product);
+            this.gridControl1.DataSource = typeof(el_shabander.tb_service);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
@@ -266,7 +266,7 @@ namespace el_shabander.pl
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(150, 56);
             this.simpleButton1.TabIndex = 11;
-            this.simpleButton1.Text = "اضافة منتج";
+            this.simpleButton1.Text = "اضافة خدمة";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btn_edit

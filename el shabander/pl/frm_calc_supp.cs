@@ -17,7 +17,7 @@ namespace el_shabander.pl
 {
     public partial class frm_calc_supp : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_supp tb_supp = new tb_supp();
 
         // double storadd, stortotal, storstay;

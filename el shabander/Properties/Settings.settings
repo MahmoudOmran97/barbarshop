@@ -87,5 +87,17 @@
     <Setting Name="checkinprint" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="ip_hik" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.198</Value>
+    </Setting>
+    <Setting Name="user_hik" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="pass_hik" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Aosh14789</Value>
+    </Setting>
+    <Setting Name="LastSyncTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

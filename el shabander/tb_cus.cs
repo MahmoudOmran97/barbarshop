@@ -21,5 +21,8 @@ namespace el_shabander
         public byte[] cus_image { get; set; }
         public Nullable<double> total_price { get; set; }
         public Nullable<double> cus_max { get; set; }
+        public Nullable<System.DateTime> cus_birthdate { get; set; }
+        public Nullable<double> cus_loyalty_points { get; set; }
+        public string cus_notes { get; set; }
     }
 }

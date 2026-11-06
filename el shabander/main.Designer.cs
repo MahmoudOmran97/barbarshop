@@ -47,7 +47,7 @@ namespace el_shabander
             this.btn_stor = new DevExpress.XtraEditors.SimpleButton();
             this.btn_employees = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton13 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton14 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.pn_headernavbar = new System.Windows.Forms.Panel();
             this.pn_titelnavbar = new System.Windows.Forms.Panel();
             this.pic_cover = new DevExpress.XtraEditors.PictureEdit();
@@ -66,6 +66,8 @@ namespace el_shabander
             this.btn_max = new DevExpress.XtraEditors.SimpleButton();
             this.btn_close = new DevExpress.XtraEditors.SimpleButton();
             this.pn_cont = new System.Windows.Forms.Panel();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton14 = new DevExpress.XtraEditors.SimpleButton();
             this.pn_navbar.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pn_headernavbar.SuspendLayout();
@@ -106,6 +108,8 @@ namespace el_shabander
             this.flowLayoutPanel1.Controls.Add(this.btn_stor);
             this.flowLayoutPanel1.Controls.Add(this.btn_employees);
             this.flowLayoutPanel1.Controls.Add(this.simpleButton13);
+            this.flowLayoutPanel1.Controls.Add(this.simpleButton6);
+            this.flowLayoutPanel1.Controls.Add(this.simpleButton5);
             this.flowLayoutPanel1.Controls.Add(this.simpleButton14);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 200);
@@ -188,8 +192,8 @@ namespace el_shabander
             this.simpleButton10.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.simpleButton10.Appearance.Options.UseFont = true;
             this.simpleButton10.Appearance.Options.UseForeColor = true;
+            this.simpleButton10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton10.ImageOptions.Image")));
             this.simpleButton10.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton10.ImageOptions.SvgImage")));
             this.simpleButton10.Location = new System.Drawing.Point(4, 213);
             this.simpleButton10.Name = "simpleButton10";
             this.simpleButton10.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -205,15 +209,15 @@ namespace el_shabander
             this.simpleButton11.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.simpleButton11.Appearance.Options.UseFont = true;
             this.simpleButton11.Appearance.Options.UseForeColor = true;
+            this.simpleButton11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton11.ImageOptions.Image")));
             this.simpleButton11.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton11.ImageOptions.SvgImage")));
             this.simpleButton11.Location = new System.Drawing.Point(4, 258);
             this.simpleButton11.Name = "simpleButton11";
             this.simpleButton11.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.simpleButton11.Size = new System.Drawing.Size(226, 47);
             this.simpleButton11.TabIndex = 7;
-            this.simpleButton11.Text = "تيك اوى";
+            this.simpleButton11.Text = "الحجز";
             this.simpleButton11.Click += new System.EventHandler(this.simpleButton11_Click);
             // 
             // simpleButton12
@@ -239,15 +243,15 @@ namespace el_shabander
             this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
             this.simpleButton1.Location = new System.Drawing.Point(4, 365);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.simpleButton1.Size = new System.Drawing.Size(226, 41);
             this.simpleButton1.TabIndex = 11;
-            this.simpleButton1.Text = "المنتجات";
+            this.simpleButton1.Text = "الخدمات";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // simpleButton3
@@ -369,22 +373,22 @@ namespace el_shabander
             this.simpleButton13.Text = "المستخدمين";
             this.simpleButton13.Click += new System.EventHandler(this.simpleButton13_Click);
             // 
-            // simpleButton14
+            // simpleButton6
             // 
-            this.simpleButton14.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton14.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.simpleButton14.Appearance.Options.UseFont = true;
-            this.simpleButton14.Appearance.Options.UseForeColor = true;
-            this.simpleButton14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton14.ImageOptions.Image")));
-            this.simpleButton14.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton14.Location = new System.Drawing.Point(4, 786);
-            this.simpleButton14.Name = "simpleButton14";
-            this.simpleButton14.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.simpleButton14.Size = new System.Drawing.Size(226, 48);
-            this.simpleButton14.TabIndex = 10;
-            this.simpleButton14.Text = "الاعدادات";
-            this.simpleButton14.Click += new System.EventHandler(this.simpleButton14_Click);
+            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton6.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.simpleButton6.Appearance.Options.UseFont = true;
+            this.simpleButton6.Appearance.Options.UseForeColor = true;
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton14.ImageOptions.Image")));
+            this.simpleButton6.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton6.Location = new System.Drawing.Point(4, 786);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.simpleButton6.Size = new System.Drawing.Size(226, 48);
+            this.simpleButton6.TabIndex = 10;
+            this.simpleButton6.Text = "الحضور والانصراف";
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click_1);
             // 
             // pn_headernavbar
             // 
@@ -601,9 +605,43 @@ namespace el_shabander
             this.pn_cont.TabIndex = 2;
             this.pn_cont.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_cont_Paint);
             // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton5.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.simpleButton5.Appearance.Options.UseFont = true;
+            this.simpleButton5.Appearance.Options.UseForeColor = true;
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton5.Location = new System.Drawing.Point(8, 840);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.simpleButton5.Size = new System.Drawing.Size(222, 43);
+            this.simpleButton5.TabIndex = 57;
+            this.simpleButton5.Text = "المرتبات";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
+            // simpleButton14
+            // 
+            this.simpleButton14.Appearance.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton14.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.simpleButton14.Appearance.Options.UseFont = true;
+            this.simpleButton14.Appearance.Options.UseForeColor = true;
+            this.simpleButton14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton14.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton14.Location = new System.Drawing.Point(4, 889);
+            this.simpleButton14.Name = "simpleButton14";
+            this.simpleButton14.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.simpleButton14.Size = new System.Drawing.Size(226, 48);
+            this.simpleButton14.TabIndex = 58;
+            this.simpleButton14.Text = "الاعدادات";
+            this.simpleButton14.Click += new System.EventHandler(this.simpleButton14_Click);
+            // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pn_cont);
@@ -641,7 +679,7 @@ namespace el_shabander
         private DevExpress.XtraEditors.SimpleButton simpleButton11;
         private DevExpress.XtraEditors.SimpleButton simpleButton12;
         private DevExpress.XtraEditors.SimpleButton simpleButton13;
-        private DevExpress.XtraEditors.SimpleButton simpleButton14;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private DevExpress.XtraEditors.SimpleButton btn_logout;
         private DevExpress.XtraEditors.SimpleButton btn_min;
@@ -667,6 +705,8 @@ namespace el_shabander
         public System.Windows.Forms.Panel pn_topbar;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton14;
     }
 }
 

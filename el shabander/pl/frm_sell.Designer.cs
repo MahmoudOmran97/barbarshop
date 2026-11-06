@@ -84,7 +84,7 @@ namespace el_shabander.pl
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(el_shabander.tb_sell_table);
+            this.gridControl1.DataSource = typeof(el_shabander.tb_appointment);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;

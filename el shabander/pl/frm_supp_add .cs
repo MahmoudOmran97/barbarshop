@@ -14,7 +14,7 @@ namespace el_shabander.pl
 {
     public partial class frm_supp_add : Form
     {
-        DB_restoraintEntities db = new DB_restoraintEntities();
+        DB_BarbershopEntities db = new DB_BarbershopEntities();
         tb_supp tB_supp = new tb_supp();
         bl.methods methods = new bl.methods();
        
